@@ -16,3 +16,4 @@ _minted
 *.sh
 **/*.aux
 **/*.minted
+./_minted
