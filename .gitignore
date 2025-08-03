@@ -12,5 +12,7 @@ _minted
 *.snm
 *.vrb
 *.dvi
+*.listing
+*.sh
 **/*.aux
 **/*.minted
