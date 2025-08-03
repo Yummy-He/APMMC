@@ -1,0 +1,3 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+rm\PYG{+w}{ }\PYG{o}{[}\PYGZhy{}i,\PYGZhy{}r,\PYGZhy{}f\PYG{o}{]}\PYG{+w}{ }文件1\PYG{+w}{ }文件2\PYG{+w}{ }...\PYG{+w}{ }目录1\PYG{+w}{ }目录2\PYG{+w}{ }...
+\end{MintedVerbatim}

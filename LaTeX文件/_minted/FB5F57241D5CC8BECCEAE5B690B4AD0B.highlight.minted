@@ -1,0 +1,43 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{user1@host:\PYGZti{}/test/test1\PYGZdl{} }ls\PYG{+w}{ }\PYGZhy{}a\PYG{+w}{ }\PYGZti{}/test
+\PYG{g+go}{.  ..  1.txt  2.txt  test2}
+
+\PYG{g+gp}{user1@host:\PYGZti{}/test/test1\PYGZdl{} }ls\PYG{+w}{ }\PYGZhy{}l
+\PYG{g+go}{总计 4}
+\PYG{g+go}{\PYGZhy{}rw\PYGZhy{}rw\PYGZhy{}r\PYGZhy{}\PYGZhy{} 1 user1 user1    0  7月  1 12:48 1.txt}
+\PYG{g+go}{\PYGZhy{}rw\PYGZhy{}rw\PYGZhy{}r\PYGZhy{}\PYGZhy{} 1 user1 user1    0  7月  1 12:48 2.txt}
+\PYG{g+go}{drwxrwxr\PYGZhy{}x 2 user1 user1 4096  7月  1 12:47 test2}
+
+\PYG{g+gp}{user1@host:\PYGZti{}/test/test1\PYGZdl{} }ls\PYG{+w}{ }\PYGZhy{}a
+\PYG{g+go}{.  ..  1.txt  2.txt  test2}
+
+\PYG{g+gp}{user1@host:\PYGZti{}/test/test1\PYGZdl{} }ls\PYG{+w}{ }\PYGZhy{}R
+\PYG{g+go}{.:}
+\PYG{g+go}{1.txt  2.txt  test2}
+
+\PYG{g+go}{./test2:}
+\PYG{g+go}{1.txt}
+
+\PYG{g+gp}{user1@host:\PYGZti{}/test/test1\PYGZdl{} }ls\PYG{+w}{ }\PYGZhy{}aR
+\PYG{g+go}{.:}
+\PYG{g+go}{.  ..  1.txt  2.txt  test2}
+
+\PYG{g+go}{./test2:}
+\PYG{g+go}{.  ..  1.txt  .4.txt}
+
+\PYG{g+gp}{user1@host:\PYGZti{}/test/test1\PYGZdl{} }ls\PYG{+w}{ }\PYGZhy{}alR
+\PYG{g+go}{.:}
+\PYG{g+go}{总计 12}
+\PYG{g+go}{drwxrwxr\PYGZhy{}x 3 user1 user1 4096  7月  1 12:48 .}
+\PYG{g+go}{drwxrwxr\PYGZhy{}x 3 user1 user1 4096  7月  1 12:47 ..}
+\PYG{g+go}{\PYGZhy{}rw\PYGZhy{}rw\PYGZhy{}r\PYGZhy{}\PYGZhy{} 1 user1 user1    0  7月  1 12:48 1.txt}
+\PYG{g+go}{\PYGZhy{}rw\PYGZhy{}rw\PYGZhy{}r\PYGZhy{}\PYGZhy{} 1 user1 user1    0  7月  1 12:48 2.txt}
+\PYG{g+go}{drwxrwxr\PYGZhy{}x 2 user1 user1 4096  7月  1 12:53 test2}
+
+\PYG{g+go}{./test2:}
+\PYG{g+go}{总计 8}
+\PYG{g+go}{drwxrwxr\PYGZhy{}x 2 user1 user1 4096  7月  1 12:53 .}
+\PYG{g+go}{drwxrwxr\PYGZhy{}x 3 user1 user1 4096  7月  1 12:48 ..}
+\PYG{g+go}{\PYGZhy{}rw\PYGZhy{}rw\PYGZhy{}r\PYGZhy{}\PYGZhy{} 1 user1 user1    0  7月  1 12:53 1.txt}
+\PYG{g+go}{\PYGZhy{}rw\PYGZhy{}rw\PYGZhy{}r\PYGZhy{}\PYGZhy{} 1 user1 user1    0  7月  1 12:53 .4.txt}
+\end{MintedVerbatim}

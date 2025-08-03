@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }\PYG{n+nb}{pwd}
+\PYG{g+go}{/home/user1}
+\end{MintedVerbatim}

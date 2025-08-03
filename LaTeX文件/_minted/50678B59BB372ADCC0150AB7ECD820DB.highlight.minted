@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }sudo\PYG{+w}{ }apt\PYGZhy{}get\PYG{+w}{ }install\PYG{+w}{ }rs
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }seq\PYG{+w}{ }\PYG{l+m}{1}\PYG{+w}{ }\PYG{l+m}{100}\PYG{+w}{ }\PYGZgt{}\PYG{+w}{ }test/numbers\PYGZhy{}2.txt
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }shuf\PYG{+w}{ }\PYGZhy{}r\PYG{+w}{ }\PYGZhy{}n\PYG{+w}{ }\PYG{l+m}{300}\PYG{+w}{ }\PYGZhy{}i\PYG{+w}{ }\PYG{l+m}{60}\PYGZhy{}100\PYG{+w}{ }\PYGZgt{}\PYGZgt{}\PYG{+w}{ }test/numbers\PYGZhy{}2.txt
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }rs\PYG{+w}{ }\PYG{l+m}{4}\PYG{+w}{ }\PYG{l+m}{100}\PYG{+w}{ }\PYGZlt{}\PYG{+w}{ }test/numbers\PYGZhy{}2.txt\PYG{+w}{ }\PYG{p}{|}\PYG{+w}{ }rs\PYG{+w}{ }\PYGZhy{}T\PYG{+w}{ }\PYGZgt{}\PYG{+w}{ }test/grades.txt
+\end{MintedVerbatim}

@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{user1@host:\PYGZti{}/learn\PYGZdl{} }gfortran\PYG{+w}{ }\PYGZhy{}o\PYG{+w}{ }hello\PYG{+w}{ }hello.f
+\PYG{g+gp}{user1@host:\PYGZti{}/learn\PYGZdl{} }./hello
+\PYG{g+go}{ HELLO, WORLD.}
+\end{MintedVerbatim}

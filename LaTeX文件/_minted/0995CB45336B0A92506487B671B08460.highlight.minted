@@ -1,0 +1,9 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{      }\PYG{n}{K}\PYG{o}{=}\PYG{l+m+mi}{1234567890}
+\PYG{+w}{      }\PYG{n}{Y}\PYG{o}{=}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{12}\PYG{l+m+mf}{3.456}
+\PYG{+w}{      }\PYG{n}{Z}\PYG{o}{=}\PYG{l+m+mi}{12}\PYG{l+m+mf}{3.456}
+\PYG{+w}{      }\PYG{k}{WRITE}\PYG{p}{(}\PYG{l+m+mi}{6}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}(I10)\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{K}
+\PYG{+w}{      }\PYG{k}{WRITE}\PYG{p}{(}\PYG{l+m+mi}{6}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}(E10.3)\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{Y}
+\PYG{+w}{      }\PYG{k}{WRITE}\PYG{p}{(}\PYG{l+m+mi}{6}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}(E10.3)\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{Z}
+\PYG{+w}{      }\PYG{k}{END}
+\end{MintedVerbatim}

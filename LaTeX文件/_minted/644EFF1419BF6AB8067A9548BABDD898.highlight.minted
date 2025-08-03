@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }sudo\PYG{+w}{ }chmod\PYG{+w}{ }\PYG{l+m}{755}\PYG{+w}{ }test/numbers.txt
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }sudo\PYG{+w}{ }chmod\PYG{+w}{ }\PYG{n+nv}{u}\PYG{o}{=}rwx,g\PYG{o}{=}rx,o\PYG{o}{=}rx\PYG{+w}{ }test/numbers.txt
+\end{MintedVerbatim}

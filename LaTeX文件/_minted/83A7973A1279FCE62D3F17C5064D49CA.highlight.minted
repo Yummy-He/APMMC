@@ -1,0 +1,3 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+chmod u+x file.txt
+\end{MintedVerbatim}

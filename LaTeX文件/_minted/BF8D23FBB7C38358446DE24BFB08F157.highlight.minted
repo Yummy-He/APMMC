@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{      }\PYG{k+kt}{INTEGER}\PYG{+w}{ }\PYG{k+kd}{::}\PYG{+w}{ }\PYG{n}{I}
+\PYG{+w}{      }\PYG{k+kt}{REAL}\PYG{+w}{ }\PYG{k+kd}{::}\PYG{+w}{ }\PYG{n}{X}
+\PYG{+w}{      }\PYG{k+kt}{DOUBLE PRECISION}\PYG{+w}{ }\PYG{k+kd}{::}\PYG{+w}{ }\PYG{n}{Y}
+\end{MintedVerbatim}

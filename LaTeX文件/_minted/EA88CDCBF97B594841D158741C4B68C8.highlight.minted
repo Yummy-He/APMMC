@@ -1,0 +1,10 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }cat\PYG{+w}{ }test/hello.txt
+\PYG{g+go}{Hello, World!}
+\PYG{g+go}{I\PYGZsq{}m Linux.}
+\PYG{g+go}{I\PYGZsq{}m also Ubuntu.}
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }cat\PYG{+w}{ }\PYGZhy{}n\PYG{+w}{ }test/hello.txt
+\PYG{g+go}{1  Hello, World!}
+\PYG{g+go}{2  I\PYGZsq{}m Linux.}
+\PYG{g+go}{3  I\PYGZsq{}m also Ubuntu.}
+\end{MintedVerbatim}
