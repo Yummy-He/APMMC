@@ -1,0 +1,7 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }gfortran\PYG{+w}{ }\PYGZhy{}\PYGZhy{}version
+\PYG{g+go}{GNU Fortran (Ubuntu 13.3.0\PYGZhy{}6ubuntu2\PYGZti{}24.04) 13.3.0}
+\PYG{g+go}{Copyright (C) 2023 Free Software Foundation, Inc.}
+\PYG{g+go}{This is free software; see the source for copying conditions.  There is NO}
+\PYG{g+go}{warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.}
+\end{MintedVerbatim}

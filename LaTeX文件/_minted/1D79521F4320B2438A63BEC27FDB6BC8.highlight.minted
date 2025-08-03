@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }mkdir\PYG{+w}{ }learn
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }\PYG{n+nb}{cd}\PYG{+w}{ }learn
+\PYG{g+gp}{user1@host:\PYGZti{}/learn\PYGZdl{} }vim\PYG{+w}{ }hello.f
+\end{MintedVerbatim}

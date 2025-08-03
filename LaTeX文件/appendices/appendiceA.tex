@@ -1,0 +1,80 @@
+\section{更换软件源为清华大学镜像站}
+\label{sec:appendix-ubuntu-mirror}
+
+\subsection{Ubuntu 24.04.2 LTS 软件源配置}
+如果是按照文章开始的方式安装的Ubuntu系统，安装的版本应当是24.04.2 LTS（长期支持版），
+请确保版本是24.04.2。
+可以通过以下命令查看当前系统版本：
+\begin{envcode}{console}{Bash}
+user1@host:~$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 24.04.2 LTS
+Release:        24.04
+Codename:       noble
+\end{envcode}
+
+运行如下命令，打开软件源配置文件：
+\begin{envcode}{console}{Bash}
+user1@host:~$ sudo vim /etc/apt/sources.list.d/ubuntu.sources
+\end{envcode}
+
+不断按“dd”删除原有内容，直到清空文件。
+
+然后按“i”进入插入模式，粘贴以下内容：
+\begin{envcode}{text}{Text}
+Types: deb
+URIs: https://mirrors.tuna.tsinghua.edu.cn/ubuntu
+Suites: noble noble-updates noble-backports
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+# Types: deb-src
+# URIs: https://mirrors.tuna.tsinghua.edu.cn/ubuntu
+# Suites: noble noble-updates noble-backports
+# Components: main restricted universe multiverse
+# Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+# 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换
+Types: deb
+URIs: http://security.ubuntu.com/ubuntu/
+Suites: noble-security
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+# Types: deb-src
+# URIs: http://security.ubuntu.com/ubuntu/
+# Suites: noble-security
+# Components: main restricted universe multiverse
+# Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+# 预发布软件源，不建议启用
+
+# Types: deb
+# URIs: https://mirrors.tuna.tsinghua.edu.cn/ubuntu
+# Suites: noble-proposed
+# Components: main restricted universe multiverse
+# Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+# # Types: deb-src
+# # URIs: https://mirrors.tuna.tsinghua.edu.cn/ubuntu
+# # Suites: noble-proposed
+# # Components: main restricted universe multiverse
+# # Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+\end{envcode}
+
+按“Esc”键退出插入模式，然后输入“:wq”后回车保存并退出。
+
+接下来，运行以下命令更新软件源列表：
+\begin{envcode}{console}{Bash}
+user1@host:~$ sudo apt-get update
+\end{envcode}
+
+\subsection{更早或更新版本软件源配置}
+
+清华大学开源软件镜像站一般只有LTS版本的Ubuntu软件源，首先请确保自己系统为LTS版本。
+
+访问\textbf{\textcolor{blue}{\href{https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/}{清华大学开源软件镜像站}}}，
+仔细阅读网页指导内容，仿照上例更改软件源配置。或自行查找相关教程，这里不作介绍。
+

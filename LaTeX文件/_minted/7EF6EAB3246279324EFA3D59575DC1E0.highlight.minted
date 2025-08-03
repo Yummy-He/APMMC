@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{C}\PYG{+w}{ }\PYG{n}{THE}\PYG{+w}{ }\PYG{n}{FIRST}\PYG{+w}{ }\PYG{n}{FORTRAN}\PYG{+w}{ }\PYG{k}{PROGRAM}
+\PYG{k}{      }\PYG{k}{WRITE}\PYG{p}{(}\PYG{l+m+mi}{6}\PYG{p}{,}\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{+w}{   }\PYG{l+m+mi}{10}\PYG{+w}{ }\PYG{k}{FORMAT}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{n}{X}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}HELLO, WORLD.\PYGZsq{}}\PYG{p}{)}
+\PYG{+w}{      }\PYG{k}{END}
+\end{MintedVerbatim}

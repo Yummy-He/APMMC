@@ -1,0 +1,337 @@
+\documentclass[12pt, a4paper, oneside]{ctexart}
+\tolerance=20000
+\usepackage{metalogo}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{forest}
+\usepackage{dirtree}
+\usepackage{amsmath, amsthm, amssymb, appendix, bm, mathrsfs, graphicx, upgreek, parskip}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{unicode-math}
+\usepackage{subcaption}
+\graphicspath{{image/}}
+\usepackage[square, super,sort&compress]{natbib}
+\usepackage{etoolbox}
+\usepackage{xpatch} % 用于去除amsthm定义的编号后面的点
+\usepackage[strict]{changepage} % 提供一个 adjustwidth 环境
+% 带圈数字
+\usepackage{fontspec}
+\newfontfamily{\circlefont}{Segoe UI Symbol}
+% \setmonofont{Consolas}[Scale = 0.9]
+
+% ————————————————————————————————————自定义颜色————————————————————————————————————
+
+\definecolor{qlv}{RGB}{230, 250, 238} % 浅绿
+\definecolor{slv}{RGB}{33, 96, 92} % 深绿
+
+\definecolor{qlan}{RGB}{230, 240, 250} % 浅蓝
+\definecolor{slan}{RGB}{3, 92, 127} % 深蓝
+
+\definecolor{qhuang}{RGB}{246, 250, 235} % 浅黄
+\definecolor{shuang}{RGB}{77, 82, 59} % 深黄
+
+\definecolor{qzi}{RGB}{240, 243, 252} % 浅紫
+\definecolor{szi}{RGB}{49, 55, 70} % 深紫
+
+\definecolor{qhui}{RGB}{230, 230, 230} % 浅灰
+\definecolor{shui}{RGB}{40, 40, 40} % 深灰
+
+\definecolor{qhong}{RGB}{255, 220, 220} % 浅红
+\definecolor{shong}{RGB}{120, 0, 0} % 深红
+
+% 将RGB换为rgb，颜色数值取值范围改为0到1
+% ————————————————————————————————————自定义颜色————————————————————————————————————
+
+% ================= 字体配置 =================
+% \usepackage{xeCJK}
+
+% 中文字体配置
+\setCJKmainfont{SimSun}[
+  BoldFont = Noto Serif CJK SC Bold,
+  SlantedFont = KaiTi
+]
+
+\setmainfont{Times New Roman}[
+  SlantedFont = Times New Roman
+]
+
+\setCJKmonofont{Maple Mono NL NF CN}
+
+\setmonofont{Maple Mono NL NF CN}
+
+% \setmainfont{Times New Roman}
+
+% ================= 代码环境配置 =================
+% 使用 minted
+\usepackage{minted} % 添加 minted 宏包
+\usepackage{tcolorbox}
+
+\renewcommand{\theFancyVerbLine}{%
+  \small\ttfamily\color{shui}\arabic{FancyVerbLine}%
+}
+
+
+\tcbset{
+    before upper={\setlength{\parindent}{2em}} % 缩进2字符（可调整）
+}
+
+% 定义代码环境盒子
+
+\tcbuselibrary{minted, breakable, skins}
+% ————————————————————————————————————盒子设置————————————————————————————————————
+% tolorbox提供了tcolorbox环境，其格式如下：
+% 第一种格式：\begin{tcolorbox}[colback=⟨背景色⟩, colframe=⟨框线色⟩, arc=⟨转角弧度半径⟩, boxrule=⟨框线粗⟩]   \end{tcolorbox}
+% 其中设置arc=0mm可得到直角；boxrule可换为toprule/bottomrule/leftrule/rightrule可分别设置对应边宽度，但是设置为0mm时仍有细边，若要绘制单边框线推荐使用第二种格式
+% 方括号内加上title=⟨标题⟩, titlerule=⟨标题背景线粗⟩, colbacktitle=⟨标题背景线色⟩可为盒子加上标题及其背景线
+\newenvironment{lvse}{
+    \begin{tcolorbox}[enhanced, colback=qlv, boxrule=0pt, frame hidden, breakable=true,
+        borderline west={0.7mm}{0.1mm}{slv}]
+    }
+    {\end{tcolorbox}}
+\newenvironment{lanse}{
+    \begin{tcolorbox}[enhanced, colback=qlan, boxrule=0pt, frame hidden, breakable=true,
+        borderline west={0.7mm}{0.1mm}{slan}
+        ]
+    }
+    {\end{tcolorbox}}
+\newenvironment{huangse}{
+    \begin{tcolorbox}[enhanced, colback=qhuang, boxrule=0pt, frame hidden, breakable=true,
+        borderline west={0.7mm}{0.1mm}{shuang}]
+    }
+    {\end{tcolorbox}}
+\newenvironment{zise}{
+    \begin{tcolorbox}[enhanced, colback=qzi, boxrule=0pt, frame hidden, breakable=true,
+        borderline west={0.7mm}{0.1mm}{szi}]
+    }
+    {\end{tcolorbox}}
+\newenvironment{huise}{
+    \begin{tcolorbox}[enhanced, colback=qhui, boxrule=0pt, frame hidden, breakable=true,
+        borderline west={0.7mm}{0.1mm}{shui}]
+    }
+    {\end{tcolorbox}}
+\newenvironment{hongse}{
+    \begin{tcolorbox}[enhanced, colback=qhong, boxrule=0pt, frame hidden, breakable=true,
+        borderline west={0.7mm}{0.1mm}{shong}]
+    }
+    {\end{tcolorbox}}
+
+% tcolorbox宏包还提供了\tcbox指令，用于生成行内盒子，可制作高光效果
+\newcommand{\hl}[1]{
+    \tcbox[on line, arc=0pt, colback=hlan!5!white, colframe=hlan!5!white, boxsep=1pt, left=1pt, right=1pt, top=1.5pt, bottom=1.5pt, boxrule=0pt]
+{\bfseries \color{hlan}#1}}
+% 其中on line将盒子放置在本行（缺失会跳到下一行），boxsep用于控制文本内容和边框的距离，left、right、top、bottom则分别在boxsep的参数的基础上分别控制四边距离
+% ————————————————————————————————————盒子设置————————————————————————————————————
+
+% ————————————————————————————————————自定义字体设置————————————————————————————————————
+% \setCJKfamilyfont{xbsong}{方正小标宋简体}
+% \newcommand{\xbsong}{\CJKfamily{xbsong}}
+% CTeX宏集还预定义了\songti、\heiti、\fangsong、\kaishu、\lishu、\youyuan、\yahei、\pingfang等字体命令
+% 由于未知原因，一些设备可能无法调用这些字体，故此文档暂时未使用
+% ————————————————————————————————————自定义字体设置————————————————————————————————————
+
+% ————————————————————————————————————定理类环境设置————————————————————————————————————
+\newtheoremstyle{t}{0pt}{}{}{\parindent}{\bfseries}{}{1em}{} % 定义新定理风格。格式如下：
+%\newtheoremstyle{⟨风格名⟩}
+%                {⟨上方间距⟩} % 若留空，则使用默认值
+%                {⟨下方间距⟩} % 若留空，则使用默认值
+%                {⟨主体字体⟩} % 如 \itshape
+%                {⟨缩进长度⟩} % 若留空，则无缩进；可以使用 \parindent 进行正常段落缩进
+%                {⟨定理头字体⟩} % 如 \bfseries
+%                {⟨定理头后的标点符号⟩} % 如点号、冒号
+%                {⟨定理头后的间距⟩} % 不可留空，若设置为 { }，则表示正常词间间距；若设置为 {\newline}，则环境内容开启新行
+%                {⟨定理头格式指定⟩} % 一般留空
+% 定理风格决定着由 \newtheorem 定义的环境的具体格式，有三种定理风格是预定义的，它们分别是：
+% plain: 环境内容使用意大利斜体，环境上下方添加额外间距
+% definition: 环境内容使用罗马正体，环境上下方添加额外间距
+% remark: 环境内容使用罗马正体，环境上下方不添加额外间距
+\theoremstyle{t} % 设置定理风格
+\newtheorem{dyhj}{\color{slv} 定义}[section] % 定义定义环境，格式为\newtheorem{⟨环境名⟩}{⟨定理头文本⟩}[⟨上级计数器⟩]或\newtheorem{⟨环境名⟩}[⟨共享计数器⟩]{⟨定理头文本⟩}，其变体\newtheorem*不带编号
+\newtheorem{dlhj}{\color{shuang} 定理}[section]
+\newtheorem{lthj}{\color{szi} 例}[section]
+\newtheorem{dmhj}{\color{shui} 代码}[section]
+\newtheorem{zjhj}{\color{shong} 总结}[section]
+\newtheorem{zyhj}{\color{shong} 注意}[section]
+\newtheorem*{jiehj}{\color{slan} 解}
+\newtheorem*{zmhj}{\color{slan} 证明}
+
+
+% ===================
+\newenvironment{dy}{\begin{lvse}\begin{dyhj}}{\end{dyhj}\end{lvse}}
+\newenvironment{dl}{\begin{huangse}\begin{dlhj}}{\end{dlhj}\end{huangse}}
+\newenvironment{lt}{\begin{zise}\begin{lthj}}{\end{lthj}\end{zise}}
+\newenvironment{zj}{\begin{hongse}\begin{zjhj}}{\end{zjhj}\end{hongse}}
+\newenvironment{zy}{\begin{hongse}\begin{zyhj}}{\end{zyhj}\end{hongse}}
+
+\newenvironment{zm}{\begin{lanse}\begin{zmhj}}{$\hfill \square$\end{zmhj}\end{lanse}}
+\newenvironment{jie}{\begin{lanse}\begin{jiehj}}{\end{jiehj}\end{lanse}}
+
+% 创建代码计数器（按section重置）
+\newcounter{code}[subsection]
+\renewcommand{\thecode}{\thesubsection.\arabic{code}}
+
+% 定义代码标题样式
+\newcommand{\codetitle}[1]{%
+  \refstepcounter{code}% 递增计数器
+  \par\noindent\hspace{-2em}% 向左微调（根据需要调整）
+  \textbf{\color{shui}代码~\thecode}
+  \hspace{0.5em}
+  \texttt{\color{gray}#1}% 标题格式
+  \par\nobreak\vspace{0\baselineskip}% 标题与代码间距
+}
+
+\newtcblisting{envcode}[3][]{
+  enhanced,
+  breakable,
+  colback=qhui,
+  boxrule=0pt,
+  frame hidden,
+  borderline west={0.7mm}{0.1mm}{shui}, % 左侧竖线
+  listing only,
+  listing engine=minted,
+  minted style=perldoc,            % 代码高亮风格
+  minted language={#2},           % 编程语言参数
+  left=3em,
+  minted options={
+    linenos,                      % 显示行号
+    numbersep=1em,                % 行号与代码间距
+    fontfamily=tt,                % 等宽字体
+    breaklines,                   % 自动换行
+    % autogobble,                   % 自动缩进
+    fontsize=\small,              % 字体大小
+    framesep=2mm                  % 代码边框间距
+  },
+  before upper={\codetitle{#3}}, % 在代码前插入标题
+  #1 % 可选的额外参数
+}
+
+% 行内代码环境
+\newcommand{\code}[2][text]{
+  \mintinline[breaklines, breakanywhere, bgcolor=qhui, style=xcode, fontsize=\small]{#1}{#2}
+}
+
+% ————————————————————————————————————定理类环境设置————————————————————————————————————
+
+% \tcbuselibrary{skins, minted} % 确保加载 minted 库
+% \tcbset{
+%     codebox/.style={
+%         enhanced,
+%         colback=gray!10,
+%         colframe=gray!30,
+%         boxrule=0.5pt,
+%         arc=0pt,
+%         before skip=10pt,
+%         after skip=10pt,
+%         listing engine=minted, % 修复：使用 listing engine 而非 minted engine
+%     }
+% }
+
+
+% 使用 minted 定义代码环境（废弃）
+% \newtcblisting{codeenv}[1]{
+%     listing engine=minted,
+%     minted style=colorful,
+%     minted language={#1},
+%     minted options={
+%         fontsize=\small,
+%         breaklines,
+%         autogobble,
+%         linenos,
+%         numbersep=3mm
+%     },
+%     colback=blue!5!white,
+%     colframe=blue!75!black,
+%     listing only,
+%     left=5mm,
+%     enhanced,
+%     overlay={\begin{tcbclipinterior}\fill[red!20!blue!20!white] (frame.south west) 
+%         rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}}
+% }
+
+% 定义带圈数字命令 - 修复 # 字符问题
+\newcommand{\circled}[1]{%
+    {\circlefont\char\numexpr"2460 + #1 - 1\relax}% % 修复：使用 #1 而不是 #1
+}
+
+% 首段缩进
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+
+% 页边距
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm,top=2.5cm,bottom=2.5cm}
+
+% 标题格式
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\LARGE\bfseries}
+  {\thesection}
+  {0.5em}
+  {}
+\titlespacing*{\section}{-2em}{2ex plus 1ex minus .1ex}{1ex plus .2ex}
+
+% 超链接
+\usepackage[hidelinks]{hyperref}
+
+
+
+
+
+
+
+
+
+
+
+
+\input{information.tex}
+\linespread{1.5}
+\renewcommand{\abstractname}{\Large\textbf{简介}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+\include{titlepage.tex} % 引入封面页
+
+\newpage
+\pagenumbering{Roman}
+\setcounter{page}{1}
+
+\tableofcontents %引入目录
+
+\newpage
+\setcounter{page}{1} %重设页数为1
+\pagenumbering{arabic}
+
+\setlength{\parskip}{0.3\baselineskip plus 0.1\baselineskip minus 0.1\baselineskip}
+
+% 调整数学环境前后的间距（带弹性伸缩）
+\setlength{\abovedisplayskip}{0.3\baselineskip plus 0.1\baselineskip minus 0.1\baselineskip}
+\setlength{\belowdisplayskip}{0.1\baselineskip plus 0.1\baselineskip minus 0.1\baselineskip}
+
+\setcounter{section}{-1}
+
+\input{content.tex}
+
+
+\newpage
+
+% 参考文献
+% \nocite{*}
+% \bibliographystyle{unsrt}
+% \addcontentsline{toc}{section}{\refname}
+% \bibliography{references.bib}
+
+\input{appendices.tex} 
+
+\end{document}

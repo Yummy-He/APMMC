@@ -1,0 +1,3 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+sed\PYG{+w}{ }\PYG{o}{[}选项\PYG{o}{]}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}命令\PYGZsq{}}\PYG{+w}{ }\PYG{o}{[}文件...\PYG{o}{]}
+\end{MintedVerbatim}

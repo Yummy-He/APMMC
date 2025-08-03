@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{      }\PYG{n}{M}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{p}{(}\PYG{n}{A}\PYG{p}{)}
+\PYG{+w}{      }\PYG{n}{N}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{IFIX}\PYG{p}{(}\PYG{n}{B}\PYG{p}{)}
+\PYG{+w}{      }\PYG{n}{I}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{IDINT}\PYG{p}{(}\PYG{n}{C}\PYG{p}{)}
+\end{MintedVerbatim}

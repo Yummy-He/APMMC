@@ -1,0 +1,2020 @@
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.28)  3 AUG 2025 14:53
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**main
+(./main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/ctexart.cls (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
+File: ctexbackend.cfg 2022/07/14 v2.5.10 Backend configuration file (CTEX)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
+\g__graphics_track_int=\count192
+\l__pdf_internal_box=\box52
+\g__pdf_backend_annotation_int=\count193
+\g__pdf_backend_link_int=\count194
+))
+Document Class: ctexart 2022/07/14 v2.5.10 Chinese adapter for class article (CTEX)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/ctexhook.sty
+Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/ctexpatch.sty
+Package: ctexpatch 2022/07/14 v2.5.10 Patching commands (CTEX)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+\l__ctex_tmp_int=\count195
+\l__ctex_tmp_box=\box53
+\l__ctex_tmp_dim=\dimen141
+\g__ctex_section_depth_int=\count196
+\g__ctex_font_size_int=\count197
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+File: ctexopts.cfg 2022/07/14 v2.5.10 Option configuration file (CTEX)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count198
+\c@section=\count199
+\c@subsection=\count266
+\c@subsubsection=\count267
+\c@paragraph=\count268
+\c@subparagraph=\count269
+\c@figure=\count270
+\c@table=\count271
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen142
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+File: ctex-engine-xetex.def 2022/07/14 v2.5.10 XeLaTeX adapter (CTEX)
+ (/usr/local/texlive/2025/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+Package: xeCJK 2022/08/05 v3.9.1 Typesetting CJK scripts with XeLaTeX
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2024-08-16 L3 Experimental prototype document functions
+)
+\l__xeCJK_tmp_int=\count272
+\l__xeCJK_tmp_box=\box54
+\l__xeCJK_tmp_dim=\dimen143
+\l__xeCJK_tmp_skip=\skip51
+\g__xeCJK_space_factor_int=\count273
+\l__xeCJK_begin_int=\count274
+\l__xeCJK_end_int=\count275
+\c__xeCJK_CJK_class_int=\XeTeXcharclass1
+\c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
+\c__xeCJK_FullRight_class_int=\XeTeXcharclass3
+\c__xeCJK_HalfLeft_class_int=\XeTeXcharclass4
+\c__xeCJK_HalfRight_class_int=\XeTeXcharclass5
+\c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
+\c__xeCJK_CM_class_int=\XeTeXcharclass7
+\c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
+\l__xeCJK_last_skip=\skip52
+\c__xeCJK_none_node=\count276
+\g__xeCJK_node_int=\count277
+\c__xeCJK_CJK_node_dim=\dimen144
+\c__xeCJK_CJK-space_node_dim=\dimen145
+\c__xeCJK_default_node_dim=\dimen146
+\c__xeCJK_CJK-widow_node_dim=\dimen147
+\c__xeCJK_normalspace_node_dim=\dimen148
+\c__xeCJK_default-space_node_skip=\skip53
+\l__xeCJK_ccglue_skip=\skip54
+\l__xeCJK_ecglue_skip=\skip55
+\l__xeCJK_punct_kern_skip=\skip56
+\l__xeCJK_indent_box=\box55
+\l__xeCJK_last_penalty_int=\count278
+\l__xeCJK_last_bound_dim=\dimen149
+\l__xeCJK_last_kern_dim=\dimen150
+\l__xeCJK_widow_penalty_int=\count279
+
+LaTeX template Info: Declaring template type 'xeCJK/punctuation' taking 0
+(template)           argument(s) on line 2396.
+
+\l__xeCJK_fixed_punct_width_dim=\dimen151
+\l__xeCJK_mixed_punct_width_dim=\dimen152
+\l__xeCJK_middle_punct_width_dim=\dimen153
+\l__xeCJK_fixed_margin_width_dim=\dimen154
+\l__xeCJK_mixed_margin_width_dim=\dimen155
+\l__xeCJK_middle_margin_width_dim=\dimen156
+\l__xeCJK_bound_punct_width_dim=\dimen157
+\l__xeCJK_bound_margin_width_dim=\dimen158
+\l__xeCJK_margin_minimum_dim=\dimen159
+\l__xeCJK_kerning_total_width_dim=\dimen160
+\l__xeCJK_same_align_margin_dim=\dimen161
+\l__xeCJK_different_align_margin_dim=\dimen162
+\l__xeCJK_kerning_margin_width_dim=\dimen163
+\l__xeCJK_kerning_margin_minimum_dim=\dimen164
+\l__xeCJK_bound_dim=\dimen165
+\l__xeCJK_reverse_bound_dim=\dimen166
+\l__xeCJK_margin_dim=\dimen167
+\l__xeCJK_minimum_bound_dim=\dimen168
+\l__xeCJK_kerning_margin_dim=\dimen169
+\g__xeCJK_family_int=\count280
+\l__xeCJK_fam_int=\count281
+\g__xeCJK_fam_allocation_int=\count282
+\l__xeCJK_verb_case_int=\count283
+\l__xeCJK_verb_exspace_skip=\skip57
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: fontspec 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count284
+\l__fontspec_language_int=\count285
+\l__fontspec_strnum_int=\count286
+\l__fontspec_tmp_int=\count287
+\l__fontspec_tmpa_int=\count288
+\l__fontspec_tmpb_int=\count289
+\l__fontspec_tmpc_int=\count290
+\l__fontspec_em_int=\count291
+\l__fontspec_emdef_int=\count292
+\l__fontspec_strong_int=\count293
+\l__fontspec_strongdef_int=\count294
+\l__fontspec_tmpa_dim=\dimen170
+\l__fontspec_tmpb_dim=\dimen171
+\l__fontspec_tmpc_dim=\dimen172
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/local/texlive/2025/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
+))
+\ccwd=\dimen173
+\l__ctex_ccglue_skip=\skip58
+)
+\l__ctex_ziju_dim=\dimen174
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+Package: zhnumber 2022/07/14 v3.0 Typesetting numbers with Chinese glyphs
+\l__zhnum_scale_int=\count295
+\l__zhnum_tmp_int=\count296
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+File: zhnumber-utf8.cfg 2022/07/14 v3.0 Chinese numerals with UTF8 encoding
+))
+\l__ctex_heading_skip=\skip59
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese-article.def
+File: ctex-scheme-chinese-article.def 2022/07/14 v2.5.10 Chinese scheme for article (CTEX)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+File: ctex-name-utf8.cfg 2022/07/14 v2.5.10 Caption with encoding UTF-8 (CTEX)
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-fandol.def
+File: ctex-fontset-fandol.def 2022/07/14 v2.5.10 Fandol fonts definition (CTEX)
+
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font
+(fontspec)             'FandolSong-Regular'. Check the typeset output, and if
+(fontspec)             it is okay then ignore this warning. Otherwise a
+(fontspec)             different font should be chosen.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FandolSong-Regular(0)' created for font
+(fontspec)             'FandolSong-Regular' with options
+(fontspec)             [Script={CJK},Extension={.otf},BoldFont={FandolSong-Bold},ItalicFont={FandolKai-Regular}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
+
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/config/ctex.cfg
+File: ctex.cfg 2022/07/14 v2.5.10 Configuration file (CTEX)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/metalogo/metalogo.sty
+Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen175
+\Gin@req@width=\dimen176
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\xl@everylogo=\toks18
+\xl@@everylogo=\toks19
+LaTeX Info: Redefining \TeX on input line 193.
+LaTeX Info: Redefining \LaTeX on input line 202.
+LaTeX Info: Redefining \LaTeXe on input line 219.
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks20
+\pgfutil@tempdima=\dimen177
+\pgfutil@tempdimb=\dimen178
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box56
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks21
+\pgfkeys@temptoks=\toks22
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks23
+))
+\pgf@x=\dimen179
+\pgf@y=\dimen180
+\pgf@xa=\dimen181
+\pgf@ya=\dimen182
+\pgf@xb=\dimen183
+\pgf@yb=\dimen184
+\pgf@xc=\dimen185
+\pgf@yc=\dimen186
+\pgf@xd=\dimen187
+\pgf@yd=\dimen188
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count297
+\c@pgf@countb=\count298
+\c@pgf@countc=\count299
+\c@pgf@countd=\count300
+\t@pgf@toka=\toks24
+\t@pgf@tokb=\toks25
+\t@pgf@tokc=\toks26
+\pgf@sys@id@count=\count301
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-xetex.def
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
+File: pgfsys-xetex.def 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)
+\pgfsys@objnum=\count302
+))) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count303
+\pgfsyssoftpath@bigbuffer@items=\count304
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen189
+\pgfmath@count=\count305
+\pgfmath@box=\box57
+\pgfmath@toks=\toks27
+\pgfmath@stack@operand=\toks28
+\pgfmath@stack@operation=\toks29
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count306
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen190
+\pgf@picmaxx=\dimen191
+\pgf@picminy=\dimen192
+\pgf@picmaxy=\dimen193
+\pgf@pathminx=\dimen194
+\pgf@pathmaxx=\dimen195
+\pgf@pathminy=\dimen196
+\pgf@pathmaxy=\dimen197
+\pgf@xx=\dimen198
+\pgf@xy=\dimen199
+\pgf@yx=\dimen256
+\pgf@yy=\dimen257
+\pgf@zx=\dimen258
+\pgf@zy=\dimen259
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen260
+\pgf@path@lasty=\dimen261
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen262
+\pgf@shorten@start@additional=\dimen263
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box58
+\pgf@hbox=\box59
+\pgf@layerbox@main=\box60
+\pgf@picture@serial@count=\count307
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen264
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen265
+\pgf@pt@y=\dimen266
+\pgf@pt@temp=\dimen267
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen268
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen269
+\pgf@sys@shading@range@num=\count308
+\pgf@shadingcount=\count309
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box61
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box62
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen270
+\pgf@nodesepend=\dimen271
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen272
+\pgffor@skip=\dimen273
+\pgffor@stack=\toks30
+\pgffor@toks=\toks31
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count310
+\pgfplotmarksize=\dimen274
+)
+\tikz@lastx=\dimen275
+\tikz@lasty=\dimen276
+\tikz@lastxsaved=\dimen277
+\tikz@lastysaved=\dimen278
+\tikz@lastmovetox=\dimen279
+\tikz@lastmovetoy=\dimen280
+\tikzleveldistance=\dimen281
+\tikzsiblingdistance=\dimen282
+\tikz@figbox=\box63
+\tikz@figbox@bg=\box64
+\tikz@tempbox=\box65
+\tikz@tempbox@bg=\box66
+\tikztreelevel=\count311
+\tikznumberofchildren=\count312
+\tikznumberofcurrentchild=\count313
+\tikz@fig@count=\count314
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count315
+\pgfmatrixcurrentcolumn=\count316
+\pgf@matrix@numberofcolumns=\count317
+)
+\tikz@expandcount=\count318
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count319
+\float@exts=\toks32
+\float@box=\box67
+\@float@everytoks=\toks33
+\@floatcapt=\box68
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/forest/forest.sty
+Package: forest 2017/07/14 v2.1.5 Drawing (linguistic) trees
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodepartlowerbox=\box69
+\pgfnodeparttwobox=\box70
+\pgfnodepartthreebox=\box71
+\pgfnodepartfourbox=\box72
+\pgfnodeparttwentybox=\box73
+\pgfnodepartnineteenbox=\box74
+\pgfnodeparteighteenbox=\box75
+\pgfnodepartseventeenbox=\box76
+\pgfnodepartsixteenbox=\box77
+\pgfnodepartfifteenbox=\box78
+\pgfnodepartfourteenbox=\box79
+\pgfnodepartthirteenbox=\box80
+\pgfnodeparttwelvebox=\box81
+\pgfnodepartelevenbox=\box82
+\pgfnodeparttenbox=\box83
+\pgfnodepartninebox=\box84
+\pgfnodeparteightbox=\box85
+\pgfnodepartsevenbox=\box86
+\pgfnodepartsixbox=\box87
+\pgfnodepartfivebox=\box88
+))) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+\pgf@intersect@solutions=\count320
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks34
+\pgfopts@list@add@b@toks=\toks35
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count321
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/elocalloc/elocalloc.sty
+Package: elocalloc 2016/12/15 v0.03 local allocation for LaTeX 2015+ (DPC)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks36
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/inlinedef/inlinedef.sty
+Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
+\ID@toks=\toks37
+\ID@count=\count322
+)
+\ID@usercommands=\toks38
+\safeloop@depth=\count323
+\safeRKloop@depth=\count324
+\forest@temp@dimen=\dimen283
+\forest@temp@count=\count325
+\forest@n=\count326
+\forest@temp@global@count=\count327
+\forest@temp@toks=\toks39
+\forest@temparray@M=\count328
+\forest@temparray@N=\count329
+\forest@global@temparray@M=\count330
+\forest@global@temparray@N=\count331
+\forest@isnum@count=\count332
+\forest@isdim@nonintpart=\count333
+\forest@isdim@dimen=\dimen284
+\forest@sort@m=\count334
+\forest@sort@k=\count335
+\forest@sort@p=\count336
+\bracket@content=\toks40
+\bracket@afterthought=\toks41
+\forest@node@maxid=\count337
+\forest@process@left@M=\count338
+\forest@process@left@N=\count339
+\forest@process@right@M=\count340
+\forest@process@right@N=\count341
+\forest@process@saved@M=\count342
+\forest@process@saved@N=\count343
+\forest@process@result@M=\count344
+\forest@process@result@N=\count345
+\forest@process@n=\count346
+\forest@nodewalk@branch@toks=\toks42
+\forest@nodewalk@shortsteps@resolution=\toks43
+\forest@do@dynamics=\toks44
+\forest@box=\box89
+\forest@xg=\dimen285
+\forest@yg=\dimen286
+\forest@xs=\dimen287
+\forest@ys=\dimen288
+\forest@pi@toks=\toks45
+\forest@segment@toks=\toks46
+\forest@PIi@toks=\toks47
+\forest@PIii@toks=\toks48
+\forest@copy@in=\read3
+\forest@copy@out=\write4
+\forest@externalize@max@outer@n=\count347
+\forest@externalize@inner@n=\count348
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/dirtree/dirtree.sty
+Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/dirtree/dirtree.tex `dirtree' v0.32, 2012/12/11 (jcc)
+\DT@offset=\dimen289
+\DT@width=\dimen290
+\DT@sep=\dimen291
+\DT@all=\dimen292
+\DT@rulewidth=\dimen293
+\DT@dotwidth=\dimen294
+\DTbaselineskip=\dimen295
+\DT@counti=\count349
+\DT@countii=\count350
+\DT@countiii=\count351
+\DT@countiv=\count352
+\DT@indent=\dimen296
+\DT@parskip=\dimen297
+\DT@baselineskip=\dimen298
+)
+File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip60
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks49
+\ex@=\dimen299
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen300
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count353
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count354
+\leftroot@=\count355
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count356
+\DOTSCASE@=\count357
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box90
+\strutbox@=\box91
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen301
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count358
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count359
+\dotsspace@=\muskip17
+\c@parentequation=\count360
+\dspbrk@lvl=\count361
+\tag@help=\toks50
+\row@=\count362
+\column@=\count363
+\maxfields@=\count364
+\andhelp@=\toks51
+\eqnshift@=\dimen302
+\alignsep@=\dimen303
+\tagshift@=\dimen304
+\tagwidth@=\dimen305
+\totwidth@=\dimen306
+\lineht@=\dimen307
+\@envbody=\toks52
+\multlinegap=\skip61
+\multlinetaggap=\skip62
+\mathdisplay@stack=\toks53
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks54
+\thm@bodyfont=\toks55
+\thm@headfont=\toks56
+\thm@notefont=\toks57
+\thm@headpunct=\toks58
+\thm@preskip=\skip63
+\thm@postskip=\skip64
+\thm@headsep=\skip65
+\dth@everypar=\toks59
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count365
+\c@@ppsavesec=\count366
+\c@@ppsaveapp=\count367
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup9
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/was/upgreek.sty
+Package: upgreek 2003/02/12 v2.0 (WaS)
+Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
+\symugrf@m=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
+(Font)                  U/eur/m/n --> U/eur/b/n on input line 38.
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+Couldn't patch \@startsection
+Couldn't patch \@xsect
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+Package: unicode-math 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.sty
+Package: unicode-math-xetex 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
+)
+\g__um_fam_int=\count368
+\g__um_fonts_used_int=\count369
+\l__um_primecount_int=\count370
+\g__um_primekern_muskip=\muskip18
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex))) (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen308
+\captionmargin=\dimen309
+\caption@leftmargin=\dimen310
+\caption@rightmargin=\dimen311
+\caption@width=\dimen312
+\caption@indent=\dimen313
+\caption@parindent=\dimen314
+\caption@hangindent=\dimen315
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count371
+\c@continuedfloat=\count372
+Package caption Info: float package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count373
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count374
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip66
+\bibsep=\skip67
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count375
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/xpatch/xpatch.sty
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count376
+\cp@tempcnt=\count377
+)
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "Segoe UI Symbol/BI" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "Segoe UI Symbol/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "Segoe UI Symbol/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'SegoeUISymbol(0)' created for font 'Segoe
+(fontspec)             UI Symbol' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Segoe UI
+(fontspec)             Symbol/OT:script=latn;language=dflt;"
+
+
+
+Package xeCJK Warning: Redefining CJKfamily `\CJKrmdefault'
+(xeCJK)                (FandolSong-Regular(0)).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "Noto Serif CJK SC Bold/I" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "SimSun/BI" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "SimSun/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "KaiTi/B" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'SimSun(0)' created for font 'SimSun' with
+(fontspec)             options
+(fontspec)             [Script={CJK},SlantedFont={KaiTi},BoldFont={Noto Serif
+(fontspec)             CJK SC Bold}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"SimSun/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Noto Serif CJK SC
+(fontspec)             Bold/OT:script=hani;language=dflt;"
+(fontspec)             - 'slanted' (m/sl) with NFSS spec.:
+(fontspec)             <->"KaiTi/OT:script=hani;language=dflt;"
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [Ligatures=TeX,SlantedFont =
+(fontspec)             Times New Roman].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"Times
+(fontspec)             New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'slanted' (m/sl) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'slanted small caps'  (m/scsl) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold slanted' (b/sl) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold slanted small caps'  (b/scsl) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'TimesNewRoman(1)' created for font 'Times
+(fontspec)             New Roman' with options [SlantedFont = Times New
+(fontspec)             Roman].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"Times
+(fontspec)             New Roman/B/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'slanted' (m/sl) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;"
+(fontspec)             - 'slanted small caps'  (m/scsl) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'bold slanted' (b/sl) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold slanted small caps'  (b/scsl) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;+smcp;"
+
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 56.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line 56.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 56.
+
+Package xeCJK Warning: Redefining CJKfamily `\CJKttdefault'
+(xeCJK)                (FandolFang-Regular).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'MapleMonoNLNFCN(0)' created for font
+(fontspec)             'Maple Mono NL NF CN' with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=WordSpace].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Maple Mono NL NF
+(fontspec)             CN/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Maple Mono NL NF
+(fontspec)             CN/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Maple Mono NL NF
+(fontspec)             CN/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Maple Mono
+(fontspec)             NL NF CN/BI/OT:script=latn;language=dflt;"
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'MapleMonoNLNFCN(1)' created for font
+(fontspec)             'Maple Mono NL NF CN' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Maple Mono NL NF
+(fontspec)             CN/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Maple Mono NL NF
+(fontspec)             CN/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Maple Mono NL NF
+(fontspec)             CN/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Maple Mono
+(fontspec)             NL NF CN/BI/OT:script=latn;language=dflt;"
+
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/MapleMonoNLNFCN(1)/m/n on input line 61.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/MapleMonoNLNFCN(1)/b/n on input line 61.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2025/03/06 v3.6.0 Yet another Pygments shim for LaTeX
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2025/03/04 v1.12.0 fvextra - extensions and patches for fancyvrb
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count378
+\FV@InFile=\read4
+\FV@TabBox=\box92
+\c@FancyVerbLine=\count379
+\FV@StepNumber=\count380
+\FV@OutFile=\write5
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2025/01/29 line numbers on paragraphs v5.4
+\linenopenalty=\count381
+\output=\toks60
+\linenoprevgraf=\count382
+\linenumbersep=\dimen316
+\linenumberwidth=\dimen317
+\c@linenumber=\count383
+\c@pagewiselinenumber=\count384
+\c@LN@truepage=\count385
+\c@internallinenumber=\count386
+\c@internallinenumbers=\count387
+\quotelinenumbersep=\dimen318
+\bframerule=\dimen319
+\bframesep=\dimen320
+\bframebox=\box93
+\@LN@amsmath@ams@eqpen=\count388
+LaTeX Info: Redefining \\ on input line 3187.
+)
+\c@FancyVerbWriteLine=\count389
+\c@FancyVerbBufferLine=\count390
+\c@FV@TrueTabGroupLevel=\count391
+\c@FV@TrueTabCounter=\count392
+\FV@TabBox@Group=\box94
+\FV@bgcolorstructbox=\box95
+\FV@TmpLength=\skip68
+\c@FV@HighlightLinesStart=\count393
+\c@FV@HighlightLinesStop=\count394
+\FV@LoopCount=\count395
+\FV@NCharsBox=\box96
+\FV@BreakIndent=\dimen321
+\FV@BreakIndentNChars=\count396
+\FV@BreakSymbolSepLeft=\dimen322
+\FV@BreakSymbolSepLeftNChars=\count397
+\FV@BreakSymbolSepRight=\dimen323
+\FV@BreakSymbolSepRightNChars=\count398
+\FV@BreakSymbolIndentLeft=\dimen324
+\FV@BreakSymbolIndentLeftNChars=\count399
+\FV@BreakSymbolIndentRight=\dimen325
+\FV@BreakSymbolIndentRightNChars=\count400
+\c@FancyVerbLineBreakLast=\count401
+\FV@LineBox=\box97
+\FV@LineIndentBox=\box98
+\c@FV@BreakBufferDepth=\count402
+\FV@LineWidth=\dimen326
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/latex2pydata/latex2pydata.sty
+Package: latex2pydata 2025/03/03 v0.5.0 latex2pydata - write data to file in Python literal format
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+\c@minted@FancyVerbLineTemp=\count403
+\@float@every@listing=\toks61
+\c@listing=\count404
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2024/10/22 version 6.4.1 text color boxes
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks62
+\verbatim@line=\toks63
+\verbatim@in@stream=\read5
+)
+\tcb@titlebox=\box99
+\tcb@upperbox=\box100
+\tcb@lowerbox=\box101
+\tcb@phantombox=\box102
+\c@tcbbreakpart=\count405
+\c@tcblayer=\count406
+\c@tcolorbox@number=\count407
+\l__tcobox_tmpa_box=\box103
+\l__tcobox_tmpa_dim=\dimen327
+\tcb@temp=\box104
+\tcb@temp=\box105
+\tcb@temp=\box106
+\tcb@temp=\box107
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbminted.code.tex
+Library (tcolorbox): 'tcbminted.code.tex' version '6.4.1'
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '6.4.1'
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '6.4.1'
+)
+\c@tcblisting=\count408
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.4.1'
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pdfcol/pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
+)
+Package pdfcol Info: pdfTeX's color stacks are not available.
+\tcb@testbox=\box108
+\tcb@totalupperbox=\box109
+\tcb@totallowerbox=\box110
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.4.1'
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
+Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
+\l__tikzfill_img_box=\box111
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.4.1'
+))
+\c@dyhj=\count409
+\c@dlhj=\count410
+\c@lthj=\count411
+\c@dmhj=\count412
+\c@zjhj=\count413
+\c@zyhj=\count414
+\c@code=\count415
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count416
+\Gm@cntv=\count417
+\c@Gm@tempcnt=\count418
+\Gm@bindingoffset=\dimen328
+\Gm@wd@mp=\dimen329
+\Gm@odd@mp=\dimen330
+\Gm@even@mp=\dimen331
+\Gm@layoutwidth=\dimen332
+\Gm@layoutheight=\dimen333
+\Gm@layouthoffset=\dimen334
+\Gm@layoutvoffset=\dimen335
+\Gm@dimlist=\toks64
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box112
+\beforetitleunit=\skip69
+\aftertitleunit=\skip70
+\ttl@plus=\dimen336
+\ttl@minus=\dimen337
+\ttl@toksa=\toks65
+\titlewidth=\dimen338
+\titlewidthlast=\dimen339
+\titlewidthfirst=\dimen340
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count419
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen341
+\Hy@linkcounter=\count420
+\Hy@pagecounter=\count421
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count422
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4040.
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count423
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip19
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen342
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count424
+\Field@Width=\dimen343
+\Fld@charsize=\dimen344
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count425
+\c@Item=\count426
+\c@Hfootnote=\count427
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2024-11-05 v7.01l Hyperref driver for XeTeX
+\pdfm@box=\box113
+\c@Hy@AnnotLevel=\count428
+\HyField@AnnotCount=\count429
+\Fld@listcount=\count430
+\c@bookmark@seq@number=\count431
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip71
+) (./information.tex) (./main.aux (./titlepage.aux) (./content/chapter0.aux) (./content/chapter1.aux) (./content/chapter2.aux) (./content/chapter3.aux) (./appendices/appendiceA.aux) (./appendices/appendiceB.aux))
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 302.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 302.
+
+Package fontspec Info: 
+(fontspec)             Font family 'latinmodern-math.otf(0)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,BoldFont={latinmodern-math.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'latinmodern-math.otf(1)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.2-},{Size=7.2-10.2,Font=latinmodern-math.otf,Style=MathScript},{Size=-7.2,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.2->"[latinmodern-math.otf]/OT:script=math;language=dflt;"<7.2-10.2>"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-7.2>"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 302.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 302.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 302.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 302.
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'latinmodern-math.otf(2)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.2-},{Size=7.2-10.2,Font=latinmodern-math.otf,Style=MathScript},{Size=-7.2,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=1.0001,FontAdjustment={\fontdimen
+(fontspec)             8\font =8.124pt\relax \fontdimen 9\font =4.728pt\relax
+(fontspec)             \fontdimen 10\font =5.328pt\relax \fontdimen 11\font
+(fontspec)             =8.232pt\relax \fontdimen 12\font =4.14pt\relax
+(fontspec)             \fontdimen 13\font =4.356pt\relax \fontdimen 14\font
+(fontspec)             =4.356pt\relax \fontdimen 15\font =3.468pt\relax
+(fontspec)             \fontdimen 16\font =2.964pt\relax \fontdimen 17\font
+(fontspec)             =2.964pt\relax \fontdimen 18\font =3.0pt\relax
+(fontspec)             \fontdimen 19\font =2.4pt\relax \fontdimen 22\font
+(fontspec)             =3.0pt\relax \fontdimen 20\font =0pt\relax \fontdimen
+(fontspec)             21\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.2->s*[1.0001]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<7.2-10.2>s*[1.0001]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-7.2>s*[1.0001]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.0001]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 302.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 302.
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 302.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 302.
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'latinmodern-math.otf(3)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.2-},{Size=7.2-10.2,Font=latinmodern-math.otf,Style=MathScript},{Size=-7.2,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=0.9999,FontAdjustment={\fontdimen
+(fontspec)             8\font =0.48pt\relax \fontdimen 9\font =2.4pt\relax
+(fontspec)             \fontdimen 10\font =2.004pt\relax \fontdimen 11\font
+(fontspec)             =1.332pt\relax \fontdimen 12\font =7.2pt\relax
+(fontspec)             \fontdimen 13\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.2->s*[0.9999]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<7.2-10.2>s*[0.9999]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-7.2>s*[0.9999]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9999]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 302.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 302.
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 302.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 302.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen345
+\caption@adjustwidth@linewidth=\dimen346
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=702.78308pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 302.
+(./main.out) (./main.out)
+\@outlinefile=\write6
+\openout6 = `main.out'.
+
+\openout2 = `titlepage.aux'.
+
+ (./titlepage.tex
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 14.40152pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00107pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.00075pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 14.39845pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) (./abstract.tex))
+
+[0
+
+
+] (./main.toc
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 12.00128pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 8.40088pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 6.00064pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 11.99872pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 8.3991pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.99936pt on input line 2.
+
+
+[1
+
+
+]
+
+[2])
+\tf@toc=\write7
+\openout7 = `main.toc'.
+
+
+
+[3] (./content.tex
+\openout2 = `content/chapter0.aux'.
+
+ (./content/chapter0.tex
+\g__tcobox_out_iow=\write8
+\openout8 = `main.listing'.
+
+
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font
+(fontspec)             'Maple Mono NL NF CN'. Check the typeset output, and if
+(fontspec)             it is okay then ignore this warning. Otherwise a
+(fontspec)             different font should be chosen.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'MapleMonoNLNFCN(2)' created for font
+(fontspec)             'Maple Mono NL NF CN' with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Maple Mono NL NF
+(fontspec)             CN/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Maple Mono NL NF
+(fontspec)             CN/B/OT:script=hani;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Maple Mono NL NF
+(fontspec)             CN/I/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Maple Mono
+(fontspec)             NL NF CN/BI/OT:script=hani;language=dflt;"
+
+\pydata@fh@_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted=\write9
+\openout9 = `_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted'.
+
+runsystem(latexminted config  --timestamp 20250803145358 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+
+ (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
+runsystem(latexminted cleanconfig  --timestamp 20250803145358 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+
+ (./_minted/perldoc.style.minted) (./_minted/AF97557D1C1C379662F1E3D0EAF5E50A.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/C10902290529CFFC19C574FDBE3C6BEC.highlight.minted) (./_minted/xcode.style.minted) (./_minted/8518FACA49B51CA801483A4BF9872547.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/25BA10E7333C6D96FC93E90F778F8DB9.highlight.minted)
+
+[1
+
+])
+
+[2]
+\openout2 = `content/chapter1.aux'.
+
+ (./content/chapter1.tex
+
+[3
+
+
+
+]
+\openout8 = `main.listing'.
+
+ (./_minted/024BB23736E8FE7F96FCDA734CDABC0A.highlight.minted)
+
+[4]
+
+[5] (./_minted/6A4822443DC318DAC86488AFD789ED1F.highlight.minted) (./_minted/8F94AE2C9B5A830335DD0EA6F10EFAD2.highlight.minted) (./_minted/9FD7E20F47A9294DA6578EACFB5C1CB9.highlight.minted) (./_minted/4ABAEF40EB59C6DA0B74AC6A8F91C478.highlight.minted) (./_minted/ABE997643E8C52CD6CB0B245378C11F2.highlight.minted) (./_minted/9E52E48B47249AE84F610212E554533A.highlight.minted) (./_minted/9C4715A2613B737E6AED65CF83728476.highlight.minted) (./_minted/CA34E0A6A31BACF936E5B6961E5DC031.highlight.minted) (./_minted/4E2D52C5801EB685E94C90A9BEBED4CB.highlight.minted) (./_minted/ED9C024576B27B00C767BBDD5EF8AB34.highlight.minted) (./_minted/9263F32F8DA00E3981652347AB6A575E.highlight.minted) (./_minted/F79A13C38B91CF11022624A509991B22.highlight.minted) (./_minted/5BE8221D991375427513815A7C46A4FE.highlight.minted) (./_minted/ED37C65DCF06015BDE5F867968E4ECFF.highlight.minted) (./_minted/1C554937342F8F5228A03AC7334A3C10.highlight.minted) (./_minted/5C0169F796AE6534E81CE04E0C332062.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/BBCA5956BF18F2E5227BADA7F818D69A.highlight.minted)
+
+[6] (./_minted/5C0169F796AE6534E81CE04E0C332062.highlight.minted) (./_minted/94FF641D790A74113011E0E6EB1AE4FE.highlight.minted) (./_minted/9FD7E20F47A9294DA6578EACFB5C1CB9.highlight.minted) (./_minted/93E8CDDD4DDD70D1B661BD0FB5D2BF90.highlight.minted) (./_minted/A2724558D7D8A50C04312BE9B65FAA86.highlight.minted) (./_minted/94FF641D790A74113011E0E6EB1AE4FE.highlight.minted) (./_minted/39D3859A35A0C154DB4440903104366F.highlight.minted) (./_minted/C513DC67743077B48EBE9AE4CEB5D88D.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/2C4C4FAC48640B17B9556DBFAA813E03.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/E85B807F54758DBBABD8A9928A5747B2.highlight.minted) (./_minted/B01F346821D474583F13A3332C934122.highlight.minted) (./_minted/026C28E905B3D85B0CE1EA671AB07CB0.highlight.minted) (./_minted/43AD9553416AAF2A32AFF06BCE554ED1.highlight.minted) (./_minted/81C182022159D1311D2D83E460A49DEC.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/3D99A01FE1CA3A27A312E2F46B91A0E3.highlight.minted) (./_minted/F608B3E543252923867028D6B4F994D4.highlight.minted) (./_minted/F608B3E543252923867028D6B4F994D4.highlight.minted) (./_minted/E4135C4D9F917F8F5B16F4DEB287B71B.highlight.minted) (./_minted/5CAE5205D68A47DD105EBF4E7E27B310.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/76D83BBF5C07A6CADC6BED6C6454D7DF.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/6F93E2AAC7B280C3F6EDC9F17DEE2C84.highlight.minted)
+
+[7] (./_minted/8B00550D6C2DF3EF3B336B0BAA3CD5D5.highlight.minted) (./_minted/66DD0FF12EC0824D8B353ECDCEC3783C.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/898A609B2DFDBE6E57B33A4E71BB7F3F.highlight.minted) (./_minted/81C182022159D1311D2D83E460A49DEC.highlight.minted) (./_minted/F608B3E543252923867028D6B4F994D4.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/B76B0BFE8528B8BEB44D2DC1CD32ED56.highlight.minted) (./_minted/33E6ED63B983CDF05EFCEE3FDD285853.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/2315EB1F4E95114E9E12624074C05B66.highlight.minted) (./_minted/33E6ED63B983CDF05EFCEE3FDD285853.highlight.minted) (./_minted/CFABDC990FE30FAD15E5C7D5AC1CA7DF.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/B5E79948BB11F337B979B2EBF75D90DA.highlight.minted) (./_minted/33E6ED63B983CDF05EFCEE3FDD285853.highlight.minted) (./_minted/CFABDC990FE30FAD15E5C7D5AC1CA7DF.highlight.minted) (./_minted/E4135C4D9F917F8F5B16F4DEB287B71B.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/9B9565288975645A5DAE2C7027B9997C.highlight.minted) (./_minted/C82019DA2F5D1E386FA6BDC8BFD30E3A.highlight.minted) (./_minted/778D5248937AECF4FE6D656BE07AAF3C.highlight.minted)
+
+[8] (./_minted/39D3859A35A0C154DB4440903104366F.highlight.minted) (./_minted/ACFA5BEA34DBBE63ADEB900C2659F114.highlight.minted) (./_minted/E4135C4D9F917F8F5B16F4DEB287B71B.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/AA584A4F40659CC3ADDC07A09C910F27.highlight.minted) (./_minted/39D3859A35A0C154DB4440903104366F.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/65747929587E5D3119F84C218CF00A5B.highlight.minted) (./_minted/0836148EF6C100550AE4AE2B9B20ACCE.highlight.minted) (./_minted/26B5B279EC816E18C09DBA55A5BD315B.highlight.minted) (./_minted/33E6ED63B983CDF05EFCEE3FDD285853.highlight.minted) (./_minted/E4135C4D9F917F8F5B16F4DEB287B71B.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/1D410A22293D3599C2C5C953EBEC6792.highlight.minted) (./_minted/33E6ED63B983CDF05EFCEE3FDD285853.highlight.minted) (./_minted/E4135C4D9F917F8F5B16F4DEB287B71B.highlight.minted) (./_minted/9F3B31C2B89E538EFBC71EB794B28E3C.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/DA52B2A66CD65C4F707EEA3F84F95EF7.highlight.minted) (./_minted/33E6ED63B983CDF05EFCEE3FDD285853.highlight.minted) (./_minted/141F0413F5457137F37C640D191C2373.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/B961CF1BC38AF6D025F6A67A80F15546.highlight.minted) (./_minted/141F0413F5457137F37C640D191C2373.highlight.minted) (./_minted/39D3859A35A0C154DB4440903104366F.highlight.minted) (./_minted/39D3859A35A0C154DB4440903104366F.highlight.minted) (./_minted/0836148EF6C100550AE4AE2B9B20ACCE.highlight.minted) (./_minted/B97B821E125185F2988F21244D0DFB6F.highlight.minted) (./_minted/94FB3DFDC6F2EBAFBA2E86F4806AEB37.highlight.minted) (./_minted/0836148EF6C100550AE4AE2B9B20ACCE.highlight.minted) (./_minted/26B5B279EC816E18C09DBA55A5BD315B.highlight.minted) (./_minted/DEAC12B42118634D4FF96843C4CCAFD7.highlight.minted) (./_minted/0836148EF6C100550AE4AE2B9B20ACCE.highlight.minted) (./_minted/26B5B279EC816E18C09DBA55A5BD315B.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/2445525DA2211CAAC3D30861C662D442.highlight.minted)
+
+[9] (./_minted/C82019DA2F5D1E386FA6BDC8BFD30E3A.highlight.minted) (./_minted/84B5C20D8AA51787EC79BDA73DDB5370.highlight.minted) (./_minted/3906B06AB57C53359A6EEB3D3CA4CD1F.highlight.minted) (./_minted/C82019DA2F5D1E386FA6BDC8BFD30E3A.highlight.minted) (./_minted/C82019DA2F5D1E386FA6BDC8BFD30E3A.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/B62DA4AB028539B60DAC53A0AAB108C1.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/FB5F57241D5CC8BECCEAE5B690B4AD0B.highlight.minted)
+
+[10] (./_minted/7DD9111E6F40DF41218E2B5238F74477.highlight.minted) (./_minted/724FA3C221BC1CF560C8D7721F508AE3.highlight.minted) (./_minted/26433094C9B1E90AD7DE37AAB5A5D649.highlight.minted) (./_minted/F6DBA3C2692B9C00F402358E89368C19.highlight.minted) (./_minted/65FF47C05E0497AB6F7C65F1C49EE989.highlight.minted) (./_minted/786A7B69041EC03E7C3903769CC2E1AA.highlight.minted)
+
+[11] (./_minted/93E8CDDD4DDD70D1B661BD0FB5D2BF90.highlight.minted) (./_minted/93E8CDDD4DDD70D1B661BD0FB5D2BF90.highlight.minted) (./_minted/75923302E56F0D699013D8105814DD10.highlight.minted) (./_minted/33E6ED63B983CDF05EFCEE3FDD285853.highlight.minted) (./_minted/950CE7DE0781923186566663434C306D.highlight.minted) (./_minted/33E6ED63B983CDF05EFCEE3FDD285853.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/519B275AF60F98AF918813515DDBC4C0.highlight.minted) (./_minted/950CE7DE0781923186566663434C306D.highlight.minted) (./_minted/DEAC12B42118634D4FF96843C4CCAFD7.highlight.minted) (./_minted/B97B821E125185F2988F21244D0DFB6F.highlight.minted) (./_minted/99302DAF303C383FEA2B9750F536A541.highlight.minted) (./_minted/F608B3E543252923867028D6B4F994D4.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/FC6761221C2754ED68D18FD751C55489.highlight.minted) (./_minted/5C0169F796AE6534E81CE04E0C332062.highlight.minted) (./_minted/AAA8503AC7B1CB8ABBFE5D936E0CB1E8.highlight.minted) (./_minted/026C28E905B3D85B0CE1EA671AB07CB0.highlight.minted) (./_minted/B01F346821D474583F13A3332C934122.highlight.minted) (./_minted/39D3859A35A0C154DB4440903104366F.highlight.minted) (./_minted/ACFA5BEA34DBBE63ADEB900C2659F114.highlight.minted) (./_minted/43AD9553416AAF2A32AFF06BCE554ED1.highlight.minted) (./_minted/66DD0FF12EC0824D8B353ECDCEC3783C.highlight.minted) (./_minted/7BAFD9EFACE9C1CC26E4BCDF6C07BFD3.highlight.minted) (./_minted/43AD9553416AAF2A32AFF06BCE554ED1.highlight.minted) (./_minted/8B00550D6C2DF3EF3B336B0BAA3CD5D5.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/B0138BEE7E1A10995EC7C5C5DC3A0DCD.highlight.minted) (./_minted/0836148EF6C100550AE4AE2B9B20ACCE.highlight.minted) (./_minted/26B5B279EC816E18C09DBA55A5BD315B.highlight.minted) (./_minted/0836148EF6C100550AE4AE2B9B20ACCE.highlight.minted) (./_minted/B97B821E125185F2988F21244D0DFB6F.highlight.minted) (./_minted/0836148EF6C100550AE4AE2B9B20ACCE.highlight.minted) (./_minted/26B5B279EC816E18C09DBA55A5BD315B.highlight.minted) (./_minted/DEAC12B42118634D4FF96843C4CCAFD7.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/03D4536B11E2CAB6880B1B2A9FFF36D6.highlight.minted) (./_minted/C82019DA2F5D1E386FA6BDC8BFD30E3A.highlight.minted) (./_minted/3906B06AB57C53359A6EEB3D3CA4CD1F.highlight.minted) (./_minted/92722DD2846EA232A6A772B876CEE456.highlight.minted) (./_minted/903ED8C230D6A0B5E13044B71C9404AF.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/4A2C8C825826F769B11B77214962B6DC.highlight.minted) (./_minted/950CE7DE0781923186566663434C306D.highlight.minted) (./_minted/DEAC12B42118634D4FF96843C4CCAFD7.highlight.minted) (./_minted/B97B821E125185F2988F21244D0DFB6F.highlight.minted) (./_minted/99302DAF303C383FEA2B9750F536A541.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/643005C75A2D8A68DCB4EC9453A02946.highlight.minted)
+
+[12] (./_minted/5C0169F796AE6534E81CE04E0C332062.highlight.minted) (./_minted/C82019DA2F5D1E386FA6BDC8BFD30E3A.highlight.minted)
+
+[13] (./_minted/E23119EFA97F8897F7580FFC03EA010A.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/3C6961BC58664F25457B59DAB3B6EC0D.highlight.minted) (./_minted/3D709D0BADC233A9744B15F3E0E16475.highlight.minted) (./_minted/3D709D0BADC233A9744B15F3E0E16475.highlight.minted) (./_minted/251E4EBD16DEF323775D9DDE9F79DE34.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/B4C432CCFA9E1DDC136A3053B717CA95.highlight.minted) (./_minted/3CC2C29ACB6CFA265380BF5299A213B9.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/268478D528A770D06F9DDD7808ED7D8E.highlight.minted) (./_minted/7C719BA22EA9FC2925F25796EBB982EF.highlight.minted) (./_minted/8893927419942F2955A18DB5491BC9EA.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/B2D478DA12A8FF6066859C955C7AE532.highlight.minted) (./_minted/62379AB17A01A0D90C15FB18CEE544CA.highlight.minted) (./_minted/62379AB17A01A0D90C15FB18CEE544CA.highlight.minted) (./_minted/9B5C969EDDABA910A939010834B399DC.highlight.minted) (./_minted/9B5C969EDDABA910A939010834B399DC.highlight.minted) (./_minted/9B5C969EDDABA910A939010834B399DC.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/7A2D8AA667BB39571179CEC628D4648D.highlight.minted)
+
+[14] (./_minted/707327C95545889D31F0F7CBE01C7F5C.highlight.minted) (./_minted/F693595E060ABFD962F7E56E346DDA65.highlight.minted) (./_minted/9B5C969EDDABA910A939010834B399DC.highlight.minted) (./_minted/81C182022159D1311D2D83E460A49DEC.highlight.minted) (./_minted/A24FF7CEE1FB81295C4F420A1C1585EC.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/D4182D0A600DE3A98FE73A584AF4FA05.highlight.minted) (./_minted/4F2EE1A0EE8B0E3776D732D10CCB9D5D.highlight.minted) (./_minted/5C0169F796AE6534E81CE04E0C332062.highlight.minted) (./_minted/C82019DA2F5D1E386FA6BDC8BFD30E3A.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/C73DD934EFBFC1587B59DE8F12704008.highlight.minted) (./_minted/5C0169F796AE6534E81CE04E0C332062.highlight.minted) (./_minted/C82019DA2F5D1E386FA6BDC8BFD30E3A.highlight.minted) (./_minted/C82019DA2F5D1E386FA6BDC8BFD30E3A.highlight.minted) (./_minted/C82019DA2F5D1E386FA6BDC8BFD30E3A.highlight.minted) (./_minted/D215EE7D5D4FA0C1CEE7727D047FB212.highlight.minted) (./_minted/2E3A0E34AF47EC149129D3CB756E53E6.highlight.minted) (./_minted/A3CFC2F8FBDBD2866AF468FF7CE57074.highlight.minted) (./_minted/E5C26E39D48632F6BAF6281D69FF468C.highlight.minted) (./_minted/1263D9A087FFC9B6DE093EC87BB5623F.highlight.minted) (./_minted/41892ADA2623CB60EBFB6AEEF2F9715D.highlight.minted) (./_minted/684A64CD9EC7C96214C3252110991D9A.highlight.minted) (./_minted/81DFCAACEB416C7C04C1813D621E4DF4.highlight.minted) (./_minted/CC04F4CF10A745241B2FEF779396604F.highlight.minted) (./_minted/0B8A586435EDF6151E25CE172CE45236.highlight.minted) (./_minted/9EAE011BEE469915322D0DBD282C418B.highlight.minted) (./_minted/81DFCAACEB416C7C04C1813D621E4DF4.highlight.minted) (./_minted/CC04F4CF10A745241B2FEF779396604F.highlight.minted) (./_minted/80A18ED1F4066C3EEA768526BA87706E.highlight.minted) (./_minted/FC9094F2D72037B885DAF2DFB3AE3FC5.highlight.minted) (./_minted/81DFCAACEB416C7C04C1813D621E4DF4.highlight.minted) (./_minted/CC04F4CF10A745241B2FEF779396604F.highlight.minted) (./_minted/08A98DCA7E487F983924180A787B84E0.highlight.minted) (./_minted/CCA071284773F9CE8CCB75CA33DA6546.highlight.minted) (./_minted/CA5FB53ABD53A70B157BAB578303A7D0.highlight.minted) (./_minted/B4B13B07021C3489E09F8136E6363EA1.highlight.minted) (./_minted/FF1A18B73FCE97B1FE70A6E9570DB19F.highlight.minted)
+
+[15]
+\openout8 = `main.listing'.
+
+ (./_minted/FBFE08E4007AAE5379A3801124FD6470.highlight.minted) (./_minted/1263D9A087FFC9B6DE093EC87BB5623F.highlight.minted) (./_minted/C8BB752938479E91D892E32E84099685.highlight.minted) (./_minted/A10B980B6E9C36934FCA915EA17DA4BC.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/EA88CDCBF97B594841D158741C4B68C8.highlight.minted) (./_minted/8694E98EBCD673A23AAFF2FB440C13DF.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/5AA90BC36ACC1FFE9EDBCB99D8362B70.highlight.minted) (./_minted/B97B821E125185F2988F21244D0DFB6F.highlight.minted) (./_minted/77A4CF86D8BD53673F0A08A6CF8E42CE.highlight.minted) (./_minted/8838B61A275EBB116877D6AD449F33A9.highlight.minted) (./_minted/535312D4ACB32800F2DB98AAABCB870A.highlight.minted) (./_minted/C8BB752938479E91D892E32E84099685.highlight.minted) (./_minted/C60431B3D2865A11ADA2AECCBAFB2AF4.highlight.minted) (./_minted/75E008497CD2D73C9EDFBCACA8986975.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/21E195C0B9F4CF32A0AA01FB7DDAE868.highlight.minted)
+
+[16] (./_minted/535312D4ACB32800F2DB98AAABCB870A.highlight.minted) (./_minted/C54078DF3D10BB5A0ED334240BE5C275.highlight.minted) (./_minted/5C701D531B3EBEB8D40A325898CB87A9.highlight.minted) (./_minted/DD87A5399BB70E2056A4047FA7608627.highlight.minted) (./_minted/84181D7F993965596A800CA03BEA61AA.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/180C5B841ACB1921CBE5BED8A216173F.highlight.minted) (./_minted/535312D4ACB32800F2DB98AAABCB870A.highlight.minted) (./_minted/A10B980B6E9C36934FCA915EA17DA4BC.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/E65FD43C778160CB8F8DE0882EDF3D81.highlight.minted) (./_minted/84181D7F993965596A800CA03BEA61AA.highlight.minted) (./_minted/4F2EE1A0EE8B0E3776D732D10CCB9D5D.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/18452B4A93C5C7FD2924A2C715165381.highlight.minted
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 3.
+) (./_minted/535312D4ACB32800F2DB98AAABCB870A.highlight.minted) (./_minted/535312D4ACB32800F2DB98AAABCB870A.highlight.minted) (./_minted/212F175E681935567922B1483818E1EA.highlight.minted)
+
+[17] (./_minted/464A2B4D003A68719A3930D04459687D.highlight.minted) (./_minted/81C182022159D1311D2D83E460A49DEC.highlight.minted) (./_minted/1263D9A087FFC9B6DE093EC87BB5623F.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/7265007DE7B032AF5CB7DBDBEF19FCA9.highlight.minted) (./_minted/81C182022159D1311D2D83E460A49DEC.highlight.minted) (./_minted/1263D9A087FFC9B6DE093EC87BB5623F.highlight.minted) (./_minted/949FE8E618B61730402F89E47F135333.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/8E8386C69B037A65D7493A16EE3E5FDC.highlight.minted) (./_minted/81C182022159D1311D2D83E460A49DEC.highlight.minted) (./_minted/93E8CDDD4DDD70D1B661BD0FB5D2BF90.highlight.minted) (./_minted/2BE0944635F28C84CFDF2C1C38EA455D.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/A3506486F96EB1991BA936A6D0A69099.highlight.minted) (./_minted/C82019DA2F5D1E386FA6BDC8BFD30E3A.highlight.minted) (./_minted/464A2B4D003A68719A3930D04459687D.highlight.minted) (./_minted/C82019DA2F5D1E386FA6BDC8BFD30E3A.highlight.minted) (./_minted/464A2B4D003A68719A3930D04459687D.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/9A6A524107B6B35A686EC262222ABACA.highlight.minted)
+
+[18] (./_minted/E23119EFA97F8897F7580FFC03EA010A.highlight.minted) (./_minted/251E4EBD16DEF323775D9DDE9F79DE34.highlight.minted) (./_minted/3CC2C29ACB6CFA265380BF5299A213B9.highlight.minted) (./_minted/4F2EE1A0EE8B0E3776D732D10CCB9D5D.highlight.minted) (./_minted/D215EE7D5D4FA0C1CEE7727D047FB212.highlight.minted) (./_minted/2E3A0E34AF47EC149129D3CB756E53E6.highlight.minted) (./_minted/A3CFC2F8FBDBD2866AF468FF7CE57074.highlight.minted) (./_minted/41892ADA2623CB60EBFB6AEEF2F9715D.highlight.minted) (./_minted/0B8A586435EDF6151E25CE172CE45236.highlight.minted) (./_minted/80A18ED1F4066C3EEA768526BA87706E.highlight.minted) (./_minted/CCA071284773F9CE8CCB75CA33DA6546.highlight.minted) (./_minted/A3CFC2F8FBDBD2866AF468FF7CE57074.highlight.minted) (./_minted/41892ADA2623CB60EBFB6AEEF2F9715D.highlight.minted) (./_minted/0B8A586435EDF6151E25CE172CE45236.highlight.minted) (./_minted/80A18ED1F4066C3EEA768526BA87706E.highlight.minted) (./_minted/CCA071284773F9CE8CCB75CA33DA6546.highlight.minted) (./_minted/C8BB752938479E91D892E32E84099685.highlight.minted) (./_minted/30FE13E94DDF70ACD619D9C13FD4425C.highlight.minted) (./_minted/C60431B3D2865A11ADA2AECCBAFB2AF4.highlight.minted) (./_minted/75E008497CD2D73C9EDFBCACA8986975.highlight.minted) (./_minted/E0EFF8251854EE80ACFDE2FC7897A31C.highlight.minted) (./_minted/2492EE9C18C5D0D71B8C4BA1025AAB5E.highlight.minted) (./_minted/DD87A5399BB70E2056A4047FA7608627.highlight.minted) (./_minted/84181D7F993965596A800CA03BEA61AA.highlight.minted) (./_minted/4F2EE1A0EE8B0E3776D732D10CCB9D5D.highlight.minted) (./_minted/464A2B4D003A68719A3930D04459687D.highlight.minted) (./_minted/F315786D3586EA94CDF01A4526BD1EFB.highlight.minted) (./_minted/949FE8E618B61730402F89E47F135333.highlight.minted) (./_minted/2BE0944635F28C84CFDF2C1C38EA455D.highlight.minted) (./_minted/E6CB35A2F69631CF4662829C06C790F2.highlight.minted)
+
+[19] (./_minted/6A3492A0DC6B459AAF59C3E6F44419C1.highlight.minted) (./_minted/9926931DF68910E770B89478FDE210E8.highlight.minted) (./_minted/6A3492A0DC6B459AAF59C3E6F44419C1.highlight.minted) (./_minted/3A5C52DC48F0540675F507FD3BDCD8BF.highlight.minted) (./_minted/3A5C52DC48F0540675F507FD3BDCD8BF.highlight.minted) (./_minted/E41FECFBD978793CA93DC5F4B1A39E44.highlight.minted) (./_minted/CAE29F77F4CF795169C2F7BC851716E5.highlight.minted) (./_minted/BD140B20719CA406BDD2A71A87194E14.highlight.minted) (./_minted/C509442EC215C615EB94ED3BA15BC1E1.highlight.minted) (./_minted/BFDCBC987BFCA092CB80120B2B0082F7.highlight.minted) (./_minted/AE469E6D4EC6DB6ECA73930A4F3641C2.highlight.minted) (./_minted/2677BB0433335B2287A46FD0AFDA38B1.highlight.minted) (./_minted/0E379271E21E61F691DFB789EBAD4922.highlight.minted) (./_minted/EF616E08C337F1596DE6525490776485.highlight.minted) (./_minted/C307F3DDEA9ACA9D2FF29EE70122AA9A.highlight.minted) (./_minted/539EDC00BC8BE2A639AD294A6F3F5F1B.highlight.minted) (./_minted/92722DD2846EA232A6A772B876CEE456.highlight.minted) (./_minted/6E5BBD9A9AA58E55788775EEC04DE637.highlight.minted) (./_minted/3A5C52DC48F0540675F507FD3BDCD8BF.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/F9A355E903B5D7B307526AAC758CA38C.highlight.minted)
+
+[20] (./_minted/3A5C52DC48F0540675F507FD3BDCD8BF.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/C67E891D6AC2D80EBD202512E2D34DA1.highlight.minted) (./_minted/84B5C20D8AA51787EC79BDA73DDB5370.highlight.minted) (./_minted/74C763C33B22C8DCBBF7E29260C411BF.highlight.minted) (./_minted/903ED8C230D6A0B5E13044B71C9404AF.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/2AB7C8D05A65A6259B283E1FE143F3F4.highlight.minted) (./_minted/535312D4ACB32800F2DB98AAABCB870A.highlight.minted) (./_minted/81C182022159D1311D2D83E460A49DEC.highlight.minted)
+
+[21] (./_minted/D5D9D9B1D5F33FB46C22F78F1C06E00D.highlight.minted) (./_minted/903ED8C230D6A0B5E13044B71C9404AF.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/C0CB5F6BC3FD7BE7F93BC3FE876CE69B.highlight.minted) (./_minted/535312D4ACB32800F2DB98AAABCB870A.highlight.minted) (./_minted/81C182022159D1311D2D83E460A49DEC.highlight.minted) (./_minted/5C2D08EC2A0E72A271D8A4E3EBB002A3.highlight.minted) (./_minted/903ED8C230D6A0B5E13044B71C9404AF.highlight.minted) (./_minted/EA42E5FC237578E230F0EA4AFA189F83.highlight.minted) (./_minted/8F1D3130DF76D99EE3A7BC864E785B0D.highlight.minted) (./_minted/E7DBCE45238DBA2E13A95D904A9A9D4D.highlight.minted) (./_minted/8F1D3130DF76D99EE3A7BC864E785B0D.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/644EFF1419BF6AB8067A9548BABDD898.highlight.minted)
+Underfull \hbox (badness 2418) in paragraph at lines 3--676
+\TU/SimSun(0)/m/n/12 权 限，|  [][][][][][] 表 示 递 归 修 改 子 目 录 和 文 件 的 权 限。|  数 字 表 示 法 是 将 权 限 用 数 字 表 示，|  如
+ []
+
+(./_minted/5A86A9A60CCDF4F59787387BA4DA7DDD.highlight.minted) (./_minted/7DD9111E6F40DF41218E2B5238F74477.highlight.minted) (./_minted/83A7973A1279FCE62D3F17C5064D49CA.highlight.minted) (./_minted/8F1D3130DF76D99EE3A7BC864E785B0D.highlight.minted) (./_minted/46AF17FCA3CAC40075D55C293784603A.highlight.minted) (./_minted/8F1D3130DF76D99EE3A7BC864E785B0D.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/D8CAB19D07235CB4D4A21771D4E8317E.highlight.minted) (./_minted/6A3492A0DC6B459AAF59C3E6F44419C1.highlight.minted) (./_minted/3A5C52DC48F0540675F507FD3BDCD8BF.highlight.minted) (./_minted/E41FECFBD978793CA93DC5F4B1A39E44.highlight.minted) (./_minted/CAE29F77F4CF795169C2F7BC851716E5.highlight.minted) (./_minted/B97B821E125185F2988F21244D0DFB6F.highlight.minted) (./_minted/0E379271E21E61F691DFB789EBAD4922.highlight.minted) (./_minted/C509442EC215C615EB94ED3BA15BC1E1.highlight.minted) (./_minted/BFDCBC987BFCA092CB80120B2B0082F7.highlight.minted) (./_minted/C307F3DDEA9ACA9D2FF29EE70122AA9A.highlight.minted) (./_minted/92722DD2846EA232A6A772B876CEE456.highlight.minted) (./_minted/6E5BBD9A9AA58E55788775EEC04DE637.highlight.minted) (./_minted/AE469E6D4EC6DB6ECA73930A4F3641C2.highlight.minted) (./_minted/2677BB0433335B2287A46FD0AFDA38B1.highlight.minted) (./_minted/77A7208A924E7AFF897B06E271DECF4C.highlight.minted) (./_minted/74C763C33B22C8DCBBF7E29260C411BF.highlight.minted) (./_minted/903ED8C230D6A0B5E13044B71C9404AF.highlight.minted) (./_minted/D5D9D9B1D5F33FB46C22F78F1C06E00D.highlight.minted) (./_minted/903ED8C230D6A0B5E13044B71C9404AF.highlight.minted) (./_minted/5C2D08EC2A0E72A271D8A4E3EBB002A3.highlight.minted) (./_minted/903ED8C230D6A0B5E13044B71C9404AF.highlight.minted) (./_minted/060D9178B907AB9CB8A47996406E32E0.highlight.minted) (./_minted/0A11E1C883F4BA672125002ECC54F6BC.highlight.minted) (./_minted/5A86A9A60CCDF4F59787387BA4DA7DDD.highlight.minted) (./_minted/7DD9111E6F40DF41218E2B5238F74477.highlight.minted) (./_minted/14BE0772AB4300F220FA27583B57C974.highlight.minted)
+
+[22] (./_minted/975A3827C3399742C810B7CF60EA1AA7.highlight.minted) (./_minted/97DE71D86844E53B2809AD3DF2930C88.highlight.minted)
+
+[23]
+\openout8 = `main.listing'.
+
+ (./_minted/3026262A6FBB1095B4B6DAB9AB6D135B.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/4CA5FE8A9C74858A510241706B7E606B.highlight.minted) (./_minted/217543321D0DC4B048D0B7AF40C0BD16.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/69E99653D6CFD875F479ABB24A349FD4.highlight.minted) (./_minted/4DFEACCF7BF5566A5AF0200007CE8080.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/0C59E074DE806EE6E954002C5C9BD165.highlight.minted) (./_minted/4DFEACCF7BF5566A5AF0200007CE8080.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/6555CCFCF7AA2B30D750E1CEB9BBCC1B.highlight.minted)
+
+[24] (./_minted/3F116E54EDAB8A5164FFB68DFE63E7EB.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/87CA79EAD76FAE74EB3870F98E8F3233.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/207DB69821A88689FEA2C4BC9E7BF56F.highlight.minted) (./_minted/9D056AC610397836B1A170B361A50528.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/E581785B19F6CE5766755F81E02AFF1A.highlight.minted) (./_minted/D5B0F24C76BC0767FB5F591E7F37CBDF.highlight.minted) (./_minted/9FF43E524A93649975A73C1C6BC2100D.highlight.minted) (./_minted/5BC43DCA320A2F45A0DCA961BB49BF22.highlight.minted) (./_minted/D5B0F24C76BC0767FB5F591E7F37CBDF.highlight.minted) (./_minted/D5B0F24C76BC0767FB5F591E7F37CBDF.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/184EAC9E3DB94D48C0A72F7B85DFF6B8.highlight.minted)
+
+[25] (./_minted/535312D4ACB32800F2DB98AAABCB870A.highlight.minted) (./_minted/5C701D531B3EBEB8D40A325898CB87A9.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/EEBC98B1BCC811F415AC582BD9E0A74F.highlight.minted) (./_minted/5C701D531B3EBEB8D40A325898CB87A9.highlight.minted) (./_minted/AED183DBDE0C4F513DCDC9334DCAE6B6.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/F5B911DAC85D65B990CFF655982CCD35.highlight.minted) (./_minted/A2349D343AA290759F16B62F5628AE44.highlight.minted) (./_minted/A2349D343AA290759F16B62F5628AE44.highlight.minted) (./_minted/665E52EE952F50812C18477BA560F44F.highlight.minted) (./_minted/DA4932D099389380FC26A0A4A33D5AB2.highlight.minted)
+
+[26]
+\openout8 = `main.listing'.
+
+ (./_minted/C99C1BF7F226BD871FFE170089ADADE0.highlight.minted) (./_minted/A1BF0C0726532205697CBFF907BCF3D8.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/50678B59BB372ADCC0150AB7ECD820DB.highlight.minted)
+
+[27] (./_minted/D202B45CBB74D48FF60F791EB2CA8791.highlight.minted) (./_minted/A1BF0C0726532205697CBFF907BCF3D8.highlight.minted) (./_minted/9FF43E524A93649975A73C1C6BC2100D.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/825BA62C16E55677CA193AFC2B53E930.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/ECEB83ED68D86ABDD3F12F143B25352C.highlight.minted) (./_minted/B72BAF5B95C290A21E19269D77BAF4EF.highlight.minted) (./_minted/E4D5A6AC4ABB4AE76A8B1945CA951B7A.highlight.minted) (./_minted/1A76B8E0AA0C854FF9ED3B6924342281.highlight.minted) (./_minted/B95F9718F5274011BB44559784C62EC4.highlight.minted) (./_minted/2D467E84641C8E8FDC7B6A69C7F0CA94.highlight.minted) (./_minted/6D9CF1FAF27DF01B93547FC78E42D861.highlight.minted) (./_minted/5BC43DCA320A2F45A0DCA961BB49BF22.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/8FA1B3845912F0CD04C5804C1709A11E.highlight.minted) (./_minted/A10B980B6E9C36934FCA915EA17DA4BC.highlight.minted)
+
+[28] (./_minted/DEAC12B42118634D4FF96843C4CCAFD7.highlight.minted) (./_minted/1119982FD5D09BFE727438DEFC9C5EB0.highlight.minted) (./_minted/D81D3DC95A0BC1C6717EA6D496773380.highlight.minted) (./_minted/F65432A0366FF9C6A69999219EC32F2E.highlight.minted) (./_minted/A7C421F93FE680CAED2B07FAF697980B.highlight.minted) (./_minted/C16CC7A075543DD12DC6302419C2F6E1.highlight.minted) (./_minted/A1BF0C0726532205697CBFF907BCF3D8.highlight.minted) (./_minted/30FBFCB78A37E11182EE6612954E2F03.highlight.minted) (./_minted/0084E2FF1695A6414B67431CEADBDE2C.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/404AAABB6F93B657D9CF00888B81E935.highlight.minted) (./_minted/DEAC12B42118634D4FF96843C4CCAFD7.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/CAB247966BBE07DFE7D9B172B5BE5082.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/2F71AB678942DFA3D6423B0AA1274E24.highlight.minted)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[29] (./_minted/A079DE61CC68DC5FCE731CF12183C209.highlight.minted) (./_minted/70E353D2692B3BD0954BD40BBBF24DE7.highlight.minted)
+
+[30] (./_minted/E7732631F611C3CE3CA690E69FABB69E.highlight.minted) (./_minted/41F1A21946B4C2CA596AD8867E337673.highlight.minted) (./_minted/A079DE61CC68DC5FCE731CF12183C209.highlight.minted) (./_minted/70E353D2692B3BD0954BD40BBBF24DE7.highlight.minted))
+
+[31]
+\openout2 = `content/chapter2.aux'.
+
+ (./content/chapter2.tex
+\openout8 = `main.listing'.
+
+ (./_minted/9A6FA3138B8974EF22D653CF45F0B9EC.highlight.minted)
+File: image/dkkp-1.png Graphic file (type bmp)
+<image/dkkp-1.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[32
+
+
+
+]
+Overfull \hbox (9.48967pt too wide) in paragraph at lines 55--68
+ [][] 
+ []
+
+\openout8 = `main.listing'.
+
+(./_minted/7EF6EAB3246279324EFA3D59575DC1E0.highlight.minted)
+File: image/dkkp-2-1.png Graphic file (type bmp)
+<image/dkkp-2-1.png>
+File: image/dkkp-2-2.png Graphic file (type bmp)
+<image/dkkp-2-2.png>
+File: image/dkkp-2-3.png Graphic file (type bmp)
+<image/dkkp-2-3.png>
+File: image/dkkp-2-4.png Graphic file (type bmp)
+<image/dkkp-2-4.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+\openout8 = `main.listing'.
+
+(./_minted/0522F00791CD9FC937AFE6D6E3F8899C.highlight.minted)
+
+[33]
+File: image/dkkp-3.png Graphic file (type bmp)
+<image/dkkp-3.png>
+
+
+[34]
+\openout8 = `main.listing'.
+
+ (./_minted/207DB69821A88689FEA2C4BC9E7BF56F.highlight.minted) (./_minted/ADF9E03D7B731F0175D5C1030A1C44EC.highlight.minted) (./_minted/D8CC6FB149761BF80A8E782B7661353A.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/1D79521F4320B2438A63BEC27FDB6BC8.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/7EF6EAB3246279324EFA3D59575DC1E0.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/A02701E1F97AB811EBFDCAACDC32771E.highlight.minted)
+
+[35] (./_minted/7DAAAAC1756E4B95F01F9B9F00E84670.highlight.minted) (./_minted/846A1FCA0925E2D41219470846567459.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/3F45C2A0CD2943AC4F935032715F4DE7.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/D0B603216CDC0AB04C64C8D009F94AC1.highlight.minted) (./_minted/7DAAAAC1756E4B95F01F9B9F00E84670.highlight.minted) (./_minted/846A1FCA0925E2D41219470846567459.highlight.minted))
+
+[36]
+\openout2 = `content/chapter3.aux'.
+
+ (./content/chapter3.tex (./_minted/A1057B1A94127734C5F742F8116E6C97.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/BF8D23FBB7C38358446DE24BFB08F157.highlight.minted) (./_minted/9B98F6D6E2E4FF474C2AC9A837E3A476.highlight.minted) (./_minted/9DA1CA8D8F48628C2C3241E95323634D.highlight.minted) (./_minted/D4E921FC20F4BFA31995CA7DC589AD71.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/F49FA349A1F3106963D9A2200FC05E60.highlight.minted)
+
+[37
+
+
+
+] (./_minted/B559759CCCFB3FF2A70FFE60F5BF2C48.highlight.minted) (./_minted/B647CD2FAB157D0492749769F2EB2B76.highlight.minted) (./_minted/34B923424EB2171A2F2D59738FB8EFA8.highlight.minted) (./_minted/6D447DC3BFF8E417836D85ECE9FF2CE1.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/A7A18B3B68F7DA2CF1E6D307E9B6C263.highlight.minted) (./_minted/9B98F6D6E2E4FF474C2AC9A837E3A476.highlight.minted) (./_minted/E941889263407BC91401EFA07603334B.highlight.minted) (./_minted/6D447DC3BFF8E417836D85ECE9FF2CE1.highlight.minted) (./_minted/E894C50C5ED758F27D9347F7F74308D3.highlight.minted) (./_minted/69F3BB7CCBF534FCCCEEBF07F474D67A.highlight.minted) (./_minted/9817E099E2318F2B794073270CA2568F.highlight.minted) (./_minted/5116BFFDB549E1FB280F0AF6DCE78641.highlight.minted) (./_minted/BB66DF0A93ACF003592529B2A2502FE5.highlight.minted) (./_minted/9817E099E2318F2B794073270CA2568F.highlight.minted) (./_minted/5116BFFDB549E1FB280F0AF6DCE78641.highlight.minted) (./_minted/9817E099E2318F2B794073270CA2568F.highlight.minted) (./_minted/5E05509B175BBF65A78FF9A880D50FF1.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/EFD435C05C5647AEF25731F02B7B4BB2.highlight.minted) (./_minted/5C701D531B3EBEB8D40A325898CB87A9.highlight.minted) (./_minted/9014BBB599351C1F298791FF7892CFC5.highlight.minted
+
+[38]) (./_minted/5116BFFDB549E1FB280F0AF6DCE78641.highlight.minted) (./_minted/BB66DF0A93ACF003592529B2A2502FE5.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/E0450D65A41B9F2F567B536D7A7BD7EF.highlight.minted) (./_minted/3331A670A54AE8AC8DE3922F50774461.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/64E5D2A00C7A532DC8BEA6E0A44561B4.highlight.minted) (./_minted/A3CFC2F8FBDBD2866AF468FF7CE57074.highlight.minted) (./_minted/9817E099E2318F2B794073270CA2568F.highlight.minted) (./_minted/5116BFFDB549E1FB280F0AF6DCE78641.highlight.minted) (./_minted/A3CFC2F8FBDBD2866AF468FF7CE57074.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/3B27FE115B5AC76276B3536666EC496F.highlight.minted)
+
+[39] (./_minted/6A7BC41B4E40BC335529655C8BA39C5A.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/80CD8EA839A95EBADF212203E3656676.highlight.minted) (./_minted/C2407BD7A788A55249C728F8550C5BBF.highlight.minted) (./_minted/D9CAA9FD79BC9EAD147E9CC431FC4D47.highlight.minted) (./_minted/0DE05E0C1684E548FF5D3D6E3487D44F.highlight.minted) (./_minted/F6DBA3C2692B9C00F402358E89368C19.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/73BF4D847445214646288112BAF348A9.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/53963BD3E4E446D10B5905E158007C7A.highlight.minted)
+
+[40] (./_minted/516CA13AC3FF6F5F1276D2AB4DE2FA61.highlight.minted) (./_minted/3673093889CB6168AAC290475592792D.highlight.minted) (./_minted/F6DBA3C2692B9C00F402358E89368C19.highlight.minted) (./_minted/724FA3C221BC1CF560C8D7721F508AE3.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/02CFB5B0A8C3B0CEB928DAF2748A2327.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/557570EB8410296E5A46C414A39C9A4C.highlight.minted) (./_minted/83FDDCBC9556637AAC93A73F583773E0.highlight.minted) (./_minted/88FC075C1EF77CC552F512CCB6FAA10E.highlight.minted) (./_minted/F6DBA3C2692B9C00F402358E89368C19.highlight.minted) (./_minted/724FA3C221BC1CF560C8D7721F508AE3.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/0995CB45336B0A92506487B671B08460.highlight.minted)
+
+[41]
+\openout8 = `main.listing'.
+
+ (./_minted/63C3ABFEEDAC28CFA2C77D8BBCCC231D.highlight.minted) (./_minted/3CAF2B32892DCD767AD416E73D833D77.highlight.minted) (./_minted/4F8C36D2EA2AF944BB92FACBD1B93348.highlight.minted) (./_minted/3636D2919FDC04E2B0359242886BF92C.highlight.minted) (./_minted/CFFA6908053D4EF92445B2C657A9BF9E.highlight.minted) (./_minted/5BE9EC86AF7244DE0C7E9AC0C8744BFB.highlight.minted) (./_minted/03EA50B17832B13EE260F27617E925F7.highlight.minted) (./_minted/BC4B949EC0CAA303BAF9601569255EAC.highlight.minted) (./_minted/1BE201AA94A7FBFFD74BDA6DC9F7349A.highlight.minted) (./_minted/09B9B5F51CCBEBDEADFE3CD07BC8D581.highlight.minted) (./_minted/8E7BBE59CF1AEB0A4139313837B2E23A.highlight.minted) (./_minted/F6D88E58D2441B5D1B86A3BA00031ADE.highlight.minted) (./_minted/CEED2990922FA3892A45EFD72826DFF5.highlight.minted) (./_minted/F2019D88F99D4BF7C47DC9A5EB143127.highlight.minted) (./_minted/63E3A3F75B8C4CF81932C7B37434BC8A.highlight.minted) (./_minted/B08E9DCBF7D8ABE591A36239578E9C2E.highlight.minted) (./_minted/3D33AF2C1D86F3AE1FF84F3353DDD322.highlight.minted) (./_minted/5A86A9A60CCDF4F59787387BA4DA7DDD.highlight.minted) (./_minted/7DD9111E6F40DF41218E2B5238F74477.highlight.minted) (./_minted/A3CFC2F8FBDBD2866AF468FF7CE57074.highlight.minted) (./_minted/6A4822443DC318DAC86488AFD789ED1F.highlight.minted) (./_minted/002647397B420C29CAFF92BCF02DDFD6.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/CBA09E2DA6CB9233409F533F4110689A.highlight.minted)
+
+[42] (./_minted/69C5D76451F4D5CD80A7F3A5A75BD3A5.highlight.minted) (./_minted/568CD6238F6F271EF537F03B2AFD2E7A.highlight.minted) (./_minted/39AE17207636D1F95F40F0C7D04CF670.highlight.minted) (./_minted/33D06C4D7C687CFF92114DDA6426512D.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/65DA95B2097195B63A54C4938D7B25BA.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/DB21DC22F378A60A53DB51CB44202388.highlight.minted)
+
+[43]
+\openout8 = `main.listing'.
+
+ (./_minted/EFDC674791E4FF8C58CF5E93CC9BA15B.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/6221ECDA7A42EACA341D1203E5CAF3AD.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/C33F2AC17FDA91ED540A3814D13F038A.highlight.minted)
+
+[44])
+
+[45]) (./appendices.tex
+\openout2 = `appendices/appendiceA.aux'.
+
+ (./appendices/appendiceA.tex
+\openout8 = `main.listing'.
+
+ (./_minted/677BCAF7719E49369F7F7DC7B62B9D22.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/924AF9C34962A62B03E166E3537AAE11.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/1F86D0B4A89EFBE5EBA93C33EB3A4BFA.highlight.minted)
+
+[46
+
+
+
+]
+\openout8 = `main.listing'.
+
+ (./_minted/3026262A6FBB1095B4B6DAB9AB6D135B.highlight.minted)
+
+[47])
+
+[48]
+\openout2 = `appendices/appendiceB.aux'.
+
+ (./appendices/appendiceB.tex
+\openout8 = `main.listing'.
+
+ (./_minted/E32D8A3C3331D373F81FD4A1A21E7C10.highlight.minted)
+File: image/gxwjj-1.png Graphic file (type bmp)
+<image/gxwjj-1.png>
+File: image/gxwjj-2.png Graphic file (type bmp)
+<image/gxwjj-2.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: image/gxwjj-3.png Graphic file (type bmp)
+<image/gxwjj-3.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+\openout8 = `main.listing'.
+
+(./_minted/D99E5B278F3FD54F938CC2C924DCF17D.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/C79A5219CEC92C0FF297D41BD9E571C8.highlight.minted)
+
+[49
+
+
+
+]
+\openout8 = `main.listing'.
+
+ (./_minted/24E83CFE7CD1A1DD0FE39871814761B5.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/2F5AC2D06D12EFA4C085B54FD49497CC.highlight.minted)
+\openout8 = `main.listing'.
+
+ (./_minted/C27594745B3596C469FC356E64E93768.highlight.minted)
+
+[50])
+
+[51]) (./main.aux (./titlepage.aux) (./content/chapter0.aux) (./content/chapter1.aux) (./content/chapter2.aux) (./content/chapter3.aux) (./appendices/appendiceA.aux) (./appendices/appendiceB.aux))
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2020/03/25>
+ ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: CFB1CBD86F900D45B4C20B77CEE075D6;7973.
+ ) 
+Here is how much of TeX's memory you used:
+ 54123 strings out of 473832
+ 1361458 string characters out of 5729481
+ 1861229 words of memory out of 5000000
+ 74949 multiletter control sequences out of 15000+600000
+ 576931 words of font info for 196 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 93i,12n,112p,1596b,1663s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on main.pdf (55 pages).

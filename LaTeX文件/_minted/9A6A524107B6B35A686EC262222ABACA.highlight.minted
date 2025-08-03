@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }whereis\PYG{+w}{ }ls
+\PYG{g+go}{ls: /bin/ls /usr/share/man/man1/ls.1.gz}
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }whereis\PYG{+w}{ }find
+\PYG{g+go}{find: /usr/bin/find /usr/share/man/man1/find.1.gz /usr/share/info/find.info.gz}
+\end{MintedVerbatim}

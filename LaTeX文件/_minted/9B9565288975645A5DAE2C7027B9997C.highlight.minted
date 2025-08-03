@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{user1@host:\PYGZti{}/test/test1\PYGZdl{} }ls
+\PYG{g+go}{1.txt  2.txt  test2}
+\end{MintedVerbatim}

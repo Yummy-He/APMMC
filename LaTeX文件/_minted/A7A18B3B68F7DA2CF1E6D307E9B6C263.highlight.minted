@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{      }\PYG{n}{X}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{REAL}\PYG{p}{(}\PYG{n}{I}\PYG{p}{)}
+\PYG{+w}{      }\PYG{n}{Y}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{FLOAT}\PYG{p}{(}\PYG{n}{J}\PYG{p}{)}
+\PYG{+w}{      }\PYG{n}{Z}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{DBLE}\PYG{p}{(}\PYG{n}{K}\PYG{p}{)}
+\end{MintedVerbatim}

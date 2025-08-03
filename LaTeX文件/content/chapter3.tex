@@ -1,0 +1,287 @@
+\newpage
+\section{Fortran基础}
+\subsection{Fortran变量类型声明与转化}
+\subsubsection{Fortran变量类型声明}
+Fortran语言中，变量的类型和声明是非常重要的概念。
+Fortran支持多种数据类型，包括整数、实数（与数学上的实数定义不同）、字符等。
+
+变量名可以包含字母、数字和下划线，但要以字母开头，同时不超过6个字符。
+
+Fortran有隐式声明和显式声明两种方式。
+
+隐式声明是指在使用变量之前不需要显式地声明变量的类型，Fortran会根据变量名的首字母自动推断类型，
+例如以\code{I、J、K、L、M、N}开头的变量默认为整数类型，其它变量默认为实数类型。
+
+显式声明是指在使用变量之前需要显式地声明变量的类型，使用类型声明语句，例如：
+\begin{envcode}{fortran}{Fortran}
+      INTEGER :: I
+      REAL :: X
+      DOUBLE PRECISION :: Y
+\end{envcode}
+上面第一行声明了一个整数类型的变量\code{I}，第二行声明了一个单精度实数类型的变量\code{X}，第三行声明了一个双精度实数类型的变量\code{Y}。
+
+一般我们遵循隐式声明的规则，除非有特殊需要，否则不使用显式声明。
+
+\subsubsection{Fortran变量类型转化}
+Fortran语言中，变量类型的转化是一个重要的概念。Fortran提供了多种方式来进行变量类型的转化。
+
+使用类型转换函数，例如：
+\begin{envcode}{fortran}{Fortran}
+      M = INT(A)
+      N = IFIX(B)
+      I = IDINT(C)
+\end{envcode}
+前两个语句将实数\code{A}和\code{B}转换为整数类型，第三个语句将双精度实数\code{C}转换为整数类型。可统一使用\code{INT}函数进行转换。
+
+\begin{envcode}{fortran}{Fortran}
+      X = REAL(I)
+      Y = FLOAT(J)
+      Z = DBLE(K)
+\end{envcode}
+前两个语句作用相同，将整数\code{I}和\code{J}转换为单精度实数类型，第三个语句将整数K转换为双精度实数类型。
+
+以上可统一记为\code{INT}转化为整数，\code{REAL}转化为单精度实数，\code{DBLE}转化为双精度实数，其它的都能用这三个代替。
+
+\subsection{Fortran程序的输入与输出}
+
+Fortran程序的输入与输出主要通过以下几个语句实现：
+
+\begin{itemize}
+    \item \code{READ}：用于从标准输入设备（通常是键盘）读取数据。
+    \item \code{WRITE}：用于向标准输出设备（通常是屏幕）输出数据。
+    \item \code{PRINT}：用于向标准输出设备写入数据，语法更简单。
+\end{itemize}
+
+我们主要使用\code{READ}和\code{WRITE}语句来进行输入和输出。
+
+\subsubsection{输入语句}
+
+Fortran中的输入语句主要有两种形式：\code{READ}和\code{READ(*,*)}。
+
+READ语句的基本形式为：
+\begin{envcode}{fortran}{Fortran}
+      READ, 变量
+      READ(单位, 格式) 变量1 变量2 ...
+\end{envcode}
+
+其中，单位表示输入设备，其中\code{5}表示读卡器（在现代的电脑上就是用键盘输入），格式表示数据的格式，变量列表表示要读取的变量。
+
+\code{READ(5,*)}表示从标准输入设备读取数据，格式由编译器自动推断，适用于简单的输入场景。
+
+\subsubsection{输出语句}
+
+Fortran中的输出语句主要有两种形式：\code{WRITE}和\code{PRINT}。
+
+
+WRITE语句的基本形式为：
+\begin{envcode}{fortran}{Fortran}
+      WRITE(单位, 格式) 变量1 变量2 ...
+\end{envcode}
+其中，单位表示输出设备，其中\code{6}表示行式打印机（在现代的电脑上就是用屏幕输出），格式表示数据的格式，变量列表表示要输出的变量。
+
+\texttt{PRINT}语句的基本形式为：
+\begin{envcode}{fortran}{Fortran}
+      PRINT(格式) 变量1 变量2 ...
+\end{envcode}
+    其中，格式表示数据的格式，变量列表表示要输出的变量。
+
+
+
+
+
+
+
+
+\subsection{格式化输出}
+
+Fortran支持格式化输入输出，可以通过格式字符串来控制输出的格式。
+一般情况下，输入数据来源复杂，格式多样，我们会使用\code{*}表示自动推断格式；
+输出时为了获取整齐美观的结果，可以指定格式。
+下面只介绍输出的格式化，输入格式化类似，不再赘述。
+
+\subsubsection{格式化输出语句}
+
+上节命令如\code{READ}和\code{WRITE}中都有“格式”参数，一般读取时我们用\code{*}表示自动推断格式，
+输出时我们可以指定格式。
+
+指定格式有两种方式：
+
+第一种是使用格式字符串，例如：
+\begin{envcode}{fortran}{Fortran}
+      WRITE(6, '(A, I5, F10.2, E10.2)') '结果是：', I, X
+\end{envcode}
+其中，\code{'(A, I5, F10.2, E10.2)'}表示输出一个字符串（A），一个整数（I5，宽度为5），一个单精度实数（F10.2，宽度为10，小数点后保留2位），一个双精度实数（E10.2，宽度为10，小数点后保留2位）。
+
+第二种是使用格式标签，例如：
+\begin{envcode}{fortran}{Fortran}
+      WRITE(6, 100) I, X
+  100 FORMAT('结果是：', I5, F10.2, E10.2)
+\end{envcode}
+其中，\code{100}是标签，其指定的行中的\code{FORMAT}语句定义了格式。如果格式字符串较长，可以使用标签来分割，避免超出固定格式行长度限制。
+
+\subsubsection{I型}
+I型格式用于输出整数，格式为\code{Iw}，其中\code{w}表示输出的宽度，
+可以理解为给这个数据5个字符的空间，例如：
+\begin{envcode}{fortran}{Fortran}
+      M=12345
+      N=123
+      K=123456
+      WRITE(6, '(I5)') M
+      WRITE(6, '(I5)') N
+      WRITE(6, '(I5)') K
+      END
+\end{envcode}
+编译后运行输出结果为：
+\begin{envcode}{text}{Text}
+12345
+  123
+*****
+\end{envcode}
+其中，\code{*****}表示输出的整数超过了指定的宽度，Fortran会用星号填充。
+
+\subsubsection{F型}
+F型格式用于输出单精度实数，格式为\code{Fw.d}，
+其中\code{w}表示输出的宽度，\code{d}表示小数点后保留的位数，
+例如：
+\begin{envcode}{fortran}{Fortran}
+      K=1234567890
+      X=123.456
+      WRITE(6, '(I10)') K
+      WRITE(6, '(F10.2)') X
+      END
+\end{envcode}
+编译后运行输出结果为：
+\begin{envcode}{text}{Text}
+1234567890
+    123.46
+\end{envcode}
+（这里第一行的整数用来标记位置，便于直观观察F型所占空间）
+其中，\code{123.46}表示输出的单精度实数，Fortran会根据指定的格式进行填充和舍入。
+
+\subsubsection{E型}
+E型格式用于输出双精度实数，格式为\code{Ew.d}，
+其中\code{w}表示输出的宽度，\code{d}表示小数点后保留的位数，
+例如：
+\begin{envcode}{fortran}{Fortran}
+      K=1234567890
+      Y=-123.456
+      Z=123.456
+      WRITE(6, '(I10)') K
+      WRITE(6, '(E10.3)') Y      
+      WRITE(6, '(E10.3)') Z
+      END
+\end{envcode}
+编译运行后输出结果为：
+\begin{envcode}{text}{Text}
+1234567890
+-0.123E+03
+ 0.123E+03
+\end{envcode}
+（这里第一行的整数用来标记位置，便于直观观察E型所占空间）
+其中，\code{0.123E+03}表示输出的双精度实数。
+
+Fortran中标准的E型格式需要注意，一个数用科学计数法表示为\code{A*10^N}，
+表示为E型为\code{AEN}，标准化E型中，A的整数部分为\code{0}。
+如\code{123.456}，则表示为\code{0.123456E+03}而不是\code{1.23456E+02}，再根据格式进行填充和舍入。
+
+以上内容可见，E型占用的空间较大，使用时注意前后留足空间，如使用\code{E20.5}。
+
+
+
+\subsection{数学语句}
+
+\subsubsection{数字与运算符}
+
+在编写Fortran程序时，我们需要使用数字和运算符来进行计算。
+整数如\code{123}、\code{-456}等，直接表示即可。
+
+实数如\code{3.14}、\code{-2.718}等，直接表示即可；
+\code{0.123}、\code{456.0}，可以省略0，直接写为\code{.123}、\code{456.}。
+
+Fortran常用的运算符有加（\code{+}）、减（\code{-}）、乘（\code{*}）、除（\code{/}）和幂（\code{**}）等。
+可直接对数字或变量进行运算。
+运算优先级从高到低依次为：幂、乘除、加减。如果有括号，则括号内的运算优先级最高。
+
+\subsubsection{数学函数}
+Fortran提供了多种数学函数，用于对数字进行处理和计算。
+例如：
+\begin{envcode}{fortran}{Fortran}
+      A = ABS(X)       ! 绝对值
+      B = SQRT(Y)      ! 平方根
+      C = EXP(Z)       ! 指数函数
+      D = LOG(W)       ! 自然对数
+      E = LOG10(V)     ! 常用对数
+      F = SIN(T)       ! 正弦函数
+      G = COS(U)       ! 余弦函数
+      M = MAX(A, B)    ! 最大值
+      N = MIN(C, D)    ! 最小值
+      O = MOD(P, Q)    ! 取模
+\end{envcode}
+
+其中自然对数函数在课堂上介绍的是\code{ALOG}，这是Fortran 77的函数，用于处理单精度实数；
+另外还有\code{DLOG}用于处理双精度实数、\code{CLOG}用于处理复数，比较复杂。
+
+在Fortran 90中，增加了\code{LOG}函数，包括了上面三种用法，兼容性强，推荐使用。
+
+\subsubsection{赋值语句}
+赋值语句用于将一个值赋给一个变量，例如：
+\begin{envcode}{fortran}{Fortran}
+      I = 5
+      X = 3.14
+      Y = 2.718281828459045
+\end{envcode}
+
+\subsubsection{算术运算}
+Fortran支持基本的算术运算，包括加法、减法、乘法、除法等，例如：
+\begin{envcode}{fortran}{Fortran}
+      Z = X + Y
+      A = B - C
+      D = E * F
+      G = H / I
+      J = K ** L
+\end{envcode}
+
+\subsubsection{大型算术表达式}
+Fortran支持大型算术表达式，可通过嵌套多层括号、合理利用运算符的优先级来实现复杂的计算。
+例如：
+\begin{equation*}
+      z = \frac{\mathrm{e}^{x+y}+\sin{x}+s^t}{\left|x\right| + \sqrt{y} - \lg(w)}
+\end{equation*}
+用Fortran的数学语句表示为：
+\begin{envcode}{fortran}{Fortran}
+      Z = (EXP(X+Y) + SIN(X) + S**T) / (ABS(X) + SQRT(Y) - LOG10(W))
+\end{envcode}
+
+为了防止语句过长违反固定格式，可拆开表示：
+\begin{envcode}{fortran}{Fortran}
+      P = EXP(X+Y) + SIN(X) + S**T
+      Q = ABS(X) + SQRT(Y) - LOG10(W)
+      Z = P / Q
+\end{envcode}
+
+\subsection{Fortran程序构成}
+Fortran程序一般由以下几个部分构成：
+\begin{itemize}
+      \item 程序头：包括程序名、变量声明等。
+      \item 主程序：包含程序的主要逻辑和计算部分。
+      \item 子程序：可选部分，用于实现特定功能的代码块。
+      \item 结束语句：标志程序的结束。
+\end{itemize}
+例如：
+\begin{envcode}{fortran}{Fortran}
+      PROGRAM HelloWorld
+      INTEGER :: I
+      REAL :: X, Y
+      
+      WRITE(6, '(A)') 'Hello, World!'
+      
+      I = 5
+      X = 3.14
+      Y = 2.718281828459045
+      
+      WRITE(6, '(I5, F10.2, E10.3)') I, X, Y
+      
+      END PROGRAM HelloWorld
+\end{envcode}
+
+

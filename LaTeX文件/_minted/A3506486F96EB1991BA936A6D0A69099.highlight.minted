@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }which\PYG{+w}{ }ls
+\PYG{g+go}{/bin/ls}
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }which\PYG{+w}{ }find
+\PYG{g+go}{/usr/bin/find}
+\end{MintedVerbatim}

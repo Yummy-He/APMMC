@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }sudo\PYG{+w}{ }chown\PYG{+w}{ }user2\PYG{+w}{ }test/numbers.txt
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }sudo\PYG{+w}{ }chown\PYG{+w}{ }\PYGZhy{}R\PYG{+w}{ }user2\PYG{+w}{ }test/
+\end{MintedVerbatim}

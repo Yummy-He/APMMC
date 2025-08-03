@@ -1,0 +1,3 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+READ(5,*)
+\end{MintedVerbatim}

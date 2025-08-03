@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }find\PYG{+w}{ }./test\PYG{+w}{ }\PYGZhy{}user\PYG{+w}{ }user1
+\PYG{g+go}{./test/numbers.txt}
+\PYG{g+go}{./test/hello.txt}
+\end{MintedVerbatim}
