@@ -1,4 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }sudo\PYG{+w}{ }useradd\PYG{+w}{ }user2
-\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }sudo\PYG{+w}{ }passwd\PYG{+w}{ }user2
-\end{MintedVerbatim}

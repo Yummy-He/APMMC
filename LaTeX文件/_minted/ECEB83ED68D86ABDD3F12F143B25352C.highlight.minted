@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }awk\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZob{}print \PYGZdl{}1, \PYGZdl{}2, \PYGZdl{}3, \PYGZdl{}4, (\PYGZdl{}2 + \PYGZdl{}3 + \PYGZdl{}4) / 3\PYGZcb{}\PYGZsq{}}\PYG{+w}{ }test/grades.txt\PYG{+w}{ }\PYGZgt{}\PYG{+w}{ }test/grades\PYGZhy{}averages.txt
-\end{MintedVerbatim}

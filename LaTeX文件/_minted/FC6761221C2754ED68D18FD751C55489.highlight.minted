@@ -1,4 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{user1@host:\PYGZti{}/test/test1\PYGZdl{} }\PYG{n+nb}{cd}\PYG{+w}{ }..
-\PYG{g+gp}{user1@host:\PYGZti{}/test\PYGZdl{} }rm\PYG{+w}{ }\PYGZhy{}r\PYG{+w}{ }test1
-\end{MintedVerbatim}

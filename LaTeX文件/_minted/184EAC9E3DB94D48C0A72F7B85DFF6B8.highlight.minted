@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-grep\PYG{+w}{ }\PYG{o}{[}选项\PYG{o}{]}\PYG{+w}{ }PATTERN\PYG{+w}{ }\PYG{o}{[}FILE...\PYG{o}{]}
-\end{MintedVerbatim}

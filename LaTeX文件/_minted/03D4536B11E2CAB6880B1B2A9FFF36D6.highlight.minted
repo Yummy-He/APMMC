@@ -1,4 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-cp\PYG{+w}{ }\PYG{o}{[}\PYGZhy{}r,\PYGZhy{}i\PYG{o}{]}\PYG{+w}{ }源文件1\PYG{+w}{ }源文件2\PYG{+w}{ }...\PYG{+w}{ }目标目录
-mv\PYG{+w}{ }\PYG{o}{[}\PYGZhy{}i\PYG{o}{]}\PYG{+w}{ }源文件1\PYG{+w}{ }源文件2\PYG{+w}{ }...\PYG{+w}{ }目标目录
-\end{MintedVerbatim}

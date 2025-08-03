@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-s/匹配的文本/替换文本/g
-\end{MintedVerbatim}

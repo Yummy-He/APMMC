@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{+w}{      }\PYG{k}{WRITE}\PYG{p}{(}\PYG{err}{单}\PYG{err}{位}\PYG{p}{,}\PYG{+w}{ }\PYG{err}{格}\PYG{err}{式}\PYG{p}{)}\PYG{+w}{ }\PYG{err}{变}\PYG{err}{量}\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{err}{变}\PYG{err}{量}\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{p}{.}\PYG{p}{.}\PYG{p}{.}
-\end{MintedVerbatim}

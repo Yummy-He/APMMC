@@ -1,7 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{+w}{      }\PYG{n}{Z}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{X}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{Y}
-\PYG{+w}{      }\PYG{n}{A}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{B}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{C}
-\PYG{+w}{      }\PYG{n}{D}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{E}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{F}
-\PYG{+w}{      }\PYG{n}{G}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{H}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n}{I}
-\PYG{+w}{      }\PYG{n}{J}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{K}\PYG{+w}{ }\PYG{o}{**}\PYG{+w}{ }\PYG{n}{L}
-\end{MintedVerbatim}
