@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }grep\PYG{+w}{ }\PYGZhy{}nw\PYG{+w}{ }\PYG{l+m}{15}\PYG{+w}{ }test/numbers.txt
-\end{MintedVerbatim}

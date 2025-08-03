@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }sudo\PYG{+w}{ }apt\PYGZhy{}get\PYG{+w}{ }remove\PYG{+w}{ }fortune
-\end{MintedVerbatim}

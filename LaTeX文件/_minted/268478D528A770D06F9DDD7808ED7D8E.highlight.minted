@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }ls\PYG{+w}{ }non\PYGZus{}existing\PYGZus{}file\PYG{+w}{ }\PYG{l+m}{2}\PYGZgt{}\PYG{+w}{ }error.log
-\end{MintedVerbatim}

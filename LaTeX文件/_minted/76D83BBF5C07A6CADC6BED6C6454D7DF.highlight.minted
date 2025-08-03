@@ -1,4 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }mkdir\PYG{+w}{ }\PYGZti{}/test/test1
-\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }mkdir\PYG{+w}{ }\PYGZti{}/test/test1/test2\PYG{+w}{ }\PYGZti{}/test/test1/test3
-\end{MintedVerbatim}

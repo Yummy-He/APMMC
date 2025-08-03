@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-chmod u=rwx,g=rx,o=rx file
-\end{MintedVerbatim}

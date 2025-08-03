@@ -1,8 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }lsb\PYGZus{}release\PYG{+w}{ }\PYGZhy{}a
-\PYG{g+go}{No LSB modules are available.}
-\PYG{g+go}{Distributor ID: Ubuntu}
-\PYG{g+go}{Description:    Ubuntu 24.04.2 LTS}
-\PYG{g+go}{Release:        24.04}
-\PYG{g+go}{Codename:       noble}
-\end{MintedVerbatim}

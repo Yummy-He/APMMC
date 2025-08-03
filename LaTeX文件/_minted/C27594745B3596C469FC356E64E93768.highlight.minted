@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-.host:/ /mnt/hgfs fuse.vmhgfs\PYGZhy{}fuse allow\PYGZus{}other,uid=1000,gid=1000,umask=022 0 0
-\end{MintedVerbatim}

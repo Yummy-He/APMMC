@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{user1@host:\PYGZti{}/test/test1\PYGZdl{} }mv\PYG{+w}{ }test2/1.txt\PYG{+w}{ }test2/.4.txt
-\end{MintedVerbatim}

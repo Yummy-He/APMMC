@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{user@host:\PYGZti{}\PYGZdl{} }sudo\PYG{+w}{ }passwd\PYG{+w}{ }root
-\end{MintedVerbatim}

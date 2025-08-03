@@ -1,5 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }\PYG{n+nb}{echo}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Hello, World!\PYGZdq{}}
-\PYG{g+go}{Hello, World!}
-\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }\PYG{n+nb}{echo}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Hello, World!\PYGZdq{}}\PYG{+w}{ }\PYGZgt{}\PYG{+w}{ }test/hello.txt
-\end{MintedVerbatim}

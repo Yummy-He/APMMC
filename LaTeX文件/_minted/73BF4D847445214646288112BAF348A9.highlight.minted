@@ -1,9 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{+w}{      }\PYG{n}{M}\PYG{o}{=}\PYG{l+m+mi}{12345}
-\PYG{+w}{      }\PYG{n}{N}\PYG{o}{=}\PYG{l+m+mi}{123}
-\PYG{+w}{      }\PYG{n}{K}\PYG{o}{=}\PYG{l+m+mi}{123456}
-\PYG{+w}{      }\PYG{k}{WRITE}\PYG{p}{(}\PYG{l+m+mi}{6}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}(I5)\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{M}
-\PYG{+w}{      }\PYG{k}{WRITE}\PYG{p}{(}\PYG{l+m+mi}{6}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}(I5)\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{N}
-\PYG{+w}{      }\PYG{k}{WRITE}\PYG{p}{(}\PYG{l+m+mi}{6}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}(I5)\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{K}
-\PYG{+w}{      }\PYG{k}{END}
-\end{MintedVerbatim}

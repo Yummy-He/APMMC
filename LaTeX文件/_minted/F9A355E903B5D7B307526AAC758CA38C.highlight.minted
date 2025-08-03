@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }sudo\PYG{+w}{ }usermod\PYG{+w}{ }\PYGZhy{}aG\PYG{+w}{ }sudo\PYG{+w}{ }user2
-\end{MintedVerbatim}

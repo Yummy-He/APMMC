@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{g+gp}{user1@host:\PYGZti{}\PYGZdl{} }sed\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}s/60/70/g\PYGZsq{}}\PYG{+w}{ }test/grades.txt
-\end{MintedVerbatim}
