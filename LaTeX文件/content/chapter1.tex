@@ -149,7 +149,7 @@ user1@host:~$ pwd
 
 \subsubsection{切换、创建、删除目录}
 
-如果现在登陆的用户是user1，则主文件夹就是/home/user1，可以通过如下指令进入:
+如果现在登陆的用户是\code{user1}，则主文件夹就是\code{/home/user1}，可以通过如下指令进入:
 \begin{envcode}{console}{Bash}
 user1@host:~$ cd /home/user1
 \end{envcode}
@@ -165,7 +165,7 @@ user1@host:~$ cd ~
 user1@host:~$ mkdir test
 \end{envcode}
 
-在test文件夹中创建一个名为\code{test1}的子目录，在\code{test1}中创建\code{test2}、\code{test3}目录，则可以执行(可同时创建多个)：
+在\code{test}文件夹中创建一个名为\code{test1}的子目录，在\code{test1}中创建\code{test2}、\code{test3}目录，则可以执行(可同时创建多个)：
 \begin{envcode}{console}{Bash}
 user1@host:~$ mkdir ~/test/test1
 user1@host:~$ mkdir ~/test/test1/test2 ~/test/test1/test3
@@ -181,12 +181,12 @@ user1@host:~$ mkdir -p ~/test/test1/test2
 user1@host:~$ rmdir ~/test/test1/test3
 \end{envcode}
 
-此时user1目录下有一个名为\code{test}的子目录，其下又有\code{test1}的目录，则可以通过如下指令进入:
+此时\code{user1}目录下有一个名为\code{test}的子目录，其下又有\code{test1}的目录，则可以通过如下指令进入:
 \begin{envcode}{console}{Bash}
 user1@host:~$ cd ~/test/test1
 \end{envcode}
 
-我们采用touch命令创建文件，如在当前目录下创建一个名为\code{1.txt}的文件，则可以执行：
+我们采用\code{touch}命令创建文件，如在当前目录下创建一个名为\code{1.txt}的文件，则可以执行：
 \begin{envcode}{console}{Bash}
 user1@host:~/test/test1$ touch 1.txt
 \end{envcode}
@@ -241,7 +241,7 @@ mv [选项] 源文件1 源文件2 ... 目标目录
 上文提到，\code{ls}命令可以列出当前目录下的文件和子目录，但如果要查看更详细的信息，则可以使用\code{ls -l}命令。
 其中\code{-l}表示“long”，即长格式，显示更详细的信息，如文件权限、所有者、大小和修改时间等。
 
-查看隐藏文件或文件夹，可用“ls -a"命令（all）。展示子文件夹下文件和目录，可用"ls -R"命令（注意大写）。
+查看隐藏文件或文件夹，可用\code{ls -a}命令（all）。展示子文件夹下文件和目录，可用\code{ls -R}命令（注意大写）。
 
 \code{ls}除了可以查看当前目录下的文件和子目录，还可以查看其他目录下的文件和子目录。
 
@@ -377,7 +377,7 @@ Linux对大小写敏感，不可混用。
 
 \subsection{文件操作命令}
 
-前面我们已经用到了touch命令创建文件，接下来我们介绍一些常用的文件操作命令。
+前面我们已经用到了\code{touch}命令创建文件，接下来我们介绍一些常用的文件操作命令。
 
 \subsubsection{输入和输出、输出重定向}
 
@@ -458,7 +458,7 @@ user1@host:~$ rm *.txt
 \subsubsection{查看文件内容}
 
 查看文件内容我们可以使用\code{cat}命令（concatenate），它可以将文件内容输出到终端。
-cat命令有\code{-n}选项，可显示行号。例如：
+\code{cat}命令有\code{-n}选项，可显示行号。例如：
 \begin{envcode}{console}{Bash}
 user1@host:~$ cat test/hello.txt
 Hello, World!
@@ -483,19 +483,19 @@ user1@host:~$ shuf -r -n 300 -i 1-100 > test/numbers.txt
 user1@host:~$ less test/numbers.txt
 \end{envcode}
 上述命令会打开\code{test/numbers.txt}文件，并在终端分页显示内容。可以使用空格键或PageDown向下翻页，
-用PageUp向上翻页（more命令不行）。
+用PageUp向上翻页（\code{more}命令不行）。
 
 还可以使用以下命令查询里面的内容：
 
-/字符串：向下查询字符串
+\code{/}字符串：向下查询字符串
 
-?字符串：向上查询字符串
+\code{?}字符串：向上查询字符串
 
-n重复前一个查询
+\code{n}重复前一个查询
 
-q退出
+\code{q}退出
 
-如\code{/5}表示向下查询数字5，会查询到包含\code{5}的数字，如15、51、45等，查询到一个后，可以按n重复查询。
+如\code{/5}表示向下查询数字5，会查询到包含\code{5}的数字，如15、51、45等，查询到一个后，可以按\code{n}重复查询。
 
 我们还可以使用\code{head}命令和\code{tail}命令查看文件的前几行或后几行内容，默认为10行。
 例如：
@@ -570,7 +570,7 @@ whereis 命令不仅会显示它们的绝对路径，还会一并显示关联的
 
 \code{cat}命令用于查看文件内容；\code{cat -n}用于显示行号。
 \code{less}命令用于分页查看文件内容；\code{more}命令也可以分页查看文件内容，不能向前翻页。
-/字符串用于向下查询字符串；?字符串用于向上查询字符串；n重复前一个查询；q退出。
+\code{/string}用于向下查询字符串“string”；\code{?string}用于向上查询字符串“string”；\code{n}重复前一个查询；\code{q}退出。
 
 \code{head -n}用于查看文件的前n行内容；\code{tail -n}用于查看文件的后n行内容。
 只用\code{head}或\code{tail}则默认查看前10行或后10行内容。可以使用管道符\code{|}和输出重定向等组合使用。
@@ -620,16 +620,16 @@ root用户是系统的超级用户，拥有最高权限，可以执行所有操�
 sudo命令相关
 
 在安装并初始化系统时，你会跟据指引创建一个用户，这个用户会被赋予sudo权限。
-sudo命令允许普通用户以超级用户权限执行命令。
+\code{sudo}命令允许普通用户以超级用户权限执行命令。
 
-而用useradd命令添加用户时，默认情况下新用户不会被赋予sudo权限。
+而用\code{useradd}命令添加用户时，默认情况下新用户不会被赋予sudo权限。
 
 要给新用户赋予sudo权限，可以将该用户添加到sudo用户组中。
 在有sudo权限的用户下执行以下命令：
 \begin{envcode}{console}{Bash}
 user1@host:~$ sudo usermod -aG sudo user2
 \end{envcode}
-上述命令会将user2用户添加到sudo用户组中，从而赋予其sudo权限。
+上述命令会将\code{user2}用户添加到sudo用户组中，从而赋予其sudo权限。
 \end{zy}
 
 \code{sudo}命令例如：
@@ -645,8 +645,12 @@ Linux系统中的文件权限管理是通过用户、用户组和其他用户的
 
 在\code{ls -l}命令的输出中，第一列显示了文件或目录的权限信息，这里详细介绍一下。
 
-每个文件和目录都有三种权限：读（r）、写（w）和执行（x），分别对应数字权限的4、2、1。
-权限的组合可以用数字相加表示，如7表示读、写、执行（rwx），6表示读、写（rw-），5表示读、执行（r-x），4表示读（r--），3表示写、执行（-wx），2表示写（-w-），1表示执行（--x），0表示无权限（---）。
+每个文件和目录都有三种权限：读（\code{r}）、写（\code{w}）和执行（\code{x}），
+分别对应数字权限表示法的\code{4}、\code{2}、\code{1}。
+权限的组合可以用数字相加表示，如\code{7}（\code{4+2+1}）表示读、写、执行（\code{rwx}），\code{6}（\code{4+2}）表示读、写（\code{rw-}），
+\code{5}（\code{4+1}）表示读、执行（\code{r-x}），\code{4}表示读（\code{r--}），
+\code{3}表示写、执行（\code{-wx}），\code{2}表示写（\code{-w-}），\code{1}表示执行（\code{--x}），
+\code{0}表示无权限（\code{---}）。
 
 对于目录而言，执行权限表示可以进入该目录，读权限表示可以列出该目录下的文件和子目录，写权限表示可以在该目录下创建、删除或重命名文件和子目录。
 
@@ -656,7 +660,7 @@ Linux系统中的文件权限管理是通过用户、用户组和其他用户的
 user1@host:~$ sudo chown user2 test/numbers.txt
 user1@host:~$ sudo chown -R user2 test/
 \end{envcode}
-上述命令会将\code{test/numbers.txt}文件的所有者修改为user2用户，第二条命令会将\code{test}目录及其子目录和文件的所有者修改为user2用户。
+上述命令会将\code{test/numbers.txt}文件的所有者修改为\code{user2}用户，第二条命令会将\code{test}目录及其子目录和文件的所有者修改为\code{user2}用户。
 
 \code{chgrp}命令用于修改文件或目录的所属组， \code{-R}表示递归修改子目录和文件的所属组。
 例如：
@@ -664,11 +668,11 @@ user1@host:~$ sudo chown -R user2 test/
 user1@host:~$ sudo chgrp group1 test/numbers.txt
 user1@host:~$ sudo chgrp -R group1 test/
 \end{envcode}
-上述命令会将\code{test/numbers.txt}文件的所属组修改为group1，第二条命令会将\code{test}目录及其子目录和文件的所属组修改为group1。
+上述命令会将\code{test/numbers.txt}文件的所属组修改为\code{group1}，第二条命令会将\code{test}目录及其子目录和文件的所属组修改为\code{group1}。
 
 \code{chmod}命令用于修改文件或目录的权限，可以使用数字表示法或符号表示法来设置权限，\code{-R}表示递归修改子目录和文件的权限。
-数字表示法是将权限用数字表示，如\code{chmod 755 file.txt}表示设置文件\code{file.txt}的权限为rwxr-xr-x（所有者可读、写、执行，用户组和其他用户可读、执行）。
-符号表示法是使用字母表示权限，如\code{chmod u=rwx file.txt}表示设置文件\code{file.txt}的所有者权限为rwx（可读、写、执行），用户组和其他用户的权限不变。
+数字表示法是将权限用数字表示，如\code{chmod 755 file.txt}表示设置文件\code{file.txt}的权限为\code{rwxr-xr-x}（所有者可读、写、执行，用户组和其他用户可读、执行）。
+符号表示法是使用字母表示权限，如\code{chmod u=rwx file.txt}表示设置文件\code{file.txt}的所有者权限为\code{rwx}（可读、写、执行），用户组和其他用户的权限不变。
 例如以下两条命令等价：
 \begin{envcode}{console}{Bash}
 user1@host:~$ sudo chmod 755 test/numbers.txt
@@ -697,7 +701,7 @@ user1@host:~$ sudo chmod g-w test/numbers.txt
 
 给用户添加sudo权限：使用\code{sudo usermod -aG sudo 用户名}。
 
-文件权限管理：文件权限分为读（r）、写（w）、执行（x），对应数字4、2、1，分为所有者、用户组、其他用户三组。
+文件权限管理：文件权限分为读（\code{r}）、写（\code{w}）、执行（\code{x}），对应数字\code{4}、\code{2}、\code{1}，分为所有者、用户组、其他用户三组。
 
 目录权限：执行权限（进入目录）、读权限（列出内容）、写权限（创建/删除/重命名）。
 
@@ -719,9 +723,9 @@ user1@host:~$ sudo chmod g-w test/numbers.txt
 \item Zypper：用于openSUSE的命令行软件包管理器。
 \item Pacman：用于Arch Linux的包管理器。
 \end{itemize}
-APT是Debian及其衍生版（如Ubuntu）中最常用的软件包管理器，它使用“.deb”格式的软件包。
+APT是Debian及其衍生版（如Ubuntu）中最常用的软件包管理器，它使用\code{.deb}格式的软件包。
 APT提供了简单易用的命令行工具，如\code{apt-get}和\code{apt}命令，用于安装、升级和删除软件包。
-YUM是Red Hat及其衍生版（如CentOS）中最常用的软件包管理器，它使用“.rpm”格式的软件包。
+YUM是Red Hat及其衍生版（如CentOS）中最常用的软件包管理器，它使用\code{.rpm}格式的软件包。
 
 我们在使用的Ubuntu系统中，APT是默认的软件包管理器。其软件仓库在国外，速度较慢，
 但可以通过修改软件源来加快下载速度，新手不建议修改软件源，若版本有误，会带来致命错误。
@@ -733,12 +737,12 @@ YUM是Red Hat及其衍生版（如CentOS）中最常用的软件包管理器，�
 user1@host:~$ sudo apt-get update
 \end{envcode}
 
-我们可以尝试安装一个小工具“fortune”，它会随机显示一段有趣的文字。
+我们可以尝试安装一个小工具\code{fortune}，它会随机显示一段有趣的文字。
 安装命令如下：
 \begin{envcode}{console}{Bash}
 user1@host:~$ sudo apt-get install fortune
 \end{envcode}
-按照提示输入当前用户密码，输入y确认后，安装完成，可以运行\code{fortune}命令来查看随机的有趣文字：
+按照提示输入当前用户密码，输入\code{y}确认后，安装完成，可以运行\code{fortune}命令来查看随机的有趣文字：
 \begin{envcode}{console}{Bash}
 user1@host:~$ fortune
 \end{envcode}
@@ -794,15 +798,15 @@ grep [选项] PATTERN [FILE...]
 其中，PATTERN是要匹配的模式，可以是字符串或正则表达式，FILE是要搜索的文件名。
 常用选项包括：
 \begin{itemize}
-\item -i：忽略大小写
-\item -v：反向匹配，输出不匹配的行
-\item -w：匹配整个单词
-\item -n：显示匹配行的行号
-\item -An：显示匹配行及其后n行
-\item -Bn：显示匹配行及其前n行
-\item -Cn：显示匹配行及其前后各n行
-\item -G：使用基本正则表达式
-\item -E：使用扩展正则表达式
+\item \code{-i}：忽略大小写
+\item \code{-v}：反向匹配，输出不匹配的行
+\item \code{-w}：匹配整个单词
+\item \code{-n}：显示匹配行的行号
+\item \code{-An}：显示匹配行及其后n行
+\item \code{-Bn}：显示匹配行及其前n行
+\item \code{-Cn}：显示匹配行及其前后各n行
+\item \code{-G}：使用基本正则表达式
+\item \code{-E}：使用扩展正则表达式
 \end{itemize}
 
 例如，要在\code{test/numbers.txt}文件中查找包含数字\code{5}的行，并显示行号，可以使用以下命令：
@@ -818,25 +822,25 @@ user1@host:~$ grep -nw 15 test/numbers.txt
 
 这里通配符的使用与之前匹配文件的通配符类似:
 \begin{itemize}
-\item \textasciicircum \ ：匹配行的开头
-\item \$ ：匹配行的结尾
-\item . ：匹配任意单个字符
-\item * ：匹配零个或多个任意字符
-\item {[} {]} ：匹配括号内的任意单个字符
-\item {[}! {]} ：匹配不在括号内的任意单个字符
-\item \{n,m\} ：匹配前一个字符或表达式至少n次，至多m次
-\item \textbackslash ：转义字符，用于匹配特殊字符
-\item \textbar ：逻辑或，用于匹配多个模式
+\item \code{^}：匹配行的开头
+\item \code{$}：匹配行的结尾
+\item \code{.}：匹配任意单个字符
+\item \code{*}：匹配零个或多个任意字符
+\item \code{[ ]}：匹配括号内的任意单个字符
+\item \code{[! ]}：匹配不在括号内的任意单个字符
+\item \code{{n,m}}：匹配前一个字符或表达式至少n次，至多m次
+\item \code{\ }：转义字符，用于匹配特殊字符
+\item \code{|}：逻辑或，用于匹配多个模式
 \end{itemize}
 
 组合使用如：
 \begin{itemize}
-\item \textasciicircum\$ ：匹配空行
-\item .* ：匹配非空行
-\item \textasciicircum.* ：匹配以任意字符开头的行
-\item .*\$ ：匹配以任意字符结尾的行
-\item {[}0-9{]} ：匹配数字
-\item {[}A-Za-z{]} ：匹配字母
+\item \code{^$}：匹配空行
+\item \code{.*}：匹配非空行
+\item \code{^.*}：匹配以任意字符开头的行
+\item \code{.*$}：匹配以任意字符结尾的行
+\item \code{[0-9]}：匹配数字
+\item \code{[A-Za-z]}：匹配字母
 \end{itemize}
 
 例如我想找到所有三位数的数字，可以使用以下命令：
@@ -855,7 +859,7 @@ user1@host:~$ rs 4 100 < test/numbers-2.txt | rs -T > test/grades.txt
 
 我们安装了\code{rs}命令（reformat），它可以格式化文本文件。
 上述命令会生成一个名为\code{test/grades.txt}的文件，共400个数字，每行4个数字，共100行，
-第一列为序号（seq生成的顺序序列），第二至第四列为随机生成的60到100之间的数字（shuf生成的随机数），
+第一列为序号（\code{seq}生成的顺序序列），第二至第四列为随机生成的60到100之间的数字（\code{shuf}生成的随机数），
 可认为是100个人三次考试的成绩。
 
 我们现在用\code{awk}命令来处理这个文件。
@@ -911,7 +915,7 @@ user1@host:~$ sed -i 's/60/70/g' test/grades.txt
 在Windows中，我们用Word或记事本编辑文本文件，
 而在Linux中，我们通常使用Vim编辑器，相比于Word或记事本，支持多种编程语言的语法高亮、自动缩进等功能。
 
-使用命令vim打开文件：
+使用命令\code{vim}打开文件：
 \begin{envcode}{console}{Bash}
 user1@host:~$ vim test/grades.txt
 \end{envcode}
@@ -967,29 +971,43 @@ Vim编辑器有三种模式：一般模式、编辑模式和命令、查找模�
 \caption{Vim文本编辑器的三种模式} 
 \end{figure} 
 
-在一般模式下，我们可以使用键盘上的方向键或hjkl键（h左、j下、k上、l右）移动光标。
-用“i, o, O, a, r, R”进入编辑模式；用“:, /, ?”进入命令模式。在非一般模式下，按“Esc”键可以返回一般模式。
+在一般模式下，有以下常用操作：
+\begin{itemize}
+\item \code{h}：光标左移
+\item \code{j}：光标下移
+\item \code{k}：光标上移
+\item \code{l}：光标右移
+\item \code{0}：光标移动到行首
+\item \code{gg}：光标移动到文件开头
+\item \code{G}：光标移动到文件结尾
+\item \code{x}：删除光标所在字符
+\item \code{dd}：剪切光标所在行
+\item \code{yy}：复制光标所在行
+\item \code{p}：粘贴复制的行到光标后面
+\item \code{u}：撤销上一步操作 
+\item \code{Ctrl+r}：重做上一步操作
+\end{itemize}
 
-按\code{:}进入命令模式，输入\code{wq}并回车即可保存并退出Vim编辑器。
+用\code{i}、\code{o}、\code{O}、\code{a}、\code{r}、\code{R}进入编辑模式；
 
-下面详细介绍编辑模式和命令、查找模式。
+用\code{:}、\code{/}、\code{?}进入底线命令模式。在非一般模式下，按\code{Esc}键可以返回一般模式。
+
+如按\code{:}进入命令模式，输入\code{wq}并回车即可保存并退出Vim编辑器。
+
+下面详细介绍编辑模式和底线命令（即命令或查找，命令输入在屏幕最下方一行输入，故称底线命令）模式。
 
 \subsubsection{编辑模式}
 在编辑模式下，我们可以直接编辑文本，输入文本、删除文本、复制粘贴文本等。
 常用的进入编辑模式命令有：
 \begin{itemize}
-\item i：在光标前插入文本
-\item I：在行首插入文本
-\item a：在光标后插入文本
-\item A：在行尾插入文本
-\item o：在光标下方新建一行并插入文本
-\item O：在光标上方新建一行并插入文本
-\item r：替换光标所在字符
-\item R：进入替换模式，替换光标所在位置及后续字符
-\item x：删除光标所在字符
-\item dd：删除光标所在行
-\item yy：复制光标所在行
-\item p：粘贴复制的行到光标后。
+\item \code{i}：在光标前插入文本
+\item \code{I}：在行首插入文本
+\item \code{a}：在光标后插入文本
+\item \code{A}：在行尾插入文本
+\item \code{o}：在光标下方新建一行并插入文本
+\item \code{O}：在光标上方新建一行并插入文本
+\item \code{r}：替换光标所在字符
+\item \code{R}：进入替换模式，替换光标所在位置及后续字符
 \end{itemize}
 
 其中主要掌握\code{i}的用法即可
@@ -1004,19 +1022,19 @@ Vim编辑器有三种模式：一般模式、编辑模式和命令、查找模�
 在命令、查找模式下，我们可以执行各种命令和查找操作。
 常用的命令有：
 \begin{itemize}
-\item :w：保存文件
-\item :q：退出Vim编辑器
-\item :wq：保存并退出Vim编辑器
-\item :q!：强制退出Vim编辑器，不保存修改
+\item \code{:w}：保存文件
+\item \code{:q}：退出Vim编辑器
+\item \code{:wq}：保存并退出Vim编辑器
+\item \code{:q!}：强制退出Vim编辑器，不保存修改
 \end{itemize}
 
 比如在一般模式下按\code{:}进入命令模式，输入\code{wq}并回车即可保存并退出Vim编辑器。
 
 查找操作有：
 \begin{itemize}
-\item /字符串：向下查找字符串
-\item ?字符串：向上查找字符串
-\item n：重复前一个查找
+\item \code{/string}：向下查找字符串“string”
+\item \code{?string}：向上查找字符串“string”
+\item \code{n}：重复前一个查找
 \end{itemize}
 
 这里不再举例，自行体会即可。
