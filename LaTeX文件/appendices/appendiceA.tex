@@ -19,9 +19,9 @@ Codename:       noble
 user1@host:~$ sudo vim /etc/apt/sources.list.d/ubuntu.sources
 \end{envcode}
 
-不断按“dd”删除原有内容，直到清空文件。
+不断按\code{dd}删除原有内容，直到清空文件。
 
-然后按“i”进入插入模式，粘贴以下内容：
+然后按\code{i}进入插入模式，粘贴以下内容：
 \begin{envcode}{text}{Text}
 Types: deb
 URIs: https://mirrors.tuna.tsinghua.edu.cn/ubuntu
@@ -64,7 +64,7 @@ Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 # # Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 \end{envcode}
 
-按“Esc”键退出插入模式，然后输入“:wq”后回车保存并退出。
+按“Esc”键退出插入模式，然后输入\code{:wq}后回车保存并退出。
 
 接下来，运行以下命令更新软件源列表：
 \begin{envcode}{console}{Bash}
