@@ -1,5 +1,89 @@
 \newpage
 \section{Fortran基础}
+
+\subsection{Fortran语言的编译}
+Fortran程序需要经过编译器编译成机器语言才能被计算机执行。
+
+在本笔记Linux部分已经提到了“gfortran”编译器的安装，如果还没有安装，可以使用以下命令安装：
+\begin{envcode}{console}{Bash}
+user1@host:~$ sudo apt-get install gfortran
+\end{envcode}
+
+\subsubsection{单个文件编译}
+
+以上面的例子为例，假设我们将代码保存在\code{learn}文件夹的\code{hello.f}：
+\begin{envcode}{console}{Bash}
+user1@host:~$ mkdir learn
+user1@host:~$ cd learn
+user1@host:~/learn$ vim hello.f
+\end{envcode}
+
+Vim编辑器用法不再重复，在文件中写入上面例子的代码，注意按照固定格式确认好空格数：
+\begin{envcode}{fortran}{Fortran}
+C THE FIRST FORTRAN PROGRAM
+      WRITE(6,10)
+   10 FORMAT(1X, 'HELLO, WORLD.')
+      END
+\end{envcode}
+保存并退出编辑器。
+
+编译程序命令如下：
+\begin{envcode}{console}{Bash}
+user1@host:~$ gfortran -c file.f -o customfilename.o
+user1@host:~$ gfortran -o executablefilename customfilename.o
+\end{envcode}
+
+其中，第一条命令中\code{-o customfilename.o}可省略，若省略则默认生成\code{file.o}（与\code{file.f}同名）目标文件。
+
+本例中使用以下命令编译程序：
+\begin{envcode}{console}{Bash}
+user1@host:~/learn$ gfortran -c hello.f
+user1@host:~/learn$ gfortran -o hello hello.o
+user1@host:~/learn$ ls
+hello  hello.f  hello.o
+\end{envcode}
+
+第一条命令会生成一个目标文件\code{hello.o}，第二条命令会将目标文件链接成可执行文件\code{hello}。
+
+运行以下命令打开可执行文件，结果如下：
+\begin{envcode}{console}{Bash}
+user1@host:~/learn$ ./hello
+ HELLO, WORLD.
+\end{envcode}
+
+若无法运行程序，可先更改文件权限：
+\begin{envcode}{console}{Bash}
+user1@host:~/learn$ sudo chmod 755 hello
+\end{envcode}
+输入本用户密码确认后即可运行。
+
+如果是像这样只有一个代码文件的简单程序，或者不想生成目标文件，可以直接使用以下命令编译并运行程序：
+\begin{envcode}{console}{Bash}
+user1@host:~/learn$ gfortran -o hello hello.f
+user1@host:~/learn$ ./hello
+ HELLO, WORLD.
+\end{envcode}
+
+这样不会生成目标文件\code{hello.o}，直接生成可执行文件\code{hello}。
+
+\subsubsection{多文件编译}
+
+假设这里有一个主文件\code{binom.f}，其中调用了储存在\code{ifact.f}中的\code{ifact}函数。
+则编译命令为：
+\begin{envcode}{console}{Bash}
+user1@host:~/learn$ gfortran -c binom.f ifact.f
+user1@host:~/learn$ ls
+binom.f  binom.o  ifact.f  ifact.o
+user1@host:~/learn$ gfortran -o binom binom.o ifact.o
+user1@host:~/learn$ ls
+binom  binom.f  binom.o  ifact.f  ifact.o
+\end{envcode}
+
+第1行中，可同时编译多个\code{.f}文件为\code{.o}文件，也可以分别编译。运行\code{ls}命令可看到两个\code{.f}文件均成功编译为\code{.o}文件。
+
+第4行中，将多个\code{.o}文件编译为可执行文件。运行\code{ls}命令可以看到编译成的可执行文件\code{binom}。
+
+
 \subsection{Fortran变量类型声明与转化}
 \subsubsection{Fortran变量类型声明}
 Fortran语言中，变量的类型和声明是非常重要的概念。
@@ -83,7 +167,8 @@ WRITE语句的基本形式为：
 \begin{envcode}{fortran}{Fortran}
       PRINT(格式) 变量1 变量2 ...
 \end{envcode}
-    其中，格式表示数据的格式，变量列表表示要输出的变量。
+    
+其中，格式表示数据的格式，变量列表表示要输出的变量。
 
 
 
@@ -259,34 +344,164 @@ Fortran支持大型算术表达式，可通过嵌套多层括号、合理利用�
       Z = P / Q
 \end{envcode}
 
-\subsection{Fortran程序构成}
-Fortran程序一般由以下几个部分构成：
+\subsection{数组与下标变量}
+
+\subsubsection{数组基本概念与分类}
+数组是Fortran中用于存储一组具有相同属性数据的连续内存单元集合，通过同一名称+下标区分不同元素，相较于标量变量更适合批量数据处理（如学生成绩、矩阵数据等）。
+
+核心要点：
 \begin{itemize}
-      \item 程序头：包括程序名、变量声明等。
-      \item 主程序：包含程序的主要逻辑和计算部分。
-      \item 子程序：可选部分，用于实现特定功能的代码块。
-      \item 结束语句：标志程序的结束。
+      \item 标量变量：单个内存单元，存储单个值（如\code{X=3.14}）。
+      \item 数组：多个连续内存单元，共享同一名称，通过下标定位元素。
+      \item 分类：按下标数量分为一维数组（线性数组）和多维数组（二维、三维等，最多支持7维）。
+      \item 命名规则：与普通变量一致，1-6个字母数字字符，首字符为字母；首字母为I/J/K/L/M/N时默认存储整数，其余默认存储实数（可通过类型语句覆盖）。
 \end{itemize}
-例如：
+
+一维数组与二维数组声明及逻辑结构示例：
 \begin{envcode}{fortran}{Fortran}
-      PROGRAM HelloWorld
-      INTEGER :: I
-      REAL :: X, Y
+C 一维数组（50个元素，存储学生学号）
+      INTEGER ID(50)  ! 合并类型声明与维数声明
+C 二维数组（25行4列，存储25名学生4门考试成绩）
+      REAL SCORE(25,4)  ! 行=学生序号，列=考试科目
       
-      WRITE(6, '(A)') 'Hello, World!'
-      
-      I = 5
-      X = 3.14
-      Y = 2.718281828459045
-      
-      WRITE(6, '(I5, F10.2, E10.3)') I, X, Y
-      
-      END PROGRAM HelloWorld
+C 数组元素引用赋值示例
+      ID(1) = 2024001  ! 第一个学生学号
+      SCORE(2,3) = 92.5  ! 第二个学生第三门考试成绩
+      WRITE(6, '(I8, F10.1)') ID(1), SCORE(2,3)
+      END
 \end{envcode}
 
-其中第一行\code{PROGRAM HelloWorld}表示程序名为\code{HelloWorld}，非必须，可以不写。
+一维数组可看作“线性列表”，二维数组对应数学中的矩阵（按列存储，即先存储第一列所有元素，再存储第二列），三维数组可理解为“多层矩阵”（页→列→行的存储顺序）。
 
-接下来是变量声明部分，使用\code{INTEGER}和\code{REAL}声明了整数和实数类型的变量，这里的内容实际上包含在隐式声明内了，可以不再显式声明。
+\subsubsection{数组声明（DIMENSION语句）}
+数组使用前必须通过声明告知编译器数组名、维度、各维度最大下标，以便分配内存。声明方式包括独立DIMENSION语句和合并类型声明。
 
-\code{END}语句标志程序的结束，后面的\code{PROGRAM HelloWorld}表示程序名的结束，可以直接写\code{END}。
+\begin{itemize}
+      \item 独立声明：使用\code{DIMENSION}语句，非执行语句，需放在所有可执行语句之前。
+      \item 合并声明：同时声明类型和维度维度（如\code{INTEGER A(10)}、\code{REAL B(3,4)}），更简洁。
+\end{itemize}
+
+数组声明的多种形式示例：
+\begin{envcode}{fortran}{Fortran}
+C 独立DIMENSION语句声明
+      DIMENSION ARR1(100), ARR2(3,5), ARR3(2,4,3)
+      INTEGER ARR1, ARR3  ! 声明数组类型
+      REAL ARR2           ! 二维数组存储实数
+      
+C 合并类型与维数声明（推荐）
+      INTEGER :: STUDENT(50)  ! 50个学生的整数类型数据
+      REAL :: MATRIX(10,10)   ! 10×10的实数矩阵
+      
+C 错误声明示例（禁止）
+C     INTEGER N=5
+C     DIMENSION ERR(3, N)  ! 维度不能用变量N
+C     DIMENSION ERR2(0,4)  ! 下标不能为0
+      END
+\end{envcode}
+
+合并声明方式更简洁，同时明确数组类型和维度；独立声明适用于多个数组共用同一类型的场景，但需额外指定类型语句。维度参数必须是常量，否则编译器无法在编译阶段分配内存。
+
+\subsubsection{数组元素引用与下标规则}
+数组元素通过“数组名(下标)”引用，下标可为常量、变量或合法算术表达式，需严格遵循下标规则避免错误。
+
+核心要点：
+\begin{itemize}
+      \item 下标范围：1≤下标≤声明的最大维度值，禁止0、负数或超界下标（编译器可能不检测，导致错误结果）。
+      \item 合法下标表达式：仅限\(n\)、\(K\)、\(K+n\)、\(n*K\)、\(n*K±m\)（\(n,m\)为整数常量，\(K\)为整数变量）。
+      \item 禁止形式：负下标（\code{A(-2)}）、零下标（\code{A(0)}）、逻辑值下标（\code{A(.TRUE.)}）、数组作为下标（\code{A(3*M(2))}）。
+      \item 多维数组下标：按“行→列→页”顺序书写（如\code{B(2,3,1)}表示第1页、第3列、第2行），存储顺序为“列优先”。
+\end{itemize}
+
+合法与非法下标引用：
+\begin{envcode}{fortran}{Fortran}
+      DIMENSION A(10), B(3,4), C(2,2,2)
+      INTEGER K=3, M=2
+      
+C 合法下标引用
+      A(5) = 10.0        ! 常量下标
+      A(K+2) = 20.0      ! 表达式下标（K+2=5）
+      B(2, M*2) = 30.0   ! 二维数组，M*2=4（列下标）
+      C(1,2,2) = 40.0    ! 三维数组，第2页、第2列、第1行
+      
+C 非法下标引用（禁止使用）
+C     A(0) = 5.0        ! 零下标
+C     A(-1) = 8.0       ! 负下标
+C     B(3,5) = 15.0     ! 列下标超界（声明为4列）
+C     C(2, M(1)) = 25.0 ! 数组作为下标
+      
+      WRITE(6, '(F8.1, F8.1, F8.1, F8.1)') A(5), A(5), B(2,4), C(1,2,2)
+      END
+\end{envcode}
+
+说明：下标表达式计算后必须为合法整数，多维数组的下标顺序需与存储顺序区分，避免因“行优先”思维导致数据访问错误（如二维数组\code{B(2,3)}先访问第3列的第2行，而非第2列第3行）。
+
+\subsubsection{数组输入输出与隐式DO循环}
+数组的输入输出（\code{I/O}）支持多种方式，包括数组名直接\code{I/O}、单个元素\code{I/O}、隐式\code{DO}循环\code{I/O}等。
+若直接读写（按照储存顺序读写），一维数组和二维数组还能清晰地通过角标辨别存储顺序，三维及以上数组存储顺序复制，容易记错或混淆，
+而隐式\code{DO}循环灵活高效，适用于批量数据处理，所以更推荐使用隐式\code{DO}循环读写。
+
+核心要点：
+\begin{itemize}
+      \item 数组名直接\code{I/O}：读写整个数组，按存储顺序处理所有元素（如\code{READ(5,*) A}、\code{WRITE(6,*) B}）。
+      \item 单个元素\code{I/O}：针对性读写特定元素（如\code{READ(5,*) A(3)}、\code{WRITE(6,*) B(2,1)}）。
+      \item 隐式\code{DO}循环：通过\code{(数组元素, 下标=初始值, 终止值, 步长)}实现批量读写，支持嵌套（处理多维数组）。
+\end{itemize}
+
+数组\code{I/O}的多种方式：
+\begin{envcode}{fortran}{Fortran}
+C 数组I/O示例：25名学生4门考试成绩的读写
+      DIMENSION SCORE(25,4), AVE(25)
+      REAL SUM
+      
+C 隐式DO循环输入（按行读入每个学生的4门成绩）
+      READ(5, '(4F10.1)') ((SCORE(I,J), J=1,4), I=1,25)
+      
+C 数组名直接输出（按存储顺序输出所有成绩，列优先）
+      WRITE(6, '(1X, 4F10.1)') SCORE
+      
+C DO循环计算并输出每个学生的平均分
+      DO 100 I=1,25
+          SUM=0.0
+          DO 200 J=1,4
+              SUM=SUM+SCORE(I,J)
+200       CONTINUE
+          AVE(I)=SUM/4.0
+100   CONTINUE
+C 嵌套隐式DO循环输出学号、成绩、平均分
+      WRITE(6, '(1X, I3, 4F10.1, F10.2)') ((I, SCORE(I,J), J=1,4, AVE(I)), I=1,25)
+      
+      END
+\end{envcode}
+
+嵌套隐式DO循环读写三维数组示例：
+\begin{envcode}{fortran}{Fortran}
+C 三维数组（2页×3列×4行）的读写
+      DIMENSION C(4,3,2)  ! 行=4，列=3，页=2
+      
+C 嵌套隐式DO循环输入（页→列→行顺序）
+      READ(5, '(6F8.1)') (((C(I,J,K), I=1,4), J=1,3), K=1,2)
+      
+C 嵌套隐式DO循环输出（按页分行打印）
+      DO 100 K=1,2
+          WRITE(6, '(1X, A, I1)') 'PAGE ', K
+          WRITE(6, '(1X, 3F8.1)') ((C(I,J,K), J=1,3), I=1,4)
+100   CONTINUE
+      
+      END
+\end{envcode}
+
+隐式DO循环的外层括号和下标前的逗号不可省略；嵌套隐式DO循环的顺序需与数组读写顺序一致（先内层下标，后外层下标），否则会导致数据读写错位。
+
+
+% \begin{zj}
+% 数组与下标变量是Fortran处理批量数据的核心工具，其核心优势在于通过“统一名称+下标”实现数据的集中管理和高效访问。
+
+% 使用数组需重点关注三点：一是声明的合法性（维度为常量、类型一致），二是下标规则（非零非负、不超界），三是I/O方式的选择（隐式DO循环更灵活，嵌套循环需匹配存储顺序）。
+
+% 多维数组的“列优先”存储顺序是Fortran的特有规则，需与数据读写顺序保持一致，避免数据错位；数组应用场景广泛，排序、查找、数据统计等均可通过数组结合循环实现，其中冒泡排序、线性查找是基础且常用的算法，需掌握其核心逻辑。
+
+% 此外，数组元素的移动、插入、删除等操作需注意避免数据覆盖，通常采用“从后向前处理”或“临时变量存储”的方式，确保数据完整性。
+% \end{zj}
+
+
 

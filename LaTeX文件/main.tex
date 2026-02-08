@@ -1,4 +1,6 @@
+\PassOptionsToPackage{quiet}{xeCJK}
 \documentclass[12pt, a4paper, oneside]{ctexart}
+
 \tolerance=20000
 \usepackage{metalogo}
 \usepackage{tikz}
@@ -33,7 +35,7 @@
 \definecolor{qzi}{RGB}{240, 243, 252} % 浅紫
 \definecolor{szi}{RGB}{49, 55, 70} % 深紫
 
-\definecolor{qhui}{RGB}{230, 230, 230} % 浅灰
+\definecolor{qhui}{RGB}{240, 240, 240} % 浅灰
 \definecolor{shui}{RGB}{40, 40, 40} % 深灰
 
 \definecolor{qhong}{RGB}{255, 220, 220} % 浅红
@@ -271,7 +273,10 @@
 
 % 超链接
 \usepackage[hidelinks]{hyperref}
-
+\hypersetup{
+pdftitle={计算程序与数学算法在化学中的应用学习笔记},
+pdfauthor={何尹铭}
+}
 
 
 
@@ -289,8 +294,22 @@
 
 
 
-
-
+\usepackage{fontawesome5}
+% 联系方式
+\newcommand{\contact}{
+    % 根据个人喜好选择字号
+    \small                % 小
+    % \footnotesize           % 更小
+    % \scriptsize           % 再小一号
+    
+    \textcolor{black}{
+        % 邮箱
+        \faGithub \ \href{https://github.com/Yummy-He/APMMC}{\texttt{GitHub}项目地址：https://github.com/Yummy-He/APMMC}
+        \\
+        \faEnvelope \quad \href{mailto:hongym1223@mails.jlu.edu.cn}{hongym1223@mails.jlu.edu.cn} ,\quad \href{mailto:yummy_he_mail@qq.com}{yummy\_he\_mail@qq.com}
+        % \hspace{4em}
+    }
+}
 
 
 
