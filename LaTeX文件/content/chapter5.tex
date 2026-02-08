@@ -1,0 +1,467 @@
+\section{程序实例}
+
+\subsection{简单程序}
+
+\subsubsection{数列求和}
+已知数列$\frac{1}{A}+\frac{1}{A+B}+\frac{1}{A+2B}+\cdots+\frac{1}{A+(N-1)B}$，求其前$N$项和$S$。
+
+新建文件夹\code{examples}，新建文件\code{sum1.f}：
+
+\begin{envcode}{console}{Bash}
+user1@host:~$ mkdir examples
+user1@host:~$ cd examples
+user1@host:~/examples$ vim sum1.f
+\end{envcode}
+
+按\code{i}进入编辑模式，输入以下内容：
+\begin{envcode}{fortran}{Fortran}
+      READ(5,*) A,B,N
+      SUM=0.0
+      DO I=0,N-1
+          SUM=SUM+1.0/(A+I*B)
+      END DO
+      WRITE(6,*) SUM
+      END
+\end{envcode}
+
+按\code{Esc}退出编辑模式，输入\code{:wq}保存并退出。
+编译运行：
+\begin{envcode}{console}{Bash}
+user1@host:~/examples$ gfortran -o sum1 sum1.f
+user1@host:~/examples$ ./sum1
+1 2 10
+   2.13325596
+\end{envcode}
+
+如上所示，依次输入$A=1$，$B=2$，$N=10$（用逗号或空格分隔），得到结果$S=2.13325596$。
+
+\subsubsection{数列求积}
+已知数列$\frac{1}{1^2}+\frac{3}{2^2}+\frac{5}{3^2}+\cdots+\frac{2N-1}{N^2}$，求其前$N$项积$P$。
+
+新建文件\code{prod1.f}：
+输入以下内容：
+\begin{envcode}{fortran}{Fortran}
+      READ(5,*) N
+      PROD=1.0
+      DO I=1,N
+          PROD=PROD*(2.0*I-1.0)/(I*I)
+      END DO
+      WRITE(6,*) PROD
+      END
+\end{envcode}
+
+编译运行：
+\begin{envcode}{console}{Bash}
+user1@host:~/examples$ gfortran -o prod1 prod1.f
+user1@host:~/examples$ ./prod1
+10
+   4.97205074E-05
+\end{envcode}
+
+\subsection{复杂程序}
+
+\subsubsection{牛顿法求平方根}
+利用牛顿迭代法求一个正数$S$的平方根，即求$x=\sqrt{S}$，其迭代公式为：
+\[x_{n+1}=\frac{1}{2}\left(x_n+\frac{S}{x_n}\right)\]
+设定初始值$x_0=S/2$，当$|x_{n+1}-x_n|<\varepsilon$时，迭代结束，取$x_{n+1}$为$\sqrt{S}$的近似值。
+新建文件\code{sqrt1.f}：
+输入以下内容：
+\begin{envcode}{fortran}{Fortran}
+      READ(5,*) S, EPS
+      XN=S/2.0
+      DO
+          XN1=0.5*(XN+S/XN)
+          IF (ABS(XN1-XN) .LT. EPS) THEN
+              EXIT
+          END IF
+          XN=XN1
+      END DO
+      WRITE(6,*) XN1
+      END
+\end{envcode}
+
+\subsubsection{解一元二次方程}
+利用求根公式解一元二次方程$ax^2+bx+c=0$，其根的求解公式为：
+\[x_{1,2}=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\]
+新建文件\code{quad1.f}：
+输入以下内容：
+\begin{envcode}{fortran}{Fortran}
+      READ(5,*) A,B,C
+      D=B*B-4.0*A*C
+      IF (D .LT. 0.0) THEN
+          WRITE(6,*) 'No real roots'
+      ELSE
+          R1=(-B+SQRT(D))/(2.0*A)
+          R2=(-B-SQRT(D))/(2.0*A)
+          WRITE(6,*) R1,R2
+      END IF
+      END
+\end{envcode}
+
+\subsubsection{一组数的统计计算}
+编写程序计算一组数的最大值、最小值、平均值和标准差。一直读取值，直到读到\code{0}为止（\code{0}不计入统计）。
+新建文件\code{stats1.f}：
+输入以下内容：
+\begin{envcode}{fortran}{Fortran}
+      SUM=0.0
+      SUMSQ=0.0
+      ICOUNT=0
+      XMAX=-1.0E30
+      XMIN=1.0E30
+      DO
+          READ(5,*) X
+          IF (X .EQ. 0.0) EXIT
+          SUM=SUM+X
+          SUMSQ=SUMSQ+X*X
+          ICOUNT=ICOUNT+1
+          IF (X .GT. XMAX) XMAX=X
+          IF (X .LT. XMIN) XMIN=X
+      END DO
+      IF (ICOUNT .EQ. 0) THEN
+          WRITE(6,*) 'No data entered'
+      ELSE
+          XMEAN=SUM/ICOUNT
+          STDDEV=SQRT((SUMSQ-ICOUNT*XMEAN*XMEAN)/(ICOUNT-1))
+          WRITE(6,10) XMAX, XMIN, XMEAN, STDDEV
+   10     FORMAT('Max=',F10.4,' Min=',F10.4,
+     &        ' Mean=',F10.4,' StdDev=',F10.4)
+      END IF
+      END
+\end{envcode}
+
+编译后运行：
+\begin{envcode}{console}{Bash}
+user1@host:~/examples$ gfortran -o stats1 stats1.f
+user1@host:~/examples$ ./stats1
+12
+13
+14
+15
+15
+15
+16
+17
+18
+0
+Max=   18.0000 Min=   12.0000 Mean=   15.0000 StdDev=    1.8708
+\end{envcode}
+
+若使用数组，需先确定数组大小，则程序如下：
+\begin{envcode}{fortran}{Fortran}
+      DIMENSION X(100)
+      ICOUNT=0
+      DO
+          READ(5,*) X(ICOUNT+1)
+          IF (X(ICOUNT+1) .EQ. 0.0) EXIT
+          ICOUNT=ICOUNT+1
+          IF (ICOUNT .GE. MAXN) THEN
+              WRITE(6,*) 'Array full'
+              EXIT
+          END IF
+      END DO
+      IF (ICOUNT .EQ. 0) THEN
+          WRITE(6,*) 'No data entered'
+      ELSE
+          XMAX=X(1)
+          XMIN=X(1)
+          SUM=0.0
+          SUMSQ=0.0
+          DO I=1,ICOUNT
+              SUM=SUM+X(I)
+              SUMSQ=SUMSQ+X(I)*X(I)
+              IF (X(I) .GT. XMAX) XMAX=X(I)
+              IF (X(I) .LT. XMIN) XMIN=X(I)
+          END DO
+          XMEAN=SUM/ICOUNT
+          STDDEV=SQRT((SUMSQ-ICOUNT*XMEAN*XMEAN)/(ICOUNT-1))
+          WRITE(6,10) XMAX, XMIN, XMEAN, STDDEV
+   10     FORMAT('Max=',F10.4,' Min=',F10.4,
+     &        ' Mean=',F10.4,' StdDev=',F10.4)
+      END IF
+      END
+\end{envcode}
+
+\subsubsection{冒泡排序}
+冒泡排序是一种简单的排序算法，其基本思想是通过重复交换相邻的元素，将较大的元素逐渐“冒泡”到序列的末尾。以下是使用Fortran实现的冒泡排序程序：
+
+新建文件\code{bubble.f}：
+输入以下内容：
+\begin{envcode}{fortran}{Fortran}
+      DIMENSION A(100)
+      READ(5,*) N
+      IF (N .GT. 100) THEN
+        WRITE(6,*) 'Error: N too large'
+        STOP
+      ENDIF
+      
+      DO 10 I = 1, N
+        READ(5,*) A(I)
+   10 CONTINUE
+      
+      WRITE(6,*) 'Original array:'
+      DO 20 I = 1, N
+        WRITE(6,*) A(I)
+   20 CONTINUE
+      
+      DO 30 I = 1, N-1
+        DO 40 J = 1, N-I
+          IF (A(J) .GT. A(J+1)) THEN
+            TEMP = A(J)
+            A(J) = A(J+1)
+            A(J+1) = TEMP
+          ENDIF
+   40   CONTINUE
+   30 CONTINUE
+      
+      WRITE(6,*) 'Sorted array:'
+      DO 50 I = 1, N
+        WRITE(6,*) A(I)
+   50 CONTINUE
+      END
+\end{envcode}
+
+\subsubsection{生成斐波那契数列}
+斐波那契数列是一种经典的数列，其定义为：前两项为1，后续每一项为前两项之和。以下是使用Fortran利用数组实现生成斐波那契数列的程序：
+新建文件\code{fibonacci.f}：
+输入以下内容：
+\begin{envcode}{fortran}{Fortran}
+      INTEGER NF(100)
+      READ(5,*) N
+      IF (N .GT. 100) THEN
+        WRITE(6,*) 'Error: N too large'
+        STOP
+      ENDIF
+
+      NF(1) = 1
+      NF(2) = 1
+      DO 10 I = 3, N
+        NF(I) = NF(I-1) + NF(I-2)
+   10 CONTINUE
+      
+      WRITE(6,*) 'Fibonacci sequence:'
+      DO 20 I = 1, N
+        WRITE(6,*) NF(I)
+   20 CONTINUE
+      END
+\end{envcode}
+
+\subsubsection{计算行列式}
+
+我们先准备一个文本文件\code{matrix1.txt}以供操作使用，按如下步骤生成：
+\begin{envcode}{console}{Bash}
+user1@host:~$ sudo apt-get install rs
+user1@host:~$ shuf -r -n 25 -i 5-10 | rs 5 5 > matrix1.txt
+\end{envcode}
+
+我们安装了\code{rs}命令（reformat），它可以格式化文本文件。
+上述命令会生成一个名为\code{matrix1.txt}的文件，其中包含25个随机整数，范围在5到10之间。
+然后，我们使用\code{rs}命令将这些数字重新格式化为一个5行5列的矩阵，并将结果保存到\code{matrix1.txt}中。
+
+新建文件\code{determinant.f}：
+输入以下内容：
+\begin{envcode}{fortran}{Fortran}
+      PROGRAM DETERMINANT
+C     ARRAY SIZE: MAXIMUM 100 X 100 MATRIX
+
+      DIMENSION A(100,100), B(10000)
+      LOGICAL NOSING
+      CHARACTER LINE*1000
+C
+C     READ ALL NUMBERS FROM INPUT BY PROCESSING EACH LINE
+      K = 0
+      NLINE = 0
+   10 READ(5,'(A)',END=20) LINE
+C     PROCESS NON-EMPTY LINES
+      IF (LINE .NE. ' ') THEN
+        NLINE = NLINE + 1
+        LENLINE = LEN(LINE)
+C       PARSE NUMBERS FROM THE LINE
+        IPOS = 1
+   30   CONTINUE
+C       FIND NEXT NON-BLANK CHARACTER
+        DO WHILE (IPOS .LE. LENLINE .AND. LINE(IPOS:IPOS) .EQ. ' ')
+          IPOS = IPOS + 1
+        ENDDO
+        IF (IPOS .GT. LENLINE) GOTO 40
+C       FIND END OF CURRENT NUMBER
+        J = IPOS
+        DO WHILE (J .LE. LENLINE .AND. LINE(J:J) .NE. ' ')
+          J = J + 1
+        ENDDO
+C       CONVERT SUBSTRING TO NUMBER
+        IF (J .GT. IPOS) THEN
+          READ(LINE(IPOS:J-1),*) B(K+1)
+          K = K + 1
+          IPOS = J
+          GOTO 30
+        ENDIF
+   40   CONTINUE
+      ENDIF
+      GOTO 10
+   20 CONTINUE
+C
+C     CHECK IF TOTAL COUNT IS PERFECT SQUARE
+      N = NINT(SQRT(REAL(K)))
+      IF (N*N .NE. K) THEN
+        WRITE(6,*) 'ERROR: NUMBER OF ELEMENTS IS NOT PERFECT SQUARE'
+        STOP
+      ENDIF
+C
+C     FILL 2D MATRIX A FROM 1D ARRAY B (ROW-MAJOR ORDER)
+      DO 50 I = 1, N
+        DO 60 J = 1, N
+          A(I,J) = B((I-1)*N + J)
+   60   CONTINUE
+   50 CONTINUE
+C
+      WRITE(6,*)'MATRIX:'
+      DO K=1,N
+      WRITE(6,'(100F10.2)') (A(I,K),I=1,N)
+      END DO
+      
+C     CALCULATE DETERMINANT USING GAUSSIAN ELIMINATION
+      DET = 1.0
+      NOSING = .TRUE.
+C
+      DO 70 K = 1, N-1
+C       FIND PIVOT ELEMENT (MAXIMUM IN COLUMN)
+        PIV = ABS(A(K,K))
+        IPIV = K
+        DO 80 I = K+1, N
+          IF (ABS(A(I,K)) .GT. PIV) THEN
+            PIV = ABS(A(I,K))
+            IPIV = I
+          ENDIF
+   80   CONTINUE
+C
+C       CHECK FOR SINGULAR MATRIX
+        IF (PIV .EQ. 0.0) THEN
+          NOSING = .FALSE.
+          GOTO 90
+        ENDIF
+C
+C       SWAP ROWS IF NECESSARY
+        IF (IPIV .NE. K) THEN
+          DET = -DET
+          DO 100 J = 1, N
+            TEMP = A(K,J)
+            A(K,J) = A(IPIV,J)
+            A(IPIV,J) = TEMP
+  100     CONTINUE
+        ENDIF
+C
+C       ELIMINATION PROCESS
+        DO 110 I = K+1, N
+          FACTOR = A(I,K)/A(K,K)
+          DO 120 J = K+1, N
+            A(I,J) = A(I,J) - FACTOR*A(K,J)
+  120     CONTINUE
+  110   CONTINUE
+        DET = DET * A(K,K)
+   70 CONTINUE
+      DET = DET * A(N,N)
+C
+   90 CONTINUE
+C
+C     OUTPUT RESULT
+      IF (NOSING) THEN
+        WRITE(6, '(A, F10.2)') 'DETERMINANT = ', DET
+      ELSE
+        WRITE(6,*) 'SINGULAR MATRIX, DETERMINANT = 0'
+      ENDIF
+C
+      STOP
+      END
+\end{envcode}
+
+本程序由AI生成，读取部分较复杂，不用在意，其中第\code{11}行\code{READ(5,'(A)',END=20)}中，意为从标准输入读取一行字符，读到末尾时跳转至标签\code{20}。
+后面的部分是标准的高斯消元法求行列式的实现，可以学习。
+
+编译运行：
+\begin{envcode}{console}{Bash}
+user1@host:~/examples$ gfortran -o determinant determinant.f
+user1@host:~/examples$ ./determinant < matrix1.txt
+ MATRIX:
+      7.00      9.00      5.00      9.00     10.00
+      5.00      7.00      5.00      8.00      9.00
+     10.00      7.00      7.00      7.00      9.00
+     10.00      8.00      9.00      6.00     10.00
+      7.00      7.00     10.00      6.00      9.00
+DETERMINANT =     314.00
+\end{envcode}
+
+\subsubsection{矩阵乘法}
+
+新建文件\code{matmult.f}：
+\begin{envcode}{fortran}{Fortran}
+      PROGRAM MATMUL
+      IMPLICIT REAL*8 (A-H,O-Z)
+      IMPLICIT INTEGER*4 (I-N)
+C     DECLARE POINTERS FOR DYNAMIC ARRAYS
+      REAL*8, POINTER :: A(:,:), B(:,:), C(:,:)
+      
+C     READ MATRIX DIMENSIONS
+      READ(5,*) M, K, N
+      
+C     ALLOCATE MEMORY FOR MATRICES
+      ALLOCATE(A(M,K), B(K,N), C(M,N))
+      
+C     READ MATRIX A (M x K)
+      DO 10 I = 1, M
+        READ(5,*) (A(I,J), J = 1, K)
+10    CONTINUE
+      
+C     READ MATRIX B (K x N)
+      DO 20 I = 1, K
+        READ(5,*) (B(I,J), J = 1, N)
+20    CONTINUE
+      
+C     PERFORM MATRIX MULTIPLICATION C = A * B
+      DO 30 I = 1, M
+        DO 40 J = 1, N
+          C(I,J) = 0.0D0
+          DO 50 L = 1, K
+            C(I,J) = C(I,J) + A(I,L) * B(L,J)
+50        CONTINUE
+40      CONTINUE
+30    CONTINUE
+      
+C     WRITE RESULT MATRIX C (M x N)
+      WRITE(6,*) 'RESULT MATRIX C:'
+      DO 60 I = 1, M
+        WRITE(6,'(1000F16.4)') (C(I,J), J = 1, N)
+60    CONTINUE
+      
+C     DEALLOCATE MEMORY
+      DEALLOCATE(A)
+      DEALLOCATE(B)
+      DEALLOCATE(C)
+      
+      STOP
+      END
+\end{envcode}
+
+准备输入文件\code{matrix2.txt}，内容如下：
+\begin{envcode}{console}{Bash}
+user1@host:~$ echo "2 3 2" >matrix2.txt
+user1@host:~$ shuf -r -n 25 -i 5-10 | rs 2 3 >> matrix2.txt
+user1@host:~$ shuf -r -n 25 -i 5-10 | rs 3 2 >> matrix2.txt
+\end{envcode}
+上述命令会生成一个名为\code{matrix2.txt}的文件，其中第一行包含矩阵的维度信息（$M=2$，$K=3$，$N=2$），接下来的两部分分别是矩阵A（2行3列）和矩阵B（3行2列）的随机数据。
+
+编译运行：
+\begin{envcode}{console}{Bash}
+user1@host:~/examples$ gfortran -o matmult matmult.f
+user1@host:~/examples$ ./matmult < matrix2.txt
+ RESULT MATRIX C:
+        131.0000        133.0000
+        135.0000        128.0000
+\end{envcode}
+
+可以看到，这次程序使用了动态数组（通过\code{ALLOCATE}语句），使得程序能够处理任意大小的矩阵，而不受固定数组大小的限制。这种方法更灵活，适用于实际应用中经常遇到的不同尺寸的矩阵乘法问题。
+需要注意的是，使用动态数组时必须确保在程序结束前正确释放内存（通过\code{DEALLOCATE}语句），以避免内存泄漏问题。
+
+动态数组在这类程序中非常有用，因为它们允许我们根据实际需要分配内存，但是也有不足之处，比如需要额外的内存管理代码，增加了程序的复杂性。此外，动态数组的性能可能不如静态数组，因为它们涉及到运行时的内存分配和释放操作，这可能会导致性能下降，尤其是在频繁分配和释放内存的情况下。因此，在使用动态数组时需要权衡灵活性和性能之间的关系。
+
+在非必要的情况下，还是建议使用一个静态数组，遇到不确定大小的数组时，可以分配一个足够大的数组，在必要的时候再使用动态数组。
+

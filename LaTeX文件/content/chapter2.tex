@@ -81,7 +81,7 @@ C THE FIRST FORTRAN PROGRAM
 
 在向机器输入程序时，依次读取四张卡片即可。
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \captionsetup{font={small, bf}, margin=60pt}
     \begin{subfigure}[c]{0.48\textwidth}
@@ -113,7 +113,7 @@ C THE FIRST FORTRAN PROGRAM
 \end{envcode}
 
 在打孔卡片上如图所示：
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \captionsetup{font={small, bf}, margin=60pt}
     \begin{subfigure}[c]{0.9\textwidth}
@@ -124,56 +124,10 @@ C THE FIRST FORTRAN PROGRAM
 \end{figure}
 
 当然，现在已经没有人使用打孔卡片了，Fortran程序的编写和运行都可以在现代计算机上完成。
-但是，Fortran的固定格式仍然保留了下来，Fortran程序的编写仍然需要遵循固定格式。
+但是，Fortran的固定格式仍然保留了下来，Fortran77程序的编写仍然需要遵循固定格式。
 
 同时卡片的概念在Fortran中也保留了下来，
 Fortran程序的每一行代码都可以看作是一张卡片，读取的每一行数据也可以看作是一张卡片。
 
 另外，打孔卡片是不区分大小写的，Fortran程序的代码也不区分大小写。
 
-\subsection{Fortran语言的编译}
-Fortran程序需要经过编译器编译成机器语言才能被计算机执行。
-
-在本笔记Linux部分已经提到了“gfortran”编译器的安装，如果还没有安装，可以使用以下命令安装：
-\begin{envcode}{console}{Bash}
-user1@host:~$ sudo apt-get install gfortran
-\end{envcode}
-
-以上面的例子为例，假设我们将代码保存在\code{learn}文件夹的\code{hello.f}：
-\begin{envcode}{console}{Bash}
-user1@host:~$ mkdir learn
-user1@host:~$ cd learn
-user1@host:~/learn$ vim hello.f
-\end{envcode}
-
-Vim编辑器用法不再重复，在文件中写入上面例子的代码，注意按照固定格式确认好空格数：
-\begin{envcode}{fortran}{Fortran}
-C THE FIRST FORTRAN PROGRAM
-      WRITE(6,10)
-   10 FORMAT(1X, 'HELLO, WORLD.')
-      END
-\end{envcode}
-
-保存并退出编辑器后，使用以下命令编译程序：
-\begin{envcode}{console}{Bash}
-user1@host:~/learn$ gfortran -c hello.f
-user1@host:~/learn$ gfortran -o hello hello.o
-user1@host:~/learn$ ls
-hello  hello.f  hello.o
-\end{envcode}
-
-第一条命令会生成一个目标文件\code{hello.o}，第二条命令会将目标文件链接成可执行文件\code{hello}。
-运行程序使用以下命令：
-\begin{envcode}{console}{Bash}
-user1@host:~/learn$ ./hello
- HELLO, WORLD.
-\end{envcode}
-
-如果是像这样只有一个代码文件的简单程序，或者不想生成目标文件，可以直接使用以下命令编译并运行程序：
-\begin{envcode}{console}{Bash}
-user1@host:~/learn$ gfortran -o hello hello.f
-user1@host:~/learn$ ./hello
- HELLO, WORLD.
-\end{envcode}
-
-这样不会生成目标文件\code{hello.o}，直接生成可执行文件\code{hello}。
