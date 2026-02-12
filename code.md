@@ -235,7 +235,7 @@ I'm also Ubuntu.
 ```  
 ### 代码 1.5.7  
 ```
-user1@host:~$ pwd | ls  
+user1@host:~$ ls -l | grep .txt  
 ```  
 ### 代码 1.5.8  
 ```

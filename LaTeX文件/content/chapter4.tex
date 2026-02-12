@@ -82,8 +82,8 @@ user1@host:~/learn$ ./binom
 
 例如，编写一个交换两个数的子程序文件\code{swap.f}：
 \begin{envcode}{fortran}{Fortran}
-C SUBROUTINE TO SWAP TWO NUMBERS
-      SUBROUTINE SWAP(A, B)
+C SUBROUTINE TO INTCHG TWO NUMBERS
+      SUBROUTINE INTCHG(A, B)
       REAL :: A, B, TEMP
       TEMP = A
       A = B
@@ -159,111 +159,6 @@ FUNCTION和SUBROUTINE子程序
 
 二者在定义时，都需要声明变量或数组的类型和维数，以确保正确处理传递的数据。
 \end{zj}
-
-\subsection{程序框图}
-程序框图是一种用于表示程序逻辑结构的图形工具，通过不同的符号和连接线来表示程序的各个部分及其关系。常用的程序框图符号包括：
-\begin{itemize}
-      \item 起始/结束符号：表示程序的开始和结束，通常用椭圆形表示。
-      \item 处理符号：表示程序中的处理步骤，如计算、赋值等，通常用矩形表示。
-      \item 输入/输出符号：表示程序中的输入和输出操作，通常用平行四边形表示。
-      \item 决策符号：表示程序中的条件判断，通常用菱形表示。
-      \item 连接线：表示程序流程的方向，连接各个符号。
-\end{itemize}
-通过程序框图，可以清晰地展示程序的逻辑结构和流程。例如，下面是一个简单的程序框图（图\ref{fig:program_flowchart}），表示一个循环结构的程序。
-\begin{figure}[ht]
-      \centering
-      \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-      %uncomment if require: \path (0,385); %set diagram left start at 0, and has height of 385
-
-      %Rounded Rect [id:dp8328588102090151] 
-      \draw   (290,34.5) .. controls (290,24.84) and (297.84,17) .. (307.5,17) -- (392.5,17) .. controls (402.16,17) and (410,24.84) .. (410,34.5) -- (410,34.5) .. controls (410,44.16) and (402.16,52) .. (392.5,52) -- (307.5,52) .. controls (297.84,52) and (290,44.16) .. (290,34.5) -- cycle ;
-      %Shape: Rectangle [id:dp17985251419884474] 
-      \draw   (290,78) -- (410,78) -- (410,111.83) -- (290,111.83) -- cycle ;
-      %Straight Lines [id:da13836301690190234] 
-      \draw    (350,52) -- (350,75) ;
-      \draw [shift={(350,78)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-      %Shape: Cloud [id:dp22782610661330427] 
-      \draw   (300.92,146.46) .. controls (299.95,142.43) and (303.13,138.44) .. (309.09,136.18) .. controls (315.06,133.93) and (322.77,133.8) .. (328.95,135.86) .. controls (331.14,133.51) and (335.15,131.89) .. (339.77,131.49) .. controls (344.39,131.09) and (349.07,131.95) .. (352.4,133.81) .. controls (354.26,131.68) and (357.93,130.25) .. (362.09,130.03) .. controls (366.25,129.81) and (370.33,130.82) .. (372.86,132.71) .. controls (376.23,130.46) and (381.6,129.51) .. (386.64,130.27) .. controls (391.67,131.04) and (395.47,133.38) .. (396.4,136.29) .. controls (400.53,136.93) and (403.97,138.56) .. (405.83,140.75) .. controls (407.7,142.94) and (407.8,145.49) .. (406.11,147.72) .. controls (410.18,150.73) and (411.13,154.74) .. (408.61,158.25) .. controls (406.09,161.76) and (400.48,164.24) .. (393.87,164.78) .. controls (393.82,168.07) and (390.64,171.1) .. (385.54,172.68) .. controls (380.45,174.27) and (374.25,174.17) .. (369.32,172.43) .. controls (367.22,176.37) and (361.31,179.28) .. (354.15,179.88) .. controls (346.98,180.49) and (339.85,178.69) .. (335.82,175.26) .. controls (330.89,176.95) and (324.96,177.44) .. (319.39,176.61) .. controls (313.82,175.79) and (309.07,173.72) .. (306.2,170.87) .. controls (301.16,171.21) and (296.29,169.73) .. (294,167.16) .. controls (291.71,164.59) and (292.49,161.49) .. (295.96,159.4) .. controls (291.47,157.89) and (289.17,154.91) .. (290.27,152) .. controls (291.38,149.1) and (295.63,146.92) .. (300.82,146.62) ; \draw   (295.97,159.39) .. controls (298.09,160.1) and (300.54,160.43) .. (302.99,160.32)(306.21,170.87) .. controls (307.26,170.8) and (308.29,170.66) .. (309.28,170.43)(335.82,175.26) .. controls (335.08,174.63) and (334.45,173.96) .. (333.97,173.25)(369.32,172.43) .. controls (369.7,171.71) and (369.95,170.97) .. (370.06,170.22)(393.86,164.78) .. controls (393.91,161.27) and (390.41,158.06) .. (384.84,156.52)(406.11,147.72) .. controls (405.21,148.92) and (403.83,149.98) .. (402.09,150.82)(396.4,136.29) .. controls (396.55,136.77) and (396.62,137.26) .. (396.61,137.75)(372.86,132.71) .. controls (372.02,133.27) and (371.33,133.9) .. (370.8,134.57)(352.4,133.81) .. controls (351.95,134.32) and (351.61,134.86) .. (351.4,135.42)(328.95,135.86) .. controls (330.26,136.29) and (331.47,136.81) .. (332.56,137.42)(300.92,146.46) .. controls (301.05,147.02) and (301.26,147.57) .. (301.55,148.1) ;
-      %Straight Lines [id:da7840256672973447] 
-      \draw    (350,112) -- (350,135) ;
-      \draw [shift={(350,138)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-      %Shape: Rectangle [id:dp20472903555734168] 
-      \draw   (290,207) -- (410,207) -- (410,240.83) -- (290,240.83) -- cycle ;
-      %Straight Lines [id:da2618437898650212] 
-      \draw    (351,181) -- (351,204) ;
-      \draw [shift={(351,207)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-      %Shape: Diamond [id:dp6500945499785862] 
-      \draw   (350,264) -- (410,289) -- (350,314) -- (290,289) -- cycle ;
-      %Straight Lines [id:da316528847526659] 
-      \draw    (350,241) -- (350,262) ;
-      \draw [shift={(350,265)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-      %Shape: Right Angle [id:dp35661600831744167] 
-      \draw   (290,288.83) -- (240,288.83) -- (240,152.83) ;
-      %Rounded Rect [id:dp12383134692351772] 
-      \draw   (291,353.5) .. controls (291,343.84) and (298.84,336) .. (308.5,336) -- (393.5,336) .. controls (403.16,336) and (411,343.84) .. (411,353.5) -- (411,353.5) .. controls (411,363.16) and (403.16,371) .. (393.5,371) -- (308.5,371) .. controls (298.84,371) and (291,363.16) .. (291,353.5) -- cycle ;
-      %Straight Lines [id:da1422568232591901] 
-      \draw    (350,313) -- (350,334) ;
-      \draw [shift={(350,337)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-      %Straight Lines [id:da26294265696172126] 
-      \draw    (239.6,152.83) -- (287,152.83) ;
-      \draw [shift={(290,152.83)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-
-      % Text Node
-      \draw (349,32.92) node   [align=left] {\begin{minipage}[lt]{81.6pt}\setlength\topsep{0pt}
-      \begin{center}
-      \textbf{{\large {Start}}}
-      \end{center}
-
-      \end{minipage}};
-      % Text Node
-      \draw (350,91.92) node   [align=left] {\begin{minipage}[lt]{81.6pt}\setlength\topsep{0pt}
-      \begin{center}
-      {\large \textbf{I ← 1}}
-      \end{center}
-
-      \end{minipage}};
-      % Text Node
-      \draw (350,151.92) node   [align=left] {\begin{minipage}[lt]{81.6pt}\setlength\topsep{0pt}
-      \begin{center}
-      {\large \textbf{Process}}
-      \end{center}
-
-      \end{minipage}};
-      % Text Node
-      \draw (351,220.92) node   [align=left] {\begin{minipage}[lt]{81.6pt}\setlength\topsep{0pt}
-      \begin{center}
-      {\textbf{{\large I ← I + 1}}}
-      \end{center}
-
-      \end{minipage}};
-      % Text Node
-      \draw (350,287) node   [align=left] {\begin{minipage}[lt]{81.6pt}\setlength\topsep{0pt}
-      \begin{center}
-      {\textbf{{\large I $\leq$ 100}}}
-      \end{center}
-
-      \end{minipage}};
-      % Text Node
-      \draw (249,272) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\texttt{\textcolor[rgb]{0.29,0.56,0.89}{Yes}}}};
-      % Text Node
-      \draw (350,351.92) node   [align=left] {\begin{minipage}[lt]{81.6pt}\setlength\topsep{0pt}
-      \begin{center}
-      \textbf{{\large Stop}}
-      \end{center}
-
-      \end{minipage}};
-      % Text Node
-      \draw (356,316) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\texttt{\textcolor[rgb]{0.29,0.56,0.89}{No}}}};
-
-
-      \end{tikzpicture}
-
-      \caption{循环结构的程序框图}
-      \label{fig:program_flowchart}
-\end{figure}
-
-程序框图能够帮助程序员更好地理解和设计程序逻辑，提高程序的可读性和维护性。在编写复杂程序时，建议先绘制程序框图，以便理清思路，确保程序逻辑的正确性。
-笔记中绘制程序框图比较麻烦，固本笔记之后不再展示程序框图。
 
 \subsection{IF语句}
 
@@ -378,7 +273,6 @@ GOTO语句的使用
 因此，在编写Fortran程序时，建议尽量避免使用\code{GOTO}语句，改用结构化的控制语句（如\code{IF}、\code{DO}等）来实现程序逻辑。
 \end{zy}
 
-
 \subsection{DO循环语句}
 \subsubsection{基本DO循环}
 \code{DO}循环用于实现重复执行某段代码的功能。基本的\code{DO}循环结构如下：
@@ -428,3 +322,108 @@ LABEL CONTINUE
       WRITE(6,*) '二维数组元素和为：', SUM
       END
 \end{envcode}
+
+\subsection{程序框图}
+程序框图是一种用于表示程序逻辑结构的图形工具，通过不同的符号和连接线来表示程序的各个部分及其关系。常用的程序框图符号包括：
+\begin{itemize}
+      \item 起始/结束符号：表示程序的开始和结束，通常用椭圆形表示。
+      \item 处理符号：表示程序中的处理步骤，如计算、赋值等，通常用矩形表示。
+      \item 输入/输出符号：表示程序中的输入和输出操作，通常用平行四边形表示。
+      \item 决策符号：表示程序中的条件判断，通常用菱形表示。
+      \item 连接线：表示程序流程的方向，连接各个符号。
+\end{itemize}
+通过程序框图，可以清晰地展示程序的逻辑结构和流程。例如，下面是一个简单的程序框图（图\ref{fig:program_flowchart}），表示一个循环结构的程序。
+\begin{figure}[ht]
+      \centering
+      \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+      %uncomment if require: \path (0,385); %set diagram left start at 0, and has height of 385
+
+      %Rounded Rect [id:dp8328588102090151] 
+      \draw   (290,34.5) .. controls (290,24.84) and (297.84,17) .. (307.5,17) -- (392.5,17) .. controls (402.16,17) and (410,24.84) .. (410,34.5) -- (410,34.5) .. controls (410,44.16) and (402.16,52) .. (392.5,52) -- (307.5,52) .. controls (297.84,52) and (290,44.16) .. (290,34.5) -- cycle ;
+      %Shape: Rectangle [id:dp17985251419884474] 
+      \draw   (290,78) -- (410,78) -- (410,111.83) -- (290,111.83) -- cycle ;
+      %Straight Lines [id:da13836301690190234] 
+      \draw    (350,52) -- (350,75) ;
+      \draw [shift={(350,78)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+      %Shape: Cloud [id:dp22782610661330427] 
+      \draw   (300.92,146.46) .. controls (299.95,142.43) and (303.13,138.44) .. (309.09,136.18) .. controls (315.06,133.93) and (322.77,133.8) .. (328.95,135.86) .. controls (331.14,133.51) and (335.15,131.89) .. (339.77,131.49) .. controls (344.39,131.09) and (349.07,131.95) .. (352.4,133.81) .. controls (354.26,131.68) and (357.93,130.25) .. (362.09,130.03) .. controls (366.25,129.81) and (370.33,130.82) .. (372.86,132.71) .. controls (376.23,130.46) and (381.6,129.51) .. (386.64,130.27) .. controls (391.67,131.04) and (395.47,133.38) .. (396.4,136.29) .. controls (400.53,136.93) and (403.97,138.56) .. (405.83,140.75) .. controls (407.7,142.94) and (407.8,145.49) .. (406.11,147.72) .. controls (410.18,150.73) and (411.13,154.74) .. (408.61,158.25) .. controls (406.09,161.76) and (400.48,164.24) .. (393.87,164.78) .. controls (393.82,168.07) and (390.64,171.1) .. (385.54,172.68) .. controls (380.45,174.27) and (374.25,174.17) .. (369.32,172.43) .. controls (367.22,176.37) and (361.31,179.28) .. (354.15,179.88) .. controls (346.98,180.49) and (339.85,178.69) .. (335.82,175.26) .. controls (330.89,176.95) and (324.96,177.44) .. (319.39,176.61) .. controls (313.82,175.79) and (309.07,173.72) .. (306.2,170.87) .. controls (301.16,171.21) and (296.29,169.73) .. (294,167.16) .. controls (291.71,164.59) and (292.49,161.49) .. (295.96,159.4) .. controls (291.47,157.89) and (289.17,154.91) .. (290.27,152) .. controls (291.38,149.1) and (295.63,146.92) .. (300.82,146.62) ; \draw   (295.97,159.39) .. controls (298.09,160.1) and (300.54,160.43) .. (302.99,160.32)(306.21,170.87) .. controls (307.26,170.8) and (308.29,170.66) .. (309.28,170.43)(335.82,175.26) .. controls (335.08,174.63) and (334.45,173.96) .. (333.97,173.25)(369.32,172.43) .. controls (369.7,171.71) and (369.95,170.97) .. (370.06,170.22)(393.86,164.78) .. controls (393.91,161.27) and (390.41,158.06) .. (384.84,156.52)(406.11,147.72) .. controls (405.21,148.92) and (403.83,149.98) .. (402.09,150.82)(396.4,136.29) .. controls (396.55,136.77) and (396.62,137.26) .. (396.61,137.75)(372.86,132.71) .. controls (372.02,133.27) and (371.33,133.9) .. (370.8,134.57)(352.4,133.81) .. controls (351.95,134.32) and (351.61,134.86) .. (351.4,135.42)(328.95,135.86) .. controls (330.26,136.29) and (331.47,136.81) .. (332.56,137.42)(300.92,146.46) .. controls (301.05,147.02) and (301.26,147.57) .. (301.55,148.1) ;
+      %Straight Lines [id:da7840256672973447] 
+      \draw    (350,112) -- (350,135) ;
+      \draw [shift={(350,138)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+      %Shape: Rectangle [id:dp20472903555734168] 
+      \draw   (290,207) -- (410,207) -- (410,240.83) -- (290,240.83) -- cycle ;
+      %Straight Lines [id:da2618437898650212] 
+      \draw    (351,181) -- (351,204) ;
+      \draw [shift={(351,207)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+      %Shape: Diamond [id:dp6500945499785862] 
+      \draw   (350,264) -- (410,289) -- (350,314) -- (290,289) -- cycle ;
+      %Straight Lines [id:da316528847526659] 
+      \draw    (350,241) -- (350,262) ;
+      \draw [shift={(350,265)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+      %Shape: Right Angle [id:dp35661600831744167] 
+      \draw   (290,288.83) -- (240,288.83) -- (240,152.83) ;
+      %Rounded Rect [id:dp12383134692351772] 
+      \draw   (291,353.5) .. controls (291,343.84) and (298.84,336) .. (308.5,336) -- (393.5,336) .. controls (403.16,336) and (411,343.84) .. (411,353.5) -- (411,353.5) .. controls (411,363.16) and (403.16,371) .. (393.5,371) -- (308.5,371) .. controls (298.84,371) and (291,363.16) .. (291,353.5) -- cycle ;
+      %Straight Lines [id:da1422568232591901] 
+      \draw    (350,313) -- (350,334) ;
+      \draw [shift={(350,337)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+      %Straight Lines [id:da26294265696172126] 
+      \draw    (239.6,152.83) -- (287,152.83) ;
+      \draw [shift={(290,152.83)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+
+      % Text Node
+      \draw (349,32.92) node   [align=left] {\begin{minipage}[lt]{81.6pt}\setlength\topsep{0pt}
+      \begin{center}
+      \textbf{{\large {Start}}}
+      \end{center}
+
+      \end{minipage}};
+      % Text Node
+      \draw (350,91.92) node   [align=left] {\begin{minipage}[lt]{81.6pt}\setlength\topsep{0pt}
+      \begin{center}
+      {\large \textbf{I ← 1}}
+      \end{center}
+
+      \end{minipage}};
+      % Text Node
+      \draw (350,151.92) node   [align=left] {\begin{minipage}[lt]{81.6pt}\setlength\topsep{0pt}
+      \begin{center}
+      {\large \textbf{Process}}
+      \end{center}
+
+      \end{minipage}};
+      % Text Node
+      \draw (351,220.92) node   [align=left] {\begin{minipage}[lt]{81.6pt}\setlength\topsep{0pt}
+      \begin{center}
+      {\textbf{{\large I ← I + 1}}}
+      \end{center}
+
+      \end{minipage}};
+      % Text Node
+      \draw (350,287) node   [align=left] {\begin{minipage}[lt]{81.6pt}\setlength\topsep{0pt}
+      \begin{center}
+      {\textbf{{\large I $\leq$ 100}}}
+      \end{center}
+
+      \end{minipage}};
+      % Text Node
+      \draw (249,272) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\texttt{\textcolor[rgb]{0.29,0.56,0.89}{Yes}}}};
+      % Text Node
+      \draw (350,351.92) node   [align=left] {\begin{minipage}[lt]{81.6pt}\setlength\topsep{0pt}
+      \begin{center}
+      \textbf{{\large Stop}}
+      \end{center}
+
+      \end{minipage}};
+      % Text Node
+      \draw (356,316) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\texttt{\textcolor[rgb]{0.29,0.56,0.89}{No}}}};
+
+
+      \end{tikzpicture}
+
+      \caption{循环结构的程序框图}
+      \label{fig:program_flowchart}
+\end{figure}
+
+程序框图能够帮助程序员更好地理解和设计程序逻辑，提高程序的可读性和维护性。在编写复杂程序时，建议先绘制程序框图，以便理清思路，确保程序逻辑的正确性。
+笔记中绘制程序框图比较麻烦，固本笔记之后不再展示程序框图。

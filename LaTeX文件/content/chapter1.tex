@@ -72,13 +72,15 @@ Linux秉承“一切皆文件”的核心设计理念。
 也可以加入学习通课程（邀请码\code{91364739}），在课程资料中获取（下载可能会快一些），由于学习通限制，所有文件打包成了压缩包，请解压使用。
 邀请码2026年8月7日前有效，我会不断更新并发布在Github上。
 
-安装之后，右击桌面，选择“在终端中打开”。运行如下指令（需要输入的是\$之后的部分）：
+安装之后，在桌面同时按\code{ctrl+Alt+T}呼出终端。运行如下指令（需要输入的是\$之后的部分），设置\code{root}用户密码：
 \begin{envcode}{console}{Bash}
 user@host:~$ sudo passwd root
 \end{envcode}
 
 首先输入当前用户的密码，然后输入两次要为root用户设置的密码，即可设置root用户的密码。
 如果密码过于简单，系统会提示密码不安全，此时不用管它，原样再输入一遍，就能设置成功。
+
+在Linux中，通常不建议直接使用\code{root}用户进行日常操作，而是通过\code{sudo}临时提升权限。这里设置\code{root}密码仅用于特殊情况。
 
 \subsubsection{子系统}
 子系统是指在Windows操作系统中运行的Linux环境，通常通过Windows Subsystem for Linux (WSL) 的终端来实现，
@@ -122,7 +124,7 @@ Linux的文件系统采用树形结构，所有文件和目录都从根目录（
 
 \code{/sbin}：管理员才能使用的目录，存放系统执行文件；
 
-\code{/usr}：用户级别目录，存放用户自己的指令，与软件安装执行有关；
+\code{/usr}：存放用户空间程序和库文件，大多数系统软件安装在此目录下；
 
 \code{/var}：存放经常变动、与系统运作过程有关的文件，如日志、网页、缓存等；
 
@@ -235,7 +237,7 @@ user1@host:~/test/test1$ mv test2/1.txt test2/.4.txt
 \end{envcode}
 其中\code{.4.txt}是一个隐藏文件，前面有\code{.}，在Linux中，前面带\code{.}的文件或目录都是隐藏的。
 
-\code{cp}命令有\code{-r}选项（recursive），与\code{mkdir -r}类似，表示递归复制目录及其内容。
+\code{cp}命令有\code{-r}选项（recursive），与\code{mkdir -p}类似，表示递归复制目录及其内容。
 \code{cp}命令和\code{mv}命令都可以使用\code{-i}选项（interactive），表示在覆盖文件时进行提示。
 \code{cp}命令和\code{mv}命令也可以复制、移动多个文件，基本结构为：
 \begin{envcode}{bash}{Bash}
@@ -432,13 +434,11 @@ I'm also Ubuntu.
 \end{envcode}
 
 管道符\code{|}用于将一个命令的输出作为另一个命令的输入，这样可以将多个命令组合起来，实现更复杂的操作。
-一个简单的例子：\code{pwd}能给出当前的目录，而\code{ls}能列出当前目录下的文件和子目录，我们可以将这两个命令组合起来，查看当前目录下的文件和子目录列表：
+一个简单的例子：\code{ls}能列出当前目录下的文件和子目录，\code{grep}命令（后面会介绍）可以用于过滤这些文件和子目录，我们可以将这两个命令组合起来，查看当前目录下特定的文件：
 \begin{envcode}{console}{Bash}
-user1@host:~$ pwd | ls
+user1@host:~$ ls -l | grep .txt
 \end{envcode}
-上述命令会将\code{pwd}的输出作为\code{ls}的输入，列出当前目录下的文件和子目录列表。
-事实上，上面的命令与直接使用\code{ls}没有区别，因为\code{ls}默认列出当前目录下的文件和子目录，这里只是借此介绍管道符的用法。
-之后会给出一些实用的例子。
+上述命令会将\code{ls}的输出作为\code{grep}的输入，\code{grep}会过滤出包含\code{.txt}的行，即当前目录下含\code{.txt}的文件的详细信息。
 
 除此之外，还有\code{<}\code{<<}符号用于将文件或文本内容作为命令的输入。例子在之后给出。
 
@@ -643,6 +643,12 @@ user1@host:~$ sudo useradd user2
 user1@host:~$ sudo passwd user2
 \end{envcode}
 
+\begin{zy}
+添加用户命令
+
+Ubuntu中\code{useradd}默认不创建用户主目录，需加-m参数\code{sudo useradd -m user2}，或使用\code{adduser}命令\code{sudo adduser user2}，它会自动创建用户主目录并设置相关权限。
+\end{zy}
+
 输入命令后的操作很简单，跟据提示操作即可。
 
 \subsubsection{文件权限管理}
@@ -825,7 +831,7 @@ user1@host:~$ grep -nw 15 test/numbers.txt
 \end{envcode}
 上述命令会输出所有包含数字\code{15}的行及其行号。不包括包含\code{15}的其他数字，如\code{155}、\code{515}等。
 
-这里通配符的使用与之前匹配文件的通配符类似:
+这里通配符的使用与之前匹配文件的通配符类似（但不完全相同）:
 \begin{itemize}
 \item \code{^}：匹配行的开头
 \item \code{$}：匹配行的结尾
@@ -899,9 +905,9 @@ sed [选项] '命令' [文件...]
 常用命令有：
 \begin{itemize}
 \item \code{s/匹配的文本/替换文本/g}：替换匹配模式的文本为替换文本，\code{g}表示全局替换
-\item \code{d/匹配的文本/}：删除匹配模式的行
-\item \code{a/匹配的文本/}：在匹配模式的行后添加文本
-\item \code{i/匹配的文本/}：在匹配模式的行前添加文本
+\item \code{/匹配的文本/d}：删除匹配模式的行
+\item \code{/匹配的文本/a}：在匹配模式的行后添加文本
+\item \code{/匹配的文本/i}：在匹配模式的行前添加文本
 \end{itemize}
 
 例如，要将\code{test/grades.txt}文件中的所有\code{60}替换为\code{70}，可以使用以下命令：
