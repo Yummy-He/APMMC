@@ -1,0 +1,731 @@
+\section{程序实例代码}
+\label{sec:code}
+
+\subsection{计算分子式程序}
+\label{subsec:mcal}
+
+\begin{envcode}{fortran}{Fortran}
+      PROGRAM MAIN
+C     
+C     ========== 数组声明（必须放在可执行语句之前）==========
+      DIMENSION SOL_INIT(5)
+      DIMENSION GA_RES(5)
+      DIMENSION SA_RES(5)
+      DIMENSION FINAL_RES(5)
+      DIMENSION HIST_FIT(1)
+C     =======================================================
+      
+C     原子量定义（实型）
+      DCM = 12.000000
+      DHM = 1.007825
+      DOM = 15.994915
+      DNM = 14.003074
+      DSM = 31.972072
+      
+C     用户输入目标分子量（实型）
+      WRITE(*,*) 'Target molecular weight: '
+      READ(*,*) TARGET_MASS
+      
+C     用户输入目标不饱和度（实型）
+      WRITE(*,*) 'Minimal degree of unsaturation (e.g., 4.0): '
+      READ(*,*) TARGET_UNSAT
+      
+C     约束参数
+      NRULE = 1          ! 1=启用氮规则惩罚，0=禁用（建议启用）
+      
+C     ==================== 算法选择配置 ====================
+      IGA = 1            ! 1=运行遗传算法, 0=跳过
+      ISA = 1            ! 1=运行模拟退火, 0=跳过
+C     ======================================================
+      
+C     ============ 原子数量限制配置（整型变量）=============
+      ICMIN = 1
+      ICMAX = 31
+      IHMIN = 0
+      IHMAX = 31
+      IOMIN = 0
+      IOMAX = 31
+      INMIN = 0
+      INMAX = 31
+      ISMIN = 0
+      ISMAX = 0
+C     ======================================================
+      
+C     ==================== 遗传算法 ====================
+      IF (IGA .EQ. 1) THEN
+          WRITE(*,*) 'Starting Genetic Algorithm optimization...'
+C         遗传算法子程序（传递目标不饱和度）
+          CALL RUN_GA(TARGET_MASS, TARGET_UNSAT,
+     +                ICMIN, ICMAX, IHMIN, IHMAX,
+     +                IOMIN, IOMAX, INMIN, INMAX, ISMIN, ISMAX,
+     +                DCM, DHM, DOM, DNM, DSM, NRULE,
+     +                GA_RES, FIT_GA, BEST_INDEX, GA_TIME)
+          
+C         解码遗传算法结果
+          X1_GA = GA_RES(1)
+          X2_GA = GA_RES(2)
+          X3_GA = GA_RES(3)
+          X4_GA = GA_RES(4)
+          X5_GA = GA_RES(5)
+          CALC_MASS_GA = X1_GA*DCM + X2_GA*DHM + X3_GA*DOM + X4_GA*DNM
+     +                 + X5_GA*DSM
+          
+C         输出遗传算法结果
+          WRITE(*,10) '========== Genetic Algorithm Best =========='
+          WRITE(*,20) 'C: ', INT(X1_GA), ', H: ', INT(X2_GA),
+     +                ', O: ', INT(X3_GA), ', N: ', INT(X4_GA),
+     +                ', S: ', INT(X5_GA)
+          CALL PRINT_CHEM(INT(X1_GA), INT(X2_GA), INT(X3_GA),
+     +                    INT(X4_GA), INT(X5_GA))
+          WRITE(*,30) 'Calculated mass: ', CALC_MASS_GA
+          WRITE(*,30) 'Target mass:     ', TARGET_MASS
+          WRITE(*,30) 'Difference:      ', ABS(TARGET_MASS 
+     +                - CALC_MASS_GA)
+          WRITE(*,30) 'Fitness:         ', FIT_GA
+          
+C         检查氮规则
+          IROUND_GA = NINT(CALC_MASS_GA)
+          CALL CHECK_N_RULE(IROUND_GA, INT(X4_GA))
+          
+          WRITE(*,10) '============================================'
+
+C         将遗传算法结果作为退火初始解
+          DO I = 1, 5
+              SOL_INIT(I) = GA_RES(I)
+          END DO
+      ELSE
+          WRITE(*,*) 'Skipping GA, generating random initial ',
+     +               'solution...'
+C         随机生成满足原子限制的初始解
+          CALL RAND_SOL(ICMIN, ICMAX, IHMIN, IHMAX,
+     +                  IOMIN, IOMAX, INMIN, INMAX,
+     +                  ISMIN, ISMAX, SOL_INIT)
+C         计算随机解的适应度（传递目标不饱和度）
+          CALL FIT_FUNC(INT(SOL_INIT(1)), INT(SOL_INIT(2)),
+     +                  INT(SOL_INIT(3)), INT(SOL_INIT(4)),
+     +                  INT(SOL_INIT(5)), TARGET_MASS, TARGET_UNSAT,
+     +                  DCM, DHM, DOM, DNM, DSM, NRULE,
+     +                  FIT_RAND)
+          
+          WRITE(*,20) 'Random initial: C', INT(SOL_INIT(1)),
+     +                ' H', INT(SOL_INIT(2)),
+     +                ' O', INT(SOL_INIT(3)),
+     +                ' N', INT(SOL_INIT(4)),
+     +                ' S', INT(SOL_INIT(5))
+          WRITE(*,30) 'Fitness: ', FIT_RAND
+      END IF
+      
+C     ==================== 模拟退火算法 ====================
+      IF (ISA .EQ. 1) THEN
+          WRITE(*,*) 'Starting Simulated Annealing optimization...'
+          
+C         模拟退火参数
+          T_INIT = 10000.0
+          T_FINAL = 1.0E-3
+          ALPHA = 0.99
+          IMAX_ITER = 2000    ! 整型变量
+          
+C         使用遗传算法结果或随机解作为初始解（传递目标不饱和度）
+          CALL RUN_SA(SOL_INIT, TARGET_MASS, TARGET_UNSAT,
+     +                ICMIN, ICMAX, IHMIN, IHMAX,
+     +                IOMIN, IOMAX, INMIN, INMAX, ISMIN, ISMAX,
+     +                T_INIT, T_FINAL, ALPHA, IMAX_ITER,
+     +                DCM, DHM, DOM, DNM, DSM, NRULE,
+     +                SA_RES, FIT_SA, SA_TIME, HIST_FIT)
+          
+C         解码模拟退火结果
+          X1_SA = SA_RES(1)
+          X2_SA = SA_RES(2)
+          X3_SA = SA_RES(3)
+          X4_SA = SA_RES(4)
+          X5_SA = SA_RES(5)
+          CALC_MASS_SA = X1_SA*DCM + X2_SA*DHM + X3_SA*DOM + X4_SA*DNM
+     +                 + X5_SA*DSM
+          
+          WRITE(*,10) '========= Simulated Annealing Best ========='
+          WRITE(*,20) 'C: ', INT(X1_SA), ', H: ', INT(X2_SA),
+     +                ', O: ', INT(X3_SA), ', N: ', INT(X4_SA),
+     +                ', S: ', INT(X5_SA)
+          CALL PRINT_CHEM(INT(X1_SA), INT(X2_SA), INT(X3_SA),
+     +                    INT(X4_SA), INT(X5_SA))
+          WRITE(*,30) 'Calculated mass: ', CALC_MASS_SA
+          WRITE(*,30) 'Target mass:     ', TARGET_MASS
+          WRITE(*,30) 'Difference:      ', ABS(TARGET_MASS 
+     +                - CALC_MASS_SA)
+          WRITE(*,30) 'Fitness:         ', FIT_SA
+          
+          IROUND_SA = NINT(CALC_MASS_SA)
+          CALL CHECK_N_RULE(IROUND_SA, INT(X4_SA))
+          
+          WRITE(*,10) '============================================'
+
+
+C         最终结果使用模拟退火结果
+          DO I = 1, 5
+              FINAL_RES(I) = SA_RES(I)
+          END DO
+          FIT_FINAL = FIT_SA
+      ELSE
+          IF (IGA .EQ. 1) THEN
+              DO I = 1, 5
+                  FINAL_RES(I) = GA_RES(I)
+              END DO
+              FIT_FINAL = FIT_GA
+          ELSE
+              DO I = 1, 5
+                  FINAL_RES(I) = SOL_INIT(I)
+              END DO
+              FIT_FINAL = FIT_RAND
+          END IF
+      END IF
+      
+C     ==================== 最终结果输出 ====================
+      X1 = FINAL_RES(1)
+      X2 = FINAL_RES(2)
+      X3 = FINAL_RES(3)
+      X4 = FINAL_RES(4)
+      X5 = FINAL_RES(5)
+      CALC_MASS = X1*DCM + X2*DHM + X3*DOM + X4*DNM + X5*DSM
+      
+      WRITE(*,10) '=========== Final Best Solution ============'
+      WRITE(*,20) 'C: ', INT(X1), ', H: ', INT(X2),
+     +            ', O: ', INT(X3), ', N: ', INT(X4),
+     +            ', S: ', INT(X5)
+      CALL PRINT_CHEM(INT(X1), INT(X2), INT(X3),
+     +                INT(X4), INT(X5))
+      WRITE(*,30) 'Calculated mass: ', CALC_MASS
+      WRITE(*,30) 'Target mass:     ', TARGET_MASS
+      WRITE(*,30) 'Difference:      ', ABS(TARGET_MASS - CALC_MASS)
+      WRITE(*,30) 'Fitness:         ', FIT_FINAL
+      
+      IROUND = NINT(CALC_MASS)
+      CALL CHECK_N_RULE(IROUND, INT(X4))
+      
+      WRITE(*,10) '============================================'
+
+
+C     保存结果到文件
+      CALL SAVE_RES(TARGET_MASS, FINAL_RES, CALC_MASS)
+      
+      WRITE(*,*) 'Program completed.'
+      
+10    FORMAT(A)
+20    FORMAT(A,I2,A,I2,A,I2,A,I2,A,I2)
+30    FORMAT(A,F12.6)
+      
+      STOP
+      END
+      
+C     *********************************************************
+C     子程序：随机生成初始解
+C     输入：各原子数量限制（整型），输出：5维实型数组SOL
+C     *********************************************************
+      SUBROUTINE RAND_SOL(ICMIN, ICMAX, IHMIN, IHMAX,
+     +                    IOMIN, IOMAX, INMIN, INMAX,
+     +                    ISMIN, ISMAX, SOL)
+      
+      DIMENSION SOL(5)
+      
+C     初始化随机数生成器（Fortran90特性）
+      CALL RANDOM_SEED()
+      
+      CALL RANDOM_NUMBER(R1)
+      SOL(1) = INT(R1 * (ICMAX - ICMIN + 1)) + ICMIN
+      
+      CALL RANDOM_NUMBER(R2)
+      SOL(2) = INT(R2 * (IHMAX - IHMIN + 1)) + IHMIN
+      
+      CALL RANDOM_NUMBER(R3)
+      SOL(3) = INT(R3 * (IOMAX - IOMIN + 1)) + IOMIN
+      
+      CALL RANDOM_NUMBER(R4)
+      SOL(4) = INT(R4 * (INMAX - INMIN + 1)) + INMIN
+      
+      CALL RANDOM_NUMBER(R5)
+      SOL(5) = INT(R5 * (ISMAX - ISMIN + 1)) + ISMIN
+      
+      RETURN
+      END
+      
+C     *********************************************************
+C     适应度函数（改进版）
+C     输入：原子数（整型）、目标质量、目标不饱和度、原子量、
+C           氮规则开关（NRULE）
+C     输出：适应度（实型，值越大越好）
+C     *********************************************************
+      SUBROUTINE FIT_FUNC(IC, IH, IO, IN, IS, 
+     +                    TARGET_MASS, TARGET_UNSAT,
+     +                    DCM, DHM, DOM, DNM, DSM, NRULE,
+     +                    FITNESS)
+      
+C     计算分子量
+      CALC_MASS = IC*DCM + IH*DHM + IO*DOM + IN*DNM + IS*DSM
+      
+C     基础适应度：与目标质量越接近，适应度越高
+      DIF_M = ABS(CALC_MASS - TARGET_MASS)
+      FITNESS = 100.0 / (DIF_M + 1.0)
+      
+C     ---------- 不饱和度惩罚（使用用户输入的目标值）----------
+C     不饱和度 = (2*C + 2 + N - H) / 2.0 （忽略硫的影响）
+      IF ((2.0*IC + 2.0 + IN - IH) / 2.0 .LT. TARGET_UNSAT) THEN
+          FITNESS = FITNESS - 5.0
+      END IF
+      
+C     ---------- 氮规则惩罚（若启用）----------
+      IF (NRULE .EQ. 1) THEN
+          IROUND = NINT(CALC_MASS)
+          IEVEN = MOD(IROUND, 2)      ! 0为偶数，1为奇数
+          N_EVEN = MOD(IN, 2)         ! 0为偶数，1为奇数
+C         规则：若N为奇数，分子量应为奇数；若N为偶数，分子量应为偶数
+          IF ((IEVEN .EQ. 0 .AND. N_EVEN .NE. 0) .OR.
+     +        (IEVEN .NE. 0 .AND. N_EVEN .EQ. 0)) THEN
+              FITNESS = FITNESS - 10.0  ! 加性惩罚，适应度降低10
+          END IF
+      END IF
+      
+C     ---------- 氢原子合理性惩罚（防止完全不饱和）----------
+C     参考MATLAB：若 H > 2*C + N + 2，则不合理，给予惩罚
+C     IF (IH .GT. 2*IC + IN + 2) THEN
+C         FITNESS = FITNESS - 5.0
+C     END IF
+      
+C     确保适应度不为负（至少为一个小正数）
+      IF (FITNESS .LT. 0.01) FITNESS = 0.01
+      
+      RETURN
+      END
+      
+C     *********************************************************
+C     打印化学式
+C     输入：各原子数（整型）
+C     *********************************************************
+      SUBROUTINE PRINT_CHEM(IC, IH, IO, IN, IS)
+      
+C     输出格式：例如 C6H12O6
+      WRITE(*,100)
+     +'Formula: C', IC, '  H', IH, '  O', IO, '  N', IN, '  S', IS
+100   FORMAT(A,I2,A,I2,A,I2,A,I2,A,I2)
+      
+      RETURN
+      END
+      
+C     *********************************************************
+C     检查氮规则并输出结果
+C     输入：取整后的分子量（整型），氮原子数（整型）
+C     *********************************************************
+      SUBROUTINE CHECK_N_RULE(IROUND_MASS, N_ATOM)
+      
+      IEVEN = MOD(IROUND_MASS, 2)
+      N_EVEN = MOD(N_ATOM, 2)
+      
+      IF (IEVEN .EQ. 0 .AND. N_EVEN .EQ. 0) THEN
+          WRITE(*,*) 'Nitrogen rule: even mass, even N atoms - OK.'
+      ELSE IF (IEVEN .NE. 0 .AND. N_EVEN .NE. 0) THEN
+          WRITE(*,*) 'Nitrogen rule: odd mass, odd N atoms - OK.'
+      ELSE
+          WRITE(*,*) 'Nitrogen rule: mass/N parity mismatch - ',
+     +               'may violate nitrogen rule!'
+      END IF
+      
+      RETURN
+      END
+      
+C     *********************************************************
+C     保存结果到文件
+C     输入：目标质量、最终解数组、计算分子量
+C     *********************************************************
+      SUBROUTINE SAVE_RES(TARGET_MASS, FINAL_RES, CALC_MASS)
+      
+      DIMENSION FINAL_RES(5)
+      
+      OPEN(UNIT=10, FILE='cal_result.txt', STATUS='UNKNOWN', 
+     +     POSITION='APPEND')
+      WRITE(10,'(A20,F15.6)') 'Target mass: ', TARGET_MASS
+      WRITE(10,'(A20)') 'Best solution:'
+      WRITE(10,'(A20,I15)') 'C: ', INT(FINAL_RES(1))
+      WRITE(10,'(A20,I15)') 'H: ', INT(FINAL_RES(2))
+      WRITE(10,'(A20,I15)') 'O: ', INT(FINAL_RES(3))
+      WRITE(10,'(A20,I15)') 'N: ', INT(FINAL_RES(4))
+      WRITE(10,'(A20,I15)') 'S: ', INT(FINAL_RES(5))
+      WRITE(10,'(A20,F15.6)') 'Calculated mass: ', CALC_MASS
+      WRITE(10,'(A20,F15.6,/)')
+     +'Difference: ', ABS(TARGET_MASS - CALC_MASS)
+      CLOSE(10)
+      
+      RETURN
+      END
+      
+C     *********************************************************
+C     遗传算法主程序
+C     *********************************************************
+      SUBROUTINE RUN_GA(TARGET_MASS, TARGET_UNSAT,
+     +                  ICMIN, ICMAX, IHMIN, IHMAX,
+     +                  IOMIN, IOMAX, INMIN, INMAX,
+     +                  ISMIN, ISMAX,
+     +                  DCM, DHM, DOM, DNM, DSM, NRULE,
+     +                  BEST_SOL, BEST_FIT, BEST_INDEX, TIME)
+      
+      DIMENSION BEST_SOL(5)
+      DIMENSION POP(500,5), FIT(500), NEWPOP(500,5)
+      DIMENSION TEMP(5)   ! 实型数组，用于存储随机解
+      DIMENSION BEST_SOL_GLOBAL(5)      ! 新增：全局最优解数组
+
+      
+C     遗传算法参数
+      IPOPS = 500        ! 种群大小
+      IMAXGEN = 10000    ! 最大代数
+      PCROSS = 0.8       ! 交叉概率（实型）
+      PMUT = 0.3         ! 变异概率（实型）
+      
+C     初始化种群
+      DO I = 1, IPOPS
+          CALL RAND_SOL(ICMIN, ICMAX, IHMIN, IHMAX,
+     +                  IOMIN, IOMAX, INMIN, INMAX,
+     +                  ISMIN, ISMAX, TEMP)
+          DO J = 1, 5
+              POP(I,J) = TEMP(J)
+          END DO
+      END DO
+      
+C     初始化全局最优
+      BEST_FIT_GLOBAL = -1.0E10
+      
+C     主循环
+      DO IGEN = 1, IMAXGEN
+C         计算适应度
+          DO I = 1, IPOPS
+              CALL FIT_FUNC(INT(POP(I,1)), INT(POP(I,2)),
+     +                      INT(POP(I,3)), INT(POP(I,4)),
+     +                      INT(POP(I,5)), TARGET_MASS, TARGET_UNSAT,
+     +                      DCM, DHM, DOM, DNM, DSM, NRULE,
+     +                      FIT(I))
+          END DO
+          
+C         寻找当前代最优个体
+          BEST = -1.0E10
+          DO I = 1, IPOPS
+              IF (FIT(I) .GT. BEST) THEN
+                  BEST = FIT(I)
+                  IBEST = I
+              END IF
+          END DO
+          
+C         保留最优个体（精英策略）
+          DO J = 1, 5
+              BEST_SOL(J) = POP(IBEST,J)
+          END DO
+          BEST_FIT = BEST
+          BEST_INDEX = IBEST
+          
+C         更新全局最优
+          IF (BEST .GT. BEST_FIT_GLOBAL) THEN
+              BEST_FIT_GLOBAL = BEST
+              DO J = 1, 5
+                  BEST_SOL_GLOBAL(J) = POP(IBEST,J)
+              END DO
+              WRITE(*,'(A,F12.6,A,5F6.0)') 'New GA best: FIT=', 
+     +        BEST_FIT_GLOBAL,' SOL=', (BEST_SOL_GLOBAL(J), J=1,5)
+C         ============ 质量差 < 0.00001 时跳出 ============
+C          计算当前全局最优解的分子量
+              CALC_MASS_TMP = BEST_SOL_GLOBAL(1)*DCM 
+     +                      + BEST_SOL_GLOBAL(2)*DHM
+     +                      + BEST_SOL_GLOBAL(3)*DOM
+     +                      + BEST_SOL_GLOBAL(4)*DNM
+     +                      + BEST_SOL_GLOBAL(5)*DSM
+              DIF_MASS = ABS(CALC_MASS_TMP - TARGET_MASS)
+              IF (DIF_MASS .LT. 0.00001) THEN
+                  WRITE(*,*) 'GA: Mass difference < 0.00001, ',
+     +                       'terminating early.'
+                  GOTO 999   ! 直接跳出主循环
+              END IF
+C         ================================================
+          END IF
+          
+C         选择（轮盘赌）
+          SUMFIT = 0.0
+          DO I = 1, IPOPS
+              SUMFIT = SUMFIT + FIT(I)
+          END DO
+          
+          DO I = 1, IPOPS
+              CALL RANDOM_NUMBER(R)
+              SELECT = R * SUMFIT
+              PARTIAL = 0.0
+              DO K = 1, IPOPS
+                  PARTIAL = PARTIAL + FIT(K)
+                  IF (PARTIAL .GE. SELECT) THEN
+                      DO J = 1, 5
+                          NEWPOP(I,J) = POP(K,J)
+                      END DO
+                      GOTO 100
+                  END IF
+              END DO
+100           CONTINUE
+          END DO
+          
+C         交叉（单点交叉）
+          DO I = 1, IPOPS, 2
+              CALL RANDOM_NUMBER(R)
+              IF (R .LT. PCROSS) THEN
+                  IPOS = INT(R * 4) + 1   ! 交叉点1-4
+                  DO J = IPOS, 5
+                      TEMP_VAL = NEWPOP(I,J)
+                      NEWPOP(I,J) = NEWPOP(I+1,J)
+                      NEWPOP(I+1,J) = TEMP_VAL
+                  END DO
+              END IF
+          END DO
+          
+C         交叉后边界检查：确保每个个体在原子限制范围内
+          DO I = 1, IPOPS
+              IF (NEWPOP(I,1) .LT. ICMIN) NEWPOP(I,1) = ICMIN
+              IF (NEWPOP(I,1) .GT. ICMAX) NEWPOP(I,1) = ICMAX
+              IF (NEWPOP(I,2) .LT. IHMIN) NEWPOP(I,2) = IHMIN
+              IF (NEWPOP(I,2) .GT. IHMAX) NEWPOP(I,2) = IHMAX
+              IF (NEWPOP(I,3) .LT. IOMIN) NEWPOP(I,3) = IOMIN
+              IF (NEWPOP(I,3) .GT. IOMAX) NEWPOP(I,3) = IOMAX
+              IF (NEWPOP(I,4) .LT. INMIN) NEWPOP(I,4) = INMIN
+              IF (NEWPOP(I,4) .GT. INMAX) NEWPOP(I,4) = INMAX
+              IF (NEWPOP(I,5) .LT. ISMIN) NEWPOP(I,5) = ISMIN
+              IF (NEWPOP(I,5) .GT. ISMAX) NEWPOP(I,5) = ISMAX
+          END DO
+          
+C         变异（均匀变异）
+          DO I = 1, IPOPS
+              DO J = 1, 5
+                  CALL RANDOM_NUMBER(R)
+                  IF (R .LT. PMUT) THEN
+C                     根据原子范围随机重置
+                      IF (J .EQ. 1) THEN
+                          CALL RANDOM_NUMBER(R1)
+                          NEWPOP(I,J) = INT(R1 * (ICMAX-ICMIN+1))
+     +                                + ICMIN
+                      ELSE IF (J .EQ. 2) THEN
+                          CALL RANDOM_NUMBER(R1)
+                          NEWPOP(I,J) = INT(R1 * (IHMAX-IHMIN+1))
+     +                                + IHMIN
+                      ELSE IF (J .EQ. 3) THEN
+                          CALL RANDOM_NUMBER(R1)
+                          NEWPOP(I,J) = INT(R1 * (IOMAX-IOMIN+1))
+     +                                + IOMIN
+                      ELSE IF (J .EQ. 4) THEN
+                          CALL RANDOM_NUMBER(R1)
+                          NEWPOP(I,J) = INT(R1 * (INMAX-INMIN+1))
+     +                                + INMIN
+                      ELSE
+                          CALL RANDOM_NUMBER(R1)
+                          NEWPOP(I,J) = INT(R1 * (ISMAX-ISMIN+1))
+     +                                + ISMIN
+                      END IF
+                  END IF
+              END DO
+          END DO
+          
+C         精英保留：将当前代最优个体放入下一代第一个位置
+          DO J = 1, 5
+              NEWPOP(1,J) = BEST_SOL(J)
+          END DO
+          
+C         更新种群
+          DO I = 1, IPOPS
+              DO J = 1, 5
+                  POP(I,J) = NEWPOP(I,J)
+              END DO
+          END DO
+          
+      END DO
+
+999   CONTINUE   ! 提前跳出时直接到达此处
+      
+C     返回全局最优解（而非最后一代最优）
+      DO J = 1, 5
+          BEST_SOL(J) = BEST_SOL_GLOBAL(J)
+      END DO
+      BEST_FIT = BEST_FIT_GLOBAL
+      
+C     记录时间（简单设为0.0）
+      TIME = 0.0
+      
+      RETURN
+      END
+      
+C     *********************************************************
+C     模拟退火算法主程序
+C     *********************************************************
+      SUBROUTINE RUN_SA(SOL_INIT, TARGET_MASS, TARGET_UNSAT,
+     +                  ICMIN, ICMAX, IHMIN, IHMAX,
+     +                  IOMIN, IOMAX, INMIN, INMAX,
+     +                  ISMIN, ISMAX,
+     +                  T_INIT, T_FINAL, ALPHA, IMAX_ITER,
+     +                  DCM, DHM, DOM, DNM, DSM, NRULE,
+     +                  BEST_SOL, BEST_FIT, TIME, HIST_FIT)
+      
+      DIMENSION SOL_INIT(5), BEST_SOL(5)
+      DIMENSION CURR_SOL(5), SOL_NEW(5)
+      DIMENSION HIST_FIT(1)      ! 未使用，仅占位
+      
+C     初始化解
+      DO I = 1, 5
+          CURR_SOL(I) = SOL_INIT(I)
+      END DO
+      
+      CALL FIT_FUNC(INT(CURR_SOL(1)), INT(CURR_SOL(2)),
+     +              INT(CURR_SOL(3)), INT(CURR_SOL(4)),
+     +              INT(CURR_SOL(5)), TARGET_MASS, TARGET_UNSAT,
+     +              DCM, DHM, DOM, DNM, DSM, NRULE,
+     +              FIT_CURR)
+      
+      DO I = 1, 5
+          BEST_SOL(I) = CURR_SOL(I)
+      END DO
+      BEST_FIT = FIT_CURR
+      
+      TEMP = T_INIT
+      
+C     退火主循环
+      DO WHILE (TEMP .GT. T_FINAL)
+          DO ITER = 1, IMAX_ITER
+C             【改进】自适应邻域生成（模拟MATLAB逻辑）
+C             根据当前温度与初始温度的比例确定扰动步长
+              TEMP_RATIO = TEMP / T_INIT
+C             步长范围：高温时最大可达5，低温时最小为1
+              STEP = MAX(1, INT(TEMP_RATIO * 5.0 + 0.5))
+              
+C             随机选择要变动的原子数量（1~3个）
+              CALL RANDOM_NUMBER(R)
+              NDIM = INT(R * 3.0) + 1
+              
+C             复制当前解到新解
+              DO I = 1, 5
+                  SOL_NEW(I) = CURR_SOL(I)
+              END DO
+              
+C             对选中的原子进行扰动
+              DO ID = 1, NDIM
+                  CALL RANDOM_NUMBER(R)
+                  IATOM = INT(R * 5.0) + 1   ! 1~5
+                  
+C                 决定变化方向（+或-）
+                  CALL RANDOM_NUMBER(R)
+                  IF (R .LT. 0.5) THEN
+                      DELTA = STEP
+                  ELSE
+                      DELTA = -STEP
+                  END IF
+                  
+                  IF (IATOM .EQ. 1) THEN
+                      NEW_VAL = CURR_SOL(1) + DELTA
+                      IF (NEW_VAL .GE. ICMIN .AND.
+     +                    NEW_VAL .LE. ICMAX) SOL_NEW(1) = NEW_VAL
+                  ELSE IF (IATOM .EQ. 2) THEN
+                      NEW_VAL = CURR_SOL(2) + DELTA
+                      IF (NEW_VAL .GE. IHMIN .AND.
+     +                    NEW_VAL .LE. IHMAX) SOL_NEW(2) = NEW_VAL
+                  ELSE IF (IATOM .EQ. 3) THEN
+                      NEW_VAL = CURR_SOL(3) + DELTA
+                      IF (NEW_VAL .GE. IOMIN .AND.
+     +                    NEW_VAL .LE. IOMAX) SOL_NEW(3) = NEW_VAL
+                  ELSE IF (IATOM .EQ. 4) THEN
+                      NEW_VAL = CURR_SOL(4) + DELTA
+                      IF (NEW_VAL .GE. INMIN .AND.
+     +                    NEW_VAL .LE. INMAX) SOL_NEW(4) = NEW_VAL
+                  ELSE
+                      NEW_VAL = CURR_SOL(5) + DELTA
+                      IF (NEW_VAL .GE. ISMIN .AND.
+     +                    NEW_VAL .LE. ISMAX) SOL_NEW(5) = NEW_VAL
+                  END IF
+              END DO
+              
+C             额外：以20%概率进行完全随机重置（大扰动，增加多样性）
+              CALL RANDOM_NUMBER(R)
+              IF (R .LT. 0.2) THEN
+C                 随机选择1~2个维度完全重置
+                  CALL RANDOM_NUMBER(R2)
+                  NRST = INT(R2 * 2.0) + 1
+                  DO IR = 1, NRST
+                      CALL RANDOM_NUMBER(R3)
+                      IATOM_RST = INT(R3 * 5.0) + 1
+                      IF (IATOM_RST .EQ. 1) THEN
+                          CALL RANDOM_NUMBER(R4)
+                          SOL_NEW(1) = INT(R4 * (ICMAX-ICMIN+1)) 
+     +                               + ICMIN
+                      ELSE IF (IATOM_RST .EQ. 2) THEN
+                          CALL RANDOM_NUMBER(R4)
+                          SOL_NEW(2) = INT(R4 * (IHMAX-IHMIN+1)) 
+     +                               + IHMIN
+                      ELSE IF (IATOM_RST .EQ. 3) THEN
+                          CALL RANDOM_NUMBER(R4)
+                          SOL_NEW(3) = INT(R4 * (IOMAX-IOMIN+1)) 
+     +                               + IOMIN
+                      ELSE IF (IATOM_RST .EQ. 4) THEN
+                          CALL RANDOM_NUMBER(R4)
+                          SOL_NEW(4) = INT(R4 * (INMAX-INMIN+1)) 
+     +                               + INMIN
+                      ELSE
+                          CALL RANDOM_NUMBER(R4)
+                          SOL_NEW(5) = INT(R4 * (ISMAX-ISMIN+1)) 
+     +                               + ISMIN
+                      END IF
+                  END DO
+              END IF
+              
+C             计算新适应度
+              CALL FIT_FUNC(INT(SOL_NEW(1)), INT(SOL_NEW(2)),
+     +                      INT(SOL_NEW(3)), INT(SOL_NEW(4)),
+     +                      INT(SOL_NEW(5)), TARGET_MASS, TARGET_UNSAT,
+     +                      DCM, DHM, DOM, DNM, DSM, NRULE,
+     +                      FIT_NEW)
+              
+              DELTA_FIT = FIT_NEW - FIT_CURR
+              
+              IF (DELTA_FIT .GT. 0.0) THEN
+C                 接受更优解
+                  DO I = 1, 5
+                      CURR_SOL(I) = SOL_NEW(I)
+                  END DO
+                  FIT_CURR = FIT_NEW
+C                 更新全局最优
+                  IF (FIT_NEW .GT. BEST_FIT) THEN
+                      BEST_FIT = FIT_NEW
+                      DO I = 1, 5
+                          BEST_SOL(I) = SOL_NEW(I)
+                      END DO
+                      WRITE(*,'(A,F12.6,A,5F6.0)') 'New SA best: FIT=', 
+     +                BEST_FIT,' SOL=', (BEST_SOL(J), J=1,5)
+
+C         ============ 质量差 < 0.00001 时跳出 ============
+                      CALC_MASS_TMP = BEST_SOL(1)*DCM 
+     +                              + BEST_SOL(2)*DHM
+     +                              + BEST_SOL(3)*DOM
+     +                              + BEST_SOL(4)*DNM
+     +                              + BEST_SOL(5)*DSM
+                      DIF_MASS = ABS(CALC_MASS_TMP - TARGET_MASS)
+                      IF (DIF_MASS .LT. 0.00001) THEN
+                          WRITE(*,*) 'SA: Mass difference < 0.00001, ',
+     +                               'terminating annealing.'
+                          TEMP = T_FINAL - 1.0   ! 强制外层循环条件为假
+                          EXIT                    ! 跳出内层循环
+                      END IF
+C         ================================================
+
+                  END IF
+              ELSE
+C                 以概率接受劣化解
+                  CALL RANDOM_NUMBER(R)
+                  IF (R .LT. EXP(DELTA_FIT / TEMP)) THEN
+                      DO I = 1, 5
+                          CURR_SOL(I) = SOL_NEW(I)
+                      END DO
+                      FIT_CURR = FIT_NEW
+                  END IF
+              END IF
+          END DO
+C         降温
+          TEMP = TEMP * ALPHA
+      END DO
+      
+      TIME = 0.0
+      
+      RETURN
+      END
+\end{envcode}

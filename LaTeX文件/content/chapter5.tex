@@ -469,3 +469,89 @@ user1@host:~/examples$ ./matmult < matrix2.txt
 
 在非必要的情况下，还是建议使用一个静态数组，遇到不确定大小的数组时，可以分配一个足够大的数组，在必要的时候再使用动态数组。
 
+\subsection{化学中的应用实例}
+
+\subsubsection{分子式计算}
+在化学合成尤其是有机合成中，经常需要猜测所合成未知物质结构，受限于成本等因素，会先用红外、质谱进行初步表征，用以计算可能的分子式，初步推断出结构信息。
+在初步确认结构后，再进行核磁共振、高分辨质谱等更精细的表征，最终确认结构。
+
+例如，合成了某化合物，低分辨质谱得到分子量为\code{135.0684}，红外光谱显示有苯环、酰胺基等特征峰（即不饱和度至少为\code{5}）,投入原料中无\code{S}。
+已知各元素精确质量如下：
+\begin{itemize}
+      \item C: 12.000000
+      \item H: 1.007825
+      \item N: 14.003074
+      \item O: 15.994915
+      \item S: 31.972072
+\end{itemize}
+
+若编写程序遍历所有可能的分子式组合，计算其分子量，并与\code{135.0684}进行比较，所需计算量较大，
+我们可以利用遗传算法和模拟退火算法来优化搜索过程，快速找到可能的分子式组合。
+
+我们化学学院的开放性创新实验（小创）中，陈晓东老师指导的项目就是编写这样的程序，感兴趣的同学可以在开放报名时积极参与。
+小创中，我们编写的是\code{Matlab}程序，这里借助AI，改编成了\code{Fortran}程序。经测试，Fortran程序运行速度较高。
+
+新建文件\code{Mcal.f}，输入\code{Fortran}代码，代码太长，放在附录\ref{subsec:mcal}了，代码较长，可一边读代码一边画程序框图辅助理解。
+
+各原子数的上下限硬编码在代码中了，可根据实际情况修改代码开头部分原子数量限制。如本例中无\code{S}，就可以把S数量上限设为\code{0}；
+确定有苯环和酰胺基，就可以把\code{C}和\code{N}下限分别设置为\code{7}和\code{1}。在代码中也可按需启用遗传算法和模拟退火算法。
+
+本程序所需精度较高，编译时加上\code{-fdefault-real-8}选项，设置全局实数为双精度：
+\begin{envcode}{console}{Bash}
+user1@host:~/examples$ gfortran -o Mcal Mcal.f -fdefault-real-8
+\end{envcode}
+
+运行并按提示输入参数：
+\begin{envcode}{console}{Bash}
+user1@host:~/examples$ ./Mcal
+ Target molecular weight: 
+135.0684
+ Minimal degree of unsaturation (e.g., 4.0): 
+5
+ Starting Genetic Algorithm optimization...
+New GA best: FIT=    1.123200 SOL=   15.   13.    1.    1.    0.
+New GA best: FIT=   33.439090 SOL=    6.    7.    1.    3.    0.
+New GA best: FIT=   34.985004 SOL=    2.    8.    2.    5.    0.
+New GA best: FIT=   40.436604 SOL=    6.    6.    1.    3.    0.
+New GA best: FIT=   97.547842 SOL=    6.    5.    1.    3.    0.
+New GA best: FIT=   99.998600 SOL=    8.    9.    1.    1.    0.
+========== Genetic Algorithm Best ==========
+C:  8, H:  9, O:  1, N:  1, S:  0
+Formula: C 8  H 9  O 1  N 1  S 0
+Calculated mass:   135.068414
+Target mass:       135.068400
+Difference:          0.000014
+Fitness:            99.998600
+ Nitrogen rule: odd mass, odd N atoms - OK.
+============================================
+ Starting Simulated Annealing optimization...
+========= Simulated Annealing Best =========
+C:  8, H:  9, O:  1, N:  1, S:  0
+Formula: C 8  H 9  O 1  N 1  S 0
+Calculated mass:   135.068414
+Target mass:       135.068400
+Difference:          0.000014
+Fitness:            99.998600
+ Nitrogen rule: odd mass, odd N atoms - OK.
+============================================
+=========== Final Best Solution ============
+C:  8, H:  9, O:  1, N:  1, S:  0
+Formula: C 8  H 9  O 1  N 1  S 0
+Calculated mass:   135.068414
+Target mass:       135.068400
+Difference:          0.000014
+Fitness:            99.998600
+ Nitrogen rule: odd mass, odd N atoms - OK.
+============================================
+ Program completed.
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+\end{envcode}
+
+运行后实时输出当前最佳结果，并在命令行输出运行后结果；同时保存最终结果到同目录下\code{cal_result.txt}中。
+
+可以看到，运行结果为\code{C₈H₉NO}，结合红外信息可知此物质大概率为乙酰苯胺。
+
+当质谱分辨率较低时，最终计算结果的分子量距离质谱分子量最近，但可能不是此物质的分子量。
+例如某未知样质谱分子量为\code{446.19}，计算最优结果为\code{446.190034}，但实际物质的分子量为\code{446.185509}。
+即，若计算最优结果明显不符合常理（如有特别多氮），则可能不是实际分子。
+然而，即使最终结果可能不对，正确的结果也大概率会出现在计算的过程中，可以观察命令行中的输出，计算过程中出现的“当前最优结果”也可能是实际的分子量。
