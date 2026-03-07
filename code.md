@@ -849,11 +849,11 @@ C FUNCTION SUBPROGRAM: COMPUTE K FACTORIAL
 ### 代码 4.1.3
 ```
 C MAIN PROGRAM: CALCULATE BINOMIAL COEFFICIENT
-      INTEGER UP, DOWN, IBINQ, N, I
+      INTEGER IUP, IDOWN, IBINQ, N, I
       READ(5, *) N, I
-      UP = IFACT(N)
-      DOWN = IFACT(N-I) * IFACT(I)
-      IBINQ = UP / DOWN
+      IUP = IFACT(N)
+      IDOWN = IFACT(N-I) * IFACT(I)
+      IBINQ = IUP / IDOWN
       WRITE(6, 20) N, I, IBINQ
 20    FORMAT(6X, 'N=', I5, 5X, 'I=', I5, 5X, 'BINOMIAL COEFF=', I8)
       STOP
@@ -1015,39 +1015,59 @@ LABEL CONTINUE
 
 ### 代码 4.4.2
 ```
-      INTEGER I, SUM
-      SUM = 0
+      INTEGER I, ISUM
+      ISUM = 0
       DO 10 I = 1, 10
-          SUM = SUM + I
+          ISUM = ISUM + I
 10    CONTINUE
-      WRITE(6,*) '1到10的整数和为：', SUM
+      WRITE(6,*) '1到10的整数和为：', ISUM
       END
 ```
 
 ### 代码 4.4.3
 ```
-      INTEGER I, SUM
-      SUM = 0
+      INTEGER I, ISUM
+      ISUM = 0
       DO I = 1, 10
-          SUM = SUM + I
+          ISUM = ISUM + I
       END DO
-      WRITE(6,*) '1到10的整数和为：', SUM
+      WRITE(6,*) '1到10的整数和为：', ISUM
       END
 ```
 
 ### 代码 4.4.4
 ```
-      INTEGER I, J, SUM
+      DO WHILE (条件)
+          ! 循环体
+      END DO
+```
+
+### 代码 4.4.5
+```
+      INTEGER I, ISUM
+      ISUM = 0
+      I = 1
+      DO WHILE (I.LE.10)
+          ISUM = ISUM + I
+          I = I + 1
+      END DO
+      WRITE(6,*) '1到10的整数和为：', ISUM
+      END
+```
+
+### 代码 4.4.6
+```
+      INTEGER I, J, ISUM
       INTEGER, DIMENSION(3, 3) :: A
       ! 初始化数组A
       A = RESHAPE([1, 2, 3, 4, 5, 6, 7, 8, 9], [3, 3])
-      SUM = 0
+      ISUM = 0
       DO 10 I = 1, 3
           DO 20 J = 1, 3
-              SUM = SUM + A(I, J)
+              ISUM = ISUM + A(I, J)
 20        CONTINUE
 10    CONTINUE
-      WRITE(6,*) '二维数组元素和为：', SUM
+      WRITE(6,*) '二维数组元素和为：', ISUM
       END
 ```
 
