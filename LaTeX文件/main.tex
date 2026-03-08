@@ -273,6 +273,35 @@
 
 % 超链接
 \usepackage[hidelinks]{hyperref}
+
+% 设置url换行
+\makeatletter
+\def\UrlAlphabet{%
+      \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
+      \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
+      \do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D%
+      \do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N%
+      \do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X%
+      \do\Y\do\Z}
+\def\UrlDigits{\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\0}
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\g@addto@macro{\UrlBreaks}{\UrlAlphabet}
+\g@addto@macro{\UrlBreaks}{\UrlDigits}
+\makeatother
+
+% 临时修改 hyperref 设置：启用边框（宽度非零）并设为下划线样式
+\let\oldurl\url
+\renewcommand{\url}[1]{%
+  \begingroup
+  \hypersetup{
+    pdfborder={0 0 1},          % 边框宽度为 1pt（可根据需要调整）
+    pdfborderstyle={/S/U},      % 下划线样式
+    urlbordercolor=black        % 下划线颜色设为黑色（可自定义）
+  }%
+  \oldurl{#1}%
+  \endgroup
+}
+
 \hypersetup{
 pdftitle={计算程序与数学算法在化学中的应用学习笔记},
 pdfauthor={何尹铭}
